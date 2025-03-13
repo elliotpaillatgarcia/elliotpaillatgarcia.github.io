@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Elliot Paillat--Garcia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f97316, #fcd34d); /* Dégradé orange à jaune */
+            text-align: center;
+        }
+
+        /* Style de la navbar (barre de navigation) */
+        .navbar {
+            background: rgba(255, 255, 255, 0.9); 
+            padding: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 10;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+        }
+
+        .navbar .name {
+            color: #f97316; 
+            font-size: 30px; 
+            font-weight: bold;
+        }
+
+        .navbar a {
+            color: #1f2937;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            transition: 0.3s;
+        }
+
+        /* Les liens deviennent colorés au survol */
+        .navbar a:hover {
+            color: transparent;
+            background: linear-gradient(to right, #f97316, #fcd34d); 
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        /* Zone principale avec photo et texte */
+        .main-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 200px 20px 50px 20px; 
+        }
+
+        /* Zone blanche pour photo et texte */
+        .content-box {
+            display: flex;
+            background-color: white; 
+            padding: 80px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
+            max-width: 1200px; 
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Zone photo */
+        .photo-section {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-right: 30px; 
+        }
+
+        /* Zone texte */
+        .text-section {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; 
+            text-align: center; 
+        }
+
+        h1 {
+            color: #f97316;
+            font-size: 4rem !important; 
+            font-weight: bold;
+            margin: 0; 
+        }
+
+        h2 {
+            color: #1f2937; 
+        }
+
+        p {
+            color: #555; 
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        .profile-pic {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fcd34d; 
+        }
+
+        .cta-button {
+            margin-top: 20px;
+            background-color: #f97316;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px; 
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #e75d0c; 
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <div class="navbar">
+        <div class="name">Elliot Paillat--Garcia</div>
+        <div>
+            <a href="a propos.html">À propos</a>
+            <a href="bilanPerso.html">Bilan Personnel</a>
+            <a href="projets.html">Projets</a> 
+            <a href="contact.html">Contacts</a>
+        </div>
+    </div>
+
+    <!-- Zone principale avec la séparation en deux -->
+    <div class="main-content">
+        <div class="content-box">
+            <!-- Photo section -->
+            <div class="photo-section">
+                <img src="https://source.unsplash.com/350x350/?portrait,smiling" alt="Photo de Elliot Paillat--Garcia" class="profile-pic">
+            </div>
+
+            <!-- Texte section -->
+            <div class="text-section">
+                <h1>Bienvenue !</h1>
+                <p>Je suis <span class="text-orange-600 font-semibold">Elliot Paillat--Garcia</span>, un élève de première année de BUT en sciences des données à <span class="text-orange-600 font-semibold"><a href="https://iutp.univ-poitiers.fr/sd/">l'IUT de Niort</span></a>.</p>
+                <a href="projets.html" class="cta-button">Voir mon travail</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
