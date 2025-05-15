@@ -1,0 +1,105 @@
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #9B111E, #8A2BE2);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+ .navbar {
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.navbar .name {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+/* Lors du survol des onglets, les caractères prennent la couleur du dégradé */
+.navbar a:hover {
+    color: transparent;
+    background: linear-gradient(to right, #9B111E, #8A2BE2); /* Dégradé du rouge royal vers le violet */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 50px;
+            padding: 20px;
+        }
+
+        .container {
+            width: 45%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .contact-info {
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .cv-container {
+    width: 35%; /* Réduire la largeur du cadre */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px; /* Réduire un peu les marges internes */
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.cv-container iframe {
+    width: 100%; /* Toujours garder la largeur à 100% du cadre */
+    height: 400px; /* Réduire la hauteur du cadre */
+    border: none;
+}
