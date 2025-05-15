@@ -1,0 +1,112 @@
+body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+         padding: 0;
+         background: linear-gradient(to bottom, #9B111E, #8A2BE2);
+         color: white;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         text-align: center;
+}
+
+ .navbar {
+    background-color: rgba(0,0,0,0.8);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+}
+
+.navbar .name {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+/* Lors du survol des onglets, les caractères prennent la couleur du dégradé */
+.navbar a:hover {
+    color: transparent;
+    background: linear-gradient(to right, #9B111E, #8A2BE2); /* Dégradé du rouge royal vers le violet */
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            color: #fff;
+        }
+
+        .year-buttons {
+            display: flex;
+            justify-content: space-around;
+            gap: 30px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .year-button {
+            background: #8A2BE2;
+            padding: 20px 40px;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.6em;
+            font-weight: bold;
+            cursor: pointer;
+            border: 2px solid #8A2BE2;
+            transition: all 0.3s ease-in-out;
+            min-width: 200px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .year-button:hover {
+            background: transparent;
+            color: #9B111E;
+            border: 2px solid #9B111E;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .disabled-button {
+            background: black;
+            border: 2px solid black;
+            cursor: not-allowed;
+        }
