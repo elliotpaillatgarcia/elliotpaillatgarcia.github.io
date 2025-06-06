@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styleC.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="name"><a href="index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="a propos.html">À propos</a>
+            <a href="bilanPerso.html">Bilan Personnel</a>
+	    <a href="projets.html">Projets</a>
+<button id="theme-toggle" class="theme-toggle-button">🌙</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1>Contacts</h1>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:elliot.paillat.garcia@gmail.com">elliot.paillat.garcia@gmail.com</a></p>
+                <p>Téléphone: <a href="tel:+336493591142">+33 6 49 35 91 42</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/elliot-paillat-garcia-94793b340/" target="_blank">Mon profil</a></p>
+            </div>
+        </div>
+        <div class="cv-container">
+            <h1>Mon CV</h1>
+            <iframe src="cv 2.pdf"></iframe>
+        </div>
+    </div>
+<script>
+// --- Logique du bouton de changement de thème ---
+const themeToggleButton = document.getElementById('theme-toggle');
+
+if (themeToggleButton) {
+    // Fonction pour appliquer le thème
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggleButton.textContent = '☀️'; // Icône soleil pour le mode sombre
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeToggleButton.textContent = '🌙'; // Icône lune pour le mode clair
+        }
+    };
+
+    // Appliquer le thème sauvegardé au chargement de la page
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme || 'light'); // Par défaut, thème clair si rien n'est sauvegardé
+
+    // Gérer le clic sur le bouton
+    themeToggleButton.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme); // Sauvegarder la préférence
+    });
+}
+// --- Fin de la logique du bouton de changement de thème ---
+</script>
+</body>
+</html>

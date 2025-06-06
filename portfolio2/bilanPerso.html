@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan Personnel</title>
+    <link rel="stylesheet" href="styleA.css">
+</head>
+<body>
+
+    <!-- Barre de navigation -->
+    <div class="navbar">
+        <div class="name"><a href="index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="index.html">Accueil</a>
+            <a href="a propos.html">À propos</a>
+            <a href="projets.html">Projets</a>
+            <a href="contact.html">Contact</a>
+<button id="theme-toggle" class="theme-toggle-button">🌙</button>
+        </div>
+    </div>
+
+    <!-- Contenu principal de la page -->
+    <div class="content">
+        <div class="containerBP">
+            <h1>Mon Bilan Personnel</h1>
+            
+            <h2>Mon année scolaire</h2>
+            <p-1>Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.</p-1>
+            
+            <h2>Mes réussites</h2>
+            <p-1>Malgré certaines difficultés durant cette année, j'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d'efforts que d'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l'anglais. Les projets m'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.</p-1>
+            
+            <h2>Les difficultés rencontrés</h2>
+            <p-1>Comme dit précédemment, j'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.</p-1>
+            
+            <h2>Ce que j’ai appris</h2>
+            <p-1>Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j’ai pu mieux les comprendre grâce à des explications différentes. J’ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu’avec les cours sur la communication et le projet personnel et professionnel.</p-1>
+            
+            <h2>Mes objectifs pour l'avenir</h2>
+            <p-1>Pour la suite, je vais essayer de travailler davantage afin d’obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d’apprendre plus facilement et plus rapidement.</p-1>
+        </div>
+    </div>
+<script>
+// --- Logique du bouton de changement de thème ---
+const themeToggleButton = document.getElementById('theme-toggle');
+
+if (themeToggleButton) {
+    // Fonction pour appliquer le thème
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggleButton.textContent = '☀️'; // Icône soleil pour le mode sombre
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeToggleButton.textContent = '🌙'; // Icône lune pour le mode clair
+        }
+    };
+
+    // Appliquer le thème sauvegardé au chargement de la page
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme || 'light'); // Par défaut, thème clair si rien n'est sauvegardé
+
+    // Gérer le clic sur le bouton
+    themeToggleButton.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme); // Sauvegarder la préférence
+    });
+}
+// --- Fin de la logique du bouton de changement de thème ---
+</script>
+</body>
+</html>
