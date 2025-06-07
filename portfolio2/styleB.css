@@ -328,20 +328,40 @@ body.dark-theme {
   background: linear-gradient(to bottom, #0D1B2A, #001F3F);
   color: #f0f0f0;
 }
+/* Navbar en thème sombre (déjà pas mal, mais revérifions le survol) */
+body.dark-theme .navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .navbar .name {
+    color: #8A2BE2; /* Violet clair pour le nom */
+}
+
+body.dark-theme .navbar a {
+    color: #ccc; /* Couleur des liens */
+}
+body.dark-theme .navbar a:hover {
+    color: transparent;
+    background: linear-gradient(to right, #007BFF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+body.dark-theme .navbar a:not(.navbar .name a):hover { /* Survol en dégradé de bleu/violet */
+    color: transparent;
+    background: linear-gradient(to right, #007BFF, #8A2BE2); /* Dégradé de bleu au violet */
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: transparent; /* Ajouté pour annuler le fond blanc en mode sombre */
+}
 
  body.dark-theme .navbar .name {
 color:white
 }
 
-body.dark-theme .navbar { background-color: rgba(0, 0, 0, 0.9); }
-body.dark-theme .navbar .name a,
 body.dark-theme .theme-toggle-button { color: #8A2BE2; border-color: #8A2BE2; }
-body.dark-theme .navbar a:hover {
-  background: linear-gradient(to right, #007BFF, #8A2BE2);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
+
 body.dark-theme .containerBP {
   background: rgba(26, 41, 58, 0.9);
   border: 1px solid rgba(255, 255, 255, 0.1);
