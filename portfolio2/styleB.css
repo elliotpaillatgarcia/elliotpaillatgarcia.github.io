@@ -357,7 +357,7 @@ body.dark-theme .navbar a:not(.navbar .name a):hover { /* Survol en dégradé de
 }
 
  body.dark-theme .navbar .name {
-color:white
+color:white !important
 }
 
 body.dark-theme .theme-toggle-button { color: #8A2BE2; border-color: #8A2BE2; }
