@@ -303,7 +303,7 @@ body.dark-theme .section-card::before {
 
 /* Couleurs de texte spécifiques au mode sombre pour la section hero (si styleA.css l'utilise) */
 body.dark-theme .hero-title {
-    color: #8A2BE2 !important; /* Un violet clair pour le titre hero en mode sombre */
+    color: white !important; /* Un violet clair pour le titre hero en mode sombre */
 }
 body.dark-theme .hero-subtitle {
     color: #BBBBBB !important; /* Un gris clair pour le sous-titre hero en mode sombre */
