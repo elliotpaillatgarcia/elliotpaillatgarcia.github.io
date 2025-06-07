@@ -193,6 +193,52 @@ body {
     outline: none;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
 }
+
+/* Animations ajoutées pour le contenu */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 .content {
     width: 100%;
     display: flex;
@@ -203,6 +249,9 @@ body {
     padding: 20px;
     margin-top: 80px;
     flex-wrap: wrap;
+    /* Animation d'apparition du contenu */
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.5s forwards;
 }
 
 .container {
@@ -218,6 +267,10 @@ body {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    /* Animation d'apparition depuis la gauche */
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInFromLeft 1s ease 0.7s forwards;
 }
 
 .container::before {
@@ -247,12 +300,20 @@ h1 {
     margin-bottom: 30px;
     color: #fff;
     font-weight: 700;
+    /* Animation d'apparition avec scale */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleIn 1s ease 0.9s forwards;
 }
 
 .contact-info {
     font-size: 1.2em;
     line-height: 1.8;
     color: #f0f0f0;
+    /* Animation d'apparition avec délai */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease 1.1s forwards;
 }
 
 .contact-info a {
@@ -266,6 +327,7 @@ h1 {
 .contact-info a:hover {
     color: #9B111E;
     border-bottom: 2px solid #9B111E;
+    transform: translateY(-2px);
 }
 
 .cv-container {
@@ -281,6 +343,10 @@ h1 {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    /* Animation d'apparition depuis la droite */
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInFromRight 1s ease 0.8s forwards;
 }
 
 .cv-container::before {
@@ -311,6 +377,16 @@ h1 {
     border: none;
     border-radius: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    /* Animation d'apparition de l'iframe */
+    opacity: 0;
+    transform: scale(0.95);
+    animation: scaleIn 1s ease 1.2s forwards;
+}
+
+.cv-container iframe:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Thème sombre */
@@ -393,6 +469,9 @@ body.dark-theme .contact-info a:hover {
     .cv-container {
         width: 90%;
         min-width: unset;
+        /* Ajustement des animations pour mobile */
+        animation: fadeInUp 1s ease 0.7s forwards;
+        transform: translateY(30px);
     }
 }
 
