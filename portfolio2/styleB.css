@@ -329,6 +329,10 @@ body.dark-theme {
   color: #f0f0f0;
 }
 
+ body.dark-theme .navbar .name {
+color:white
+}
+
 body.dark-theme .navbar { background-color: rgba(0, 0, 0, 0.9); }
 body.dark-theme .navbar .name a,
 body.dark-theme .theme-toggle-button { color: #8A2BE2; border-color: #8A2BE2; }
