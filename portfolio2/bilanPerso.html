@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilan Personnel</title>
+    <link rel="stylesheet" href="styleB.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="a propos.html" data-translate="À propos">À propos</a>
+            <a href="projets.html" data-translate="Projets">Projets</a>
+            <a href="contact.html" data-translate="Contact">Contact</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="containerBP">
+            <h1 data-translate="Mon Bilan Personnel">Mon Bilan Personnel</h1>
+            
+            <h2 data-translate="Mon année scolaire">Mon année scolaire</h2>
+            <p-1 data-translate="Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.">Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.</p-1>
+            
+            <h2 data-translate="Mes réussites">Mes réussites</h2>
+            <p-1 data-translate="Malgré certaines difficultés durant cette année, j'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d'efforts que d'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l'anglais. Les projets m'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.">Malgré certaines difficultés durant cette année, j'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d'efforts que d'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l'anglais. Les projets m'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.</p-1>
+            
+            <h2 data-translate="Les difficultés rencontrées">Les difficultés rencontrées</h2>
+            <p-1 data-translate="Comme dit précédemment, j'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.">Comme dit précédemment, j'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.</p-1>
+            
+            <h2 data-translate="Ce que j'ai appris">Ce que j'ai appris</h2>
+            <p-1 data-translate="Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j'ai pu mieux les comprendre grâce à des explications différentes. J'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu'avec les cours sur la communication et le projet personnel et professionnel.">Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j'ai pu mieux les comprendre grâce à des explications différentes. J'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu'avec les cours sur la communication et le projet personnel et professionnel.</p-1>
+            
+            <h2 data-translate="Mes objectifs pour l'avenir">Mes objectifs pour l'avenir</h2>
+            <p-1 data-translate="Pour la suite, je vais essayer de travailler davantage afin d'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d'apprendre plus facilement et plus rapidement.">Pour la suite, je vais essayer de travailler davantage afin d'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d'apprendre plus facilement et plus rapidement.</p-1>
+        </div>
+    </div>
+<script>
+// --- Logique du bouton de changement de thème ---
+const themeToggleButton = document.getElementById('theme-toggle');
+
+if (themeToggleButton) {
+    // Fonction pour appliquer le thème
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            document.body.classList.add('dark-theme');
+            themeToggleButton.textContent = '☀️'; // Icône soleil pour le mode sombre
+        } else {
+            document.body.classList.remove('dark-theme');
+            themeToggleButton.textContent = '🌙'; // Icône lune pour le mode clair
+        }
+    };
+
+    // Appliquer le thème sauvegardé au chargement de la page
+    const savedTheme = localStorage.getItem('theme');
+    applyTheme(savedTheme || 'light'); // Par défaut, thème clair si rien n'est sauvegardé
+
+    // Gérer le clic sur le bouton
+    themeToggleButton.addEventListener('click', () => {
+        const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        applyTheme(newTheme);
+        localStorage.setItem('theme', newTheme); // Sauvegarder la préférence
+    });
+}
+// --- Fin de la logique du bouton de changement de thème ---
+
+        // Système de traductions automatique
+        const translations = {
+            'fr': {
+                'Accueil': 'Accueil',
+                'À propos': 'À propos',
+                'Projets': 'Projets',
+                'Contact': 'Contact',
+                'Mon Bilan Personnel': 'Mon Bilan Personnel',
+                'Mon année scolaire': 'Mon année scolaire',
+                'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.': 'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.',
+                'Mes réussites': 'Mes réussites',
+                'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.': 'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.',
+                'Les difficultés rencontrées': 'Les difficultés rencontrées',
+                'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.': 'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.',
+                'Ce que j\'ai appris': 'Ce que j\'ai appris',
+                'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.': 'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.',
+                'Mes objectifs pour l\'avenir': 'Mes objectifs pour l\'avenir',
+                'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.': 'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.'
+            },
+            'en': {
+                'Accueil': 'Home',
+                'À propos': 'About',
+                'Projets': 'Projects',
+                'Contact': 'Contact',
+                'Mon Bilan Personnel': 'My Personal Review',
+                'Mon année scolaire': 'My school year',
+                'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.': 'This year had its ups and downs. It was primarily a discovery for me to see the importance of probabilities in the field of data and the diversity of probability concepts, an area not extensively developed in high school. I also got to discover the wide range of software used in this field, as well as a glimpse into the professional world thanks to the many speakers who explained this largely unknown universe to us.',
+                'Mes réussites': 'My achievements',
+                'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.': 'Despite some difficulties this year, I managed not to give up and kept trying, as some areas required more effort than others. Fortunately, some seemed simpler to me, such as programming or English. Projects also helped me to understand and grow, as I prefer group work, which, thanks to my classmates\' explanations, allows me to better assimilate certain concepts.',
+                'Les difficultés rencontrées': 'Difficulties encountered',
+                'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.': 'As mentioned earlier, I encountered difficulties this year in certain areas, such as mathematics and economics. This is due to several factors, including an underestimation on my part of the training, which led to a work deficit that was too significant compared to expectations. Indeed, many new concepts are taught to us, as well as entirely new subjects, at a pace that varies depending on the difficulty.',
+                'Ce que j\'ai appris': 'What I learned',
+                'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.': 'Despite choosing mathematics and NSI (Digital and Computer Sciences) as my specialties in high school, this year has been rich in learning from start to finish. While some concepts were already familiar, I was able to understand them better through different explanations. I also discovered new concepts never before covered, particularly in economics, statistics, as well as in communication and personal and professional project courses.',
+                'Mes objectifs pour l\'avenir': 'My goals for the future',
+                'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.': 'Going forward, I will try to work harder to achieve more satisfactory results, by being more attentive in class, if conditions allow. I also intend to strengthen my personal study, ensuring it is more substantial and of better quality, with a study method that suits me better and will therefore allow me to learn more easily and quickly.'
+            },
+            'es': {
+                'Accueil': 'Inicio',
+                'À propos': 'Acerca de',
+                'Projets': 'Proyectos',
+                'Contact': 'Contacto',
+                'Mon Bilan Personnel': 'Mi Balance Personal',
+                'Mon année scolaire': 'Mi año escolar',
+                'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.': 'Este año ha tenido altibajos. Fue sobre todo un descubrimiento para mí ver la importancia de las probabilidades en el campo de los datos y la diversidad de nociones en probabilidades, un área poco desarrollada en el bachillerato. También pude descubrir la gran cantidad de software utilizado en este campo, así como una visión del mundo profesional gracias a los numerosos ponentes que pudieron explicarnos este universo aún en gran parte desconocido.',
+                'Mes réussites': 'Mis logros',
+                'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.': 'A pesar de algunas dificultades durante este año, supe no rendirme y seguir intentándolo, ya que algunas áreas me exigían más esfuerzo que otras. Afortunadamente, algunas me parecieron más sencillas, como la programación o el inglés. Los proyectos también me ayudaron a comprender y evolucionar, ya que prefiero el trabajo en grupo, que, gracias a las explicaciones de mis compañeros, me permite asimilar mejor ciertas nociones.',
+                'Les difficultés rencontrées': 'Dificultades encontradas',
+                'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.': 'Como se mencionó anteriormente, este año he encontrado dificultades en algunos campos, como las matemáticas o la economía. Esto se debe a varios factores, en particular a una subestimación de mi parte de la formación, lo que generó una falta de trabajo demasiado consecuente en relación con las expectativas. De hecho, se nos enseñan muchos conocimientos nuevos, así como materias completamente nuevas, con un ritmo más o menos rápido según la dificultad.',
+                'Ce que j\'ai appris': 'Lo que aprendí',
+                'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.': 'A pesar de haber elegido las especialidades de matemáticas y NSI (Numérica y Ciencias Informáticas) en el último año de bachillerato, este año ha sido rico en aprendizajes de principio a fin. Si bien algunas nociones ya eran conocidas, pude comprenderlas mejor gracias a diferentes explicaciones. También descubrí nuevas nociones nunca antes abordadas, particularmente en economía, estadísticas, así como con los cursos de comunicación y proyecto personal y profesional.',
+                'Mes objectifs pour l\'avenir': 'Mis objetivos para el futuro',
+                'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.': 'Para el futuro, intentaré trabajar más para obtener resultados más satisfactorios, prestando más atención en clase, si las condiciones me lo permiten. También pretendo reforzar mi trabajo personal, asegurándome de que sea más consistente y de mejor calidad, con un método de trabajo que me convenga mejor y que, por lo tanto, me permita aprender más fácil y rápidamente.'
+            },
+            'de': {
+                'Accueil': 'Startseite',
+                'À propos': 'Über mich',
+                'Projets': 'Projekte',
+                'Contact': 'Kontakt',
+                'Mon Bilan Personnel': 'Meine persönliche Bilanz',
+                'Mon année scolaire': 'Mein Schuljahr',
+                'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.': 'Dieses Jahr hatte seine Höhen und Tiefen. Es war vor allem eine Entdeckung für mich, die Bedeutung von Wahrscheinlichkeiten im Datenbereich und die Vielfalt der Wahrscheinlichkeitsbegriffe zu sehen, ein Bereich, der im Gymnasium wenig entwickelt war. Ich konnte auch die große Anzahl von Software entdecken, die in diesem Bereich verwendet wird, sowie einen Einblick in die Berufswelt dank der vielen Referenten, die uns dieses noch weitgehend unbekannte Universum erklären konnten.',
+                'Mes réussites': 'Meine Erfolge',
+                'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.': 'Trotz einiger Schwierigkeiten in diesem Jahr habe ich nicht aufgegeben und weiter versucht, da einige Bereiche mehr Anstrengung von mir verlangten als andere. Glücklicherweise schienen mir einige einfacher, wie Programmierung oder Englisch. Die Projekte haben mir auch geholfen, zu verstehen und mich weiterzuentwickeln, da ich Gruppenarbeit bevorzuge, die mir dank der Erklärungen meiner Kommilitonen hilft, bestimmte Konzepte besser zu assimilieren.',
+                'Les difficultés rencontrées': 'Begegnete Schwierigkeiten',
+                'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.': 'Wie bereits erwähnt, hatte ich dieses Jahr in einigen Bereichen Schwierigkeiten, wie in Mathematik oder Wirtschaft. Dies liegt an mehreren Faktoren, insbesondere an einer Unterschätzung der Ausbildung meinerseits, was zu einem zu großen Arbeitsmangel im Vergleich zu den Erwartungen führte. Tatsächlich werden uns viele neue Kenntnisse vermittelt, sowie völlig neue Fächer, mit einem je nach Schwierigkeitsgrad mehr oder weniger schnellen Tempo.',
+                'Ce que j\'ai appris': 'Was ich gelernt habe',
+                'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.': 'Obwohl ich im letzten Jahr die Spezialisierungen Mathematik und NSI (Digital- und Computerwissenschaften) gewählt hatte, war dieses Jahr von Anfang bis Ende reich an Lernerfahrungen. Wenn einige Konzepte bereits bekannt waren, konnte ich sie durch unterschiedliche Erklärungen besser verstehen. Ich entdeckte auch neue Konzepte, die bisher noch nie behandelt wurden, insbesondere in Wirtschaft, Statistik sowie in den Kursen zu Kommunikation und persönlichem und beruflichem Projekt.',
+                'Mes objectifs pour l\'avenir': 'Meine Ziele für die Zukunft',
+                'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.': 'Für die Zukunft werde ich versuchen, mehr zu arbeiten, um zufriedenstellendere Ergebnisse zu erzielen, indem ich im Unterricht aufmerksamer bin, wenn die Bedingungen es mir erlauben. Ich beabsichtige auch, meine persönliche Arbeit zu verstärken, um sicherzustellen, dass sie konsequenter und von besserer Qualität ist, mit einer Arbeitsmethode, die besser zu mir passt und es mir so ermöglicht, leichter und schneller zu lernen.'
+            },
+            'it': {
+                'Accueil': 'Home',
+                'À propos': 'Chi sono',
+                'Projets': 'Progetti',
+                'Contact': 'Contatto',
+                'Mon Bilan Personnel': 'Il mio Bilancio Personale',
+                'Mon année scolaire': 'Il mio anno scolastico',
+                'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.': 'Quest\'anno ha avuto alti e bassi. È stata soprattutto una scoperta per me vedere l\'importanza delle probabilità nel campo dei dati e la diversità delle nozioni di probabilità, un\'area poco sviluppata al liceo. Ho anche potuto scoprire il gran numero di software utilizzati in questo campo, oltre a un\'anteprima del mondo professionale grazie ai numerosi relatori che ci hanno potuto spiegare questo universo ancora in gran parte sconosciuto.',
+                'Mes réussites': 'I miei successi',
+                'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, comme la programmation ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.': 'Nonostante alcune difficoltà incontrate quest\'anno, sono riuscito a non arrendermi e a continuare a provare, perché alcuni ambiti mi richiedevano più sforzi di altri. Fortunatamente, alcuni mi sembravano più semplici, come la programmazione o l\'inglese. I progetti mi hanno anche aiutato a capire e a evolvere, perché preferisco il lavoro di gruppo, che, grazie alle spiegazioni dei miei compagni, mi permette di assimilare meglio alcune nozioni.',
+                'Les difficultés rencontrées': 'Difficoltà incontrate',
+                'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.': 'Come detto in precedenza, quest\'anno ho incontrato difficoltà in alcuni ambiti, come la matematica o l\'economia. Ciò è dovuto a diversi fattori, in particolare una sottovalutazione da parte mia della formazione, che ha generato una mancanza di lavoro troppo consistente rispetto alle aspettative. Infatti, ci vengono insegnate molte nuove conoscenze, oltre a materie completamente nuove, con un ritmo più o meno veloce a seconda della difficoltà.',
+                'Ce que j\'ai appris': 'Cosa ho imparato',
+                'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.': 'Nonostante avessi scelto le specializzazioni matematica e NSI (Numerica e Scienze Informatiche) al terminale, quest\'anno è stato ricco di apprendimenti dall\'inizio alla fine. Se alcune nozioni erano già note, ho potuto comprenderle meglio grazie a spiegazioni diverse. Ho anche scoperto nuove nozioni mai affrontate prima, in particolare in economia, in statistica, così come con i corsi di comunicazione e di progetto personale e professionale.',
+                'Mes objectifs pour l\'avenir': 'I miei obiettivi per il futuro',
+                'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.': 'Per il futuro, cercherò di lavorare di più per ottenere risultati più soddisfacenti, prestando maggiore attenzione in classe, se le condizioni me lo permetteranno. Intendo anche rafforzare il mio lavoro personale, assicurandomi che sia più consistente e di migliore qualità, con un metodo di lavoro che mi si addica meglio e che mi permetterà quindi di imparare più facilmente e più rapidamente.'
+            },
+            'pt': {
+                'Accueil': 'Início',
+                'À propos': 'Sobre',
+                'Projets': 'Projetos',
+                'Contact': 'Contato',
+                'Mon Bilan Personnel': 'Meu Balanço Pessoal',
+                'Mon année scolaire': 'Meu ano escolar',
+                'Cette année a eu des hauts et des bas. Ce fut surtout une découverte pour moi de voir l\'importance des probabilités dans le domaine des données et la diversité des notions en probabilités, un domaine peu développé au lycée. J\'ai aussi pu découvrir le grand nombre de logiciels utilisés dans ce domaine, ainsi qu\'un aperçu du monde professionnel grâce aux nombreux intervenants qui ont pu nous expliquer cet univers encore en grande partie inconnu.': 'Este ano teve seus altos e baixos. Foi principalmente uma descoberta para mim ver a importância das probabilidades na área de dados e a diversidade de noções em probabilidades, uma área pouco desenvolvida no ensino médio. Também pude descobrir o grande número de softwares utilizados nesta área, bem como uma visão do mundo profissional graças aos numerosos palestrantes que puderam nos explicar este universo ainda em grande parte desconhecido.',
+                'Mes réussites': 'Meus sucessos',
+                'Malgré certaines difficultés durant cette année, j\'ai su ne pas abandonner et continuer à essayer, car certains domaines me demandaient plus d\'efforts que d\'autres. Heureusement, certains me semblaient plus simples, como a programação ou l\'anglais. Les projets m\'ont également aidé à comprendre et à évoluer, car je préfère le travail de groupe, qui, grâce aux explications de mes camarades, me permet de mieux assimiler certaines notions.': 'Apesar de algumas dificuldades durante este ano, consegui não desistir e continuar tentando, pois algumas áreas exigiam mais esforço de mim do que outras. Felizmente, algumas me pareceram mais simples, como a programação ou o inglês. Os projetos também me ajudaram a entender e a evoluir, pois prefiro o trabalho em grupo, que, graças às explicações dos meus colegas, me permite assimilar melhor certas noções.',
+                'Les difficultés rencontrées': 'Dificuldades encontradas',
+                'Comme dit précédemment, j\'ai rencontré des difficultés cette année dans certains domaines, comme les mathématiques ou encore l\'économie. Cela est dû à plusieurs facteurs, notamment une sous-évaluation de ma part de la formation, ce qui a engendré un manque de travail trop conséquent par rapport aux attentes. En effet, de nombreuses nouvelles connaissances nous sont enseignées, ainsi que des matières entièrement nouvelles, avec un rythme plus ou moins rapide selon la difficulté.': 'Como dito anteriormente, encontrei dificuldades este ano em certas áreas, como matemática e economia. Isso se deve a vários fatores, incluindo uma subavaliação minha da formação, o que gerou uma falta de trabalho muito significativa em relação às expectativas. De fato, muitos novos conhecimentos nos são ensinados, bem como matérias totalmente novas, com um ritmo mais ou menos rápido dependendo da dificuldade.',
+                'Ce que j\'ai appris': 'O que aprendi',
+                'Malgré avoir choisi les spécialités mathématiques et NSI (Numérique et Sciences Informatiques) en terminale, cette année a été riche en apprentissages du début à la fin. Si certaines notions étaient déjà connues, j\'ai pu mieux les comprendre grâce à des explications différentes. J\'ai également découvert de nouvelles notions encore jamais abordées jusque-là, notamment en économie, en statistiques, ainsi qu\'avec les cours sur la communication et le projet personnel et professionnel.': 'Apesar de ter escolhido as especialidades de matemática e NSI (Numerics and Computer Science) no ensino médio, este ano foi rico em aprendizados do início ao fim. Se algumas noções já eram conhecidas, pude compreendê-las melhor graças a diferentes explicações. Também descobri novas noções nunca antes abordadas, principalmente em economia, estatística, bem como nos cursos de comunicação e projeto pessoal e profissional.',
+                'Mes objectifs pour l\'avenir': 'Meus objetivos para o futuro',
+                'Pour la suite, je vais essayer de travailler davantage afin d\'obtenir des résultats plus satisfaisants, en étant plus attentif en cours, si les conditions me le permettent. Je compte aussi renforcer mon travail personnel, en veillant à ce qu\'il soit plus conséquent et de meilleure qualité, avec une méthode de travail qui me correspond mieux et me permettra donc d\'apprendre plus facilement et plus rapidement.': 'Para o futuro, vou tentar trabalhar mais para obter resultados mais satisfatórios, prestando mais atenção nas aulas, se as condições me permitirem. Pretendo também fortalecer meu trabalho pessoal, garantindo que seja mais consistente e de melhor qualidade, com um método de trabalho que me convenha melhor e que, portanto, me permitirá aprender mais fácil e rapidamente.'
+            }
+        };
+
+        let currentLanguage = 'fr';
+
+        // Créer le sélecteur de langue
+        function createLanguageSelector() {
+            const container = document.getElementById('language_selector_container');
+            if (!container) return;
+
+            const select = document.createElement('select');
+            select.className = 'language-selector';
+            select.id = 'language-selector';
+
+            const languages = [
+                { code: 'fr', name: '🇫🇷 Français', flag: '🇫🇷' },
+                { code: 'en', name: '🇬🇧 English', flag: '🇬🇧' },
+                { code: 'es', name: '🇪🇸 Español', flag: '🇪🇸' },
+                { code: 'de', name: '🇩🇪 Deutsch', flag: '🇩🇪' },
+                { code: 'it', name: '🇮🇹 Italiano', flag: '🇮🇹' },
+                { code: 'pt', name: '🇵🇹 Português', flag: '🇵🇹' }
+            ];
+
+            languages.forEach(lang => {
+                const option = document.createElement('option');
+                option.value = lang.code;
+                option.textContent = lang.name;
+                select.appendChild(option);
+            });
+
+            select.addEventListener('change', (e) => {
+                translatePage(e.target.value);
+            });
+
+            container.appendChild(select);
+        }
+
+        // Fonction de traduction améliorée
+        function translatePage(targetLang) {
+            if (!translations[targetLang]) return;
+
+            currentLanguage = targetLang;
+
+            // Sauvegarder le choix de langue
+            localStorage.setItem('preferredLanguage', targetLang);
+
+            // Traduire tous les éléments avec l'attribut data-translate
+            const elementsToTranslate = document.querySelectorAll('[data-translate]');
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[targetLang][key]) {
+                    element.textContent = translations[targetLang][key];
+                }
+            });
+
+            // Mettre à jour la langue du document
+            document.documentElement.lang = targetLang;
+
+            // Mettre à jour la sélection
+            const selector = document.getElementById('language-selector');
+            if (selector) {
+                selector.value = targetLang;
+            }
+        }
+
+        // Détection automatique de la langue
+        function detectAndApplyLanguage() {
+            // Vérifier si l'utilisateur a déjà une préférence sauvegardée
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && translations[savedLang]) {
+                translatePage(savedLang);
+                return;
+            }
+
+            // Récupérer la langue du navigateur
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.split('-')[0].toLowerCase();
+
+            console.log('Langue du navigateur détectée:', langCode);
+
+            // Si ce n'est pas français et que la langue est supportée, traduire
+            if (langCode !== 'fr' && translations[langCode]) {
+                translatePage(langCode);
+            } else if (langCode !== 'fr') {
+                // Si la langue n'est pas supportée, utiliser l'anglais par default
+                translatePage('en');
+            }
+        }
+
+        // Initialisation au chargement de la page
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Page chargée - Initialisation...');
+            
+            // Créer le sélecteur de langue
+            createLanguageSelector();
+            
+            // Initialiser le thème (already present)
+            // initTheme();
+            
+            // Appliquer la détection automatique après un court délai
+            setTimeout(() => {
+                detectAndApplyLanguage();
+            }, 100);
+        });
+
+        // Écouter les changements de langue du navigateur
+        window.addEventListener('languagechange', () => {
+            console.log('Changement de langue détecté');
+            detectAndApplyLanguage();
+        });
+</script>
+</body>
+</html>

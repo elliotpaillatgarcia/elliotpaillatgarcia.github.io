@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styleC.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="a propos.html" data-translate="À propos">À propos</a>
+            <a href="bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
+            <a href="projets.html" data-translate="Projets">Projets</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1 data-translate="Contacts">Contacts</h1>
+            <div class="contact-info">
+                <p><span data-translate="Email:">Email:</span> <a href="mailto:elliot.paillat.garcia@gmail.com">elliot.paillat.garcia@gmail.com</a></p>
+                <p><span data-translate="Téléphone:">Téléphone:</span> <a href="tel:+336493591142">+33 6 49 35 91 42</a></p>
+                <p><span data-translate="LinkedIn:">LinkedIn:</span> <a href="https://www.linkedin.com/in/elliot-paillat-garcia-94793b340/" target="_blank" data-translate="Mon profil">Mon profil</a></p>
+            </div>
+        </div>
+        <div class="cv-container">
+            <h1 data-translate="Mon CV">Mon CV</h1>
+            <iframe src="cv 2.pdf"></iframe>
+        </div>
+    </div>
+
+    <script>
+        // Système de traductions automatique
+        const translations = {
+            'fr': {
+                'Contacts': 'Contacts',
+                'Email:': 'Email:',
+                'Téléphone:': 'Téléphone:',
+                'LinkedIn:': 'LinkedIn:',
+                'Mon profil': 'Mon profil',
+                'Mon CV': 'Mon CV',
+                'Accueil': 'Accueil',
+                'À propos': 'À propos',
+                'Bilan Personnel': 'Bilan Personnel',
+                'Projets': 'Projets'
+            },
+            'en': {
+                'Contacts': 'Contacts',
+                'Email:': 'Email:',
+                'Téléphone:': 'Phone:',
+                'LinkedIn:': 'LinkedIn:',
+                'Mon profil': 'My profile',
+                'Mon CV': 'My Resume',
+                'Accueil': 'Home',
+                'À propos': 'About',
+                'Bilan Personnel': 'Personal Review',
+                'Projets': 'Projects'
+            },
+            'es': {
+                'Contacts': 'Contactos',
+                'Email:': 'Email:',
+                'Téléphone:': 'Teléfono:',
+                'LinkedIn:': 'LinkedIn:',
+                'Mon profil': 'Mi perfil',
+                'Mon CV': 'Mi CV',
+                'Accueil': 'Inicio',
+                'À propos': 'Acerca de',
+                'Bilan Personnel': 'Evaluación Personal',
+                'Projets': 'Proyectos'
+            },
+            'de': {
+                'Contacts': 'Kontakte',
+                'Email:': 'E-Mail:',
+                'Téléphone:': 'Telefon:',
+                'LinkedIn:': 'LinkedIn:',
+                'Mon profil': 'Mein Profil',
+                'Mon CV': 'Mein Lebenslauf',
+                'Accueil': 'Startseite',
+                'À propos': 'Über mich',
+                'Bilan Personnel': 'Persönliche Bilanz',
+                'Projets': 'Projekte'
+            },
+            'it': {
+                'Contacts': 'Contatti',
+                'Email:': 'Email:',
+                'Téléphone:': 'Telefono:',
+                'LinkedIn:': 'LinkedIn:',
+                'Mon profil': 'Il mio profilo',
+                'Mon CV': 'Il mio CV',
+                'Accueil': 'Home',
+                'À propos': 'Chi sono',
+                'Bilan Personnel': 'Bilancio Personale',
+                'Projets': 'Progetti'
+            },
+            'pt': {
+                'Contacts': 'Contatos',
+                'Email:': 'Email:',
+                'Téléphone:': 'Telefone:',
+                'LinkedIn:': 'LinkedIn:',
+                'Mon profil': 'Meu perfil',
+                'Mon CV': 'Meu CV',
+                'Accueil': 'Início',
+                'À propos': 'Sobre',
+                'Bilan Personnel': 'Avaliação Pessoal',
+                'Projets': 'Projetos'
+            }
+        };
+
+        let currentLanguage = 'fr';
+
+        // Créer le sélecteur de langue
+        function createLanguageSelector() {
+            const container = document.getElementById('language_selector_container');
+            if (!container) return;
+
+            const select = document.createElement('select');
+            select.className = 'language-selector';
+            select.id = 'language-selector';
+
+            const languages = [
+                { code: 'fr', name: '🇫🇷 Français', flag: '🇫🇷' },
+                { code: 'en', name: '🇬🇧 English', flag: '🇬🇧' },
+                { code: 'es', name: '🇪🇸 Español', flag: '🇪🇸' },
+                { code: 'de', name: '🇩🇪 Deutsch', flag: '🇩🇪' },
+                { code: 'it', name: '🇮🇹 Italiano', flag: '🇮🇹' },
+                { code: 'pt', name: '🇵🇹 Português', flag: '🇵🇹' }
+            ];
+
+            languages.forEach(lang => {
+                const option = document.createElement('option');
+                option.value = lang.code;
+                option.textContent = lang.name;
+                select.appendChild(option);
+            });
+
+            select.addEventListener('change', (e) => {
+                translatePage(e.target.value);
+            });
+
+            container.appendChild(select);
+        }
+
+        // Fonction de traduction améliorée
+        function translatePage(targetLang) {
+            if (!translations[targetLang]) return;
+
+            currentLanguage = targetLang;
+
+            // Sauvegarder le choix de langue
+            localStorage.setItem('preferredLanguage', targetLang);
+
+            // Traduire tous les éléments avec l'attribut data-translate
+            const elementsToTranslate = document.querySelectorAll('[data-translate]');
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[targetLang][key]) {
+                    element.textContent = translations[targetLang][key];
+                }
+            });
+
+            // Mettre à jour la langue du document
+            document.documentElement.lang = targetLang;
+
+            // Mettre à jour la sélection
+            const selector = document.getElementById('language-selector');
+            if (selector) {
+                selector.value = targetLang;
+            }
+        }
+
+        // Détection automatique de la langue
+        function detectAndApplyLanguage() {
+            // Vérifier si l'utilisateur a déjà une préférence sauvegardée
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && translations[savedLang]) {
+                translatePage(savedLang);
+                return;
+            }
+
+            // Récupérer la langue du navigateur
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.split('-')[0].toLowerCase();
+
+            console.log('Langue du navigateur détectée:', langCode);
+
+            // Si ce n'est pas français et que la langue est supportée, traduire
+            if (langCode !== 'fr' && translations[langCode]) {
+                translatePage(langCode);
+            } else if (langCode !== 'fr') {
+                // Si la langue n'est pas supportée, utiliser l'anglais par défaut
+                translatePage('en');
+            }
+        }
+
+        // Gestion du thème
+        function initTheme() {
+            const themeToggleButton = document.getElementById('theme-toggle');
+            if (!themeToggleButton) return;
+
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggleButton.textContent = '☀️';
+                } else {
+                    document.body.classList.remove('dark-theme');
+                    themeToggleButton.textContent = '🌙';
+                }
+            };
+
+            // Charger le thème sauvegardé
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            applyTheme(savedTheme);
+
+            themeToggleButton.addEventListener('click', () => {
+                const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+        }
+
+        // Initialisation au chargement de la page
+        window.addEventListener('DOMContentLoaded', () => {
+            console.log('Page chargée - Initialisation...');
+            
+            // Créer le sélecteur de langue
+            createLanguageSelector();
+            
+            // Initialiser le thème
+            initTheme();
+            
+            // Appliquer la détection automatique après un court délai
+            setTimeout(() => {
+                detectAndApplyLanguage();
+            }, 100);
+        });
+
+        // Écouter les changements de langue du navigateur
+        window.addEventListener('languagechange', () => {
+            console.log('Changement de langue détecté');
+            detectAndApplyLanguage();
+        });
+    </script>
+</body>
+</html>

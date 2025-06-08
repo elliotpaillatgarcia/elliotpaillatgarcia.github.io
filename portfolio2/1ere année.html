@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="Mes Projets Universitaires">Mes Projets Universitaires</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="a propos.html" data-translate="À propos">À propos</a>
+            <a href="bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
+            <a href="projets.html" data-translate="Projets">Projets</a>
+            <a href="contact.html" data-translate="Contact">Contact</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container"></div>
+        </div>
+    </div>
+
+<div class="content">
+    <div class="container">
+        <h1 data-translate="Mes Projets Universitaires">Mes Projets Universitaires</h1>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-btn left" onclick="changeSlide(-1)">
+                <i class="fas fa-chevron-left"></i> </button>
+
+            <div class="carousel-slide active">
+                <div class="project-card" onclick="openModal(1)">
+                    <img src="SAE FR AN.png" alt="Projet 1">
+                    <h3 data-translate="Présentation en anglais d'un territoire économique et culturel">Présentation en anglais d'un territoire économique et culturel</h3>
+                    <p data-translate="Présentation en Francais et en Anglais d'un territoire.">Présentation en Francais et en Anglais d'un territoire.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(2)">
+                    <img src="SAEentreprise.png" alt="Projet 2">
+                    <h3 data-translate="Apprendre en situation la production de données en entreprise">Apprendre en situation la production de données en entreprise</h3>
+                    <p data-translate="Réussir a analyser et faire ressortir des données.">Réussir a analyser et faire ressortir des données. </p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(3)">
+                    <img src="SAE tableaux.png" alt="Projet 3">
+                    <h3 data-translate="Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple">Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple</h3>
+                    <p data-translate="Etablir un tableaux de bord et un compte rendu d'une enquête.">Etablir un tableaux de bord et un compte rendu d'une enquête. </p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(4)">
+                    <img src="SAE JSON.png" alt="Projet 4">
+                    <h3 data-translate="Ecriture et lecture de fichiers de données">Ecriture et lecture de fichiers de données</h3>
+                    <p data-translate="Prendre un fichier du format JSON et le rendre en CSV.">Prendre un fichier du format JSON et le rendre en CSV.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(5)">
+                    <img src="SAE VBA.png" alt="Projet 5">
+                    <h3 data-translate="Création d’un reporting">Création d'un reporting</h3>
+                    <p data-translate="Création d'une application sur Excel/VBA.">Création d'une application sur Excel/VBA. </p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(6)">
+                    <img src="SAEMOenquete.png" alt="Projet 6">
+                    <h3 data-translate="Mise en œuvre d'une enquête">Mise en œuvre d'une enquête</h3>
+                    <p data-translate="Récupération, analyse et synthèse de données d'un enquête.">Récupération, analyse et synthèse de données d'un enquête.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(7)">
+                    <img src="SAE BD.png" alt="Projet 7">
+                    <h3 data-translate="Conception et implémentation d'une base de données">Conception et implémentation d'une base de données</h3>
+                    <p data-translate="Création et optimisation d'une base de données correspondant au thème.">Création et optimisation d'une base de données correspondant au thème.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(8)">
+                    <img src="SAE regression.png" alt="Projet 8">
+                    <h3 data-translate="Régression sur des données réelles">Régression sur des données réelles</h3>
+                    <p data-translate="Analyse de données réels afin de faire des previsions sur des logements.">Analyse de données réels afin de faire des previsions sur des logements.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(9)">
+                    <img src="SAE echantillonnage.png" alt="Projet 9">
+                    <h3 data-translate="Estimation par échantillonnage">Estimation par échantillonnage </h3>
+                    <p data-translate="Estimer le nombre total d'habitants d'une régions.">Estimer le nombre total d'habitants d'une régions. </p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(10)">
+                    <img src="Dataviz.png" alt="Projet 10">
+                    <h3 data-translate="Dataviz (Concours)">Dataviz (Concours)</h3>
+                    <p data-translate="Faire une infographie sur un thème choisi.">Faire une infographie sur un thème choisi.</p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(11)">
+                    <img src="SAE Marzouk.png" alt="Projet 11">
+                    <h3 data-translate="Construction et présentation d'indicateurs de performance">Construction et présentation d'indicateurs de performance</h3>
+                    <p data-translate="Etablir un compte rendu visuel et écris sur une entreprise.">Etablir un compte rendu visuel et écris sur une entreprise. </p>
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="project-card" onclick="openModal(12)">
+                    <img src="SAE final.png" alt="Projet 12">
+                    <h3 data-translate="Analyse de données, reporting et datavisualisation">Analyse de données, reporting et datavisualisation</h3>
+                    <p data-translate="Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.">Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.</p>
+                </div>
+            </div>
+            <button class="carousel-btn right" onclick="changeSlide(1)">
+                <i class="fas fa-chevron-right"></i> </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Variables du carrousel
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    /**
+     * Affiche la diapositive spécifiée.
+     * @param {number} index - L'index de la diapositive à afficher.
+     */
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) {
+                slide.classList.add('active');
+            }
+        });
+    }
+
+    /**
+     * Change la diapositive du carrousel en fonction de la direction.
+     * @param {number} direction - -1 pour la diapositive précédente, 1 pour la suivante.
+     */
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+        if (currentSlide >= slides.length) currentSlide = 0;
+        showSlide(currentSlide);
+    }
+
+    // Gestion des modales
+    /**
+     * Ouvre la modale correspondant à l'ID du projet.
+     * @param {number} projectId - L'ID du projet.
+     */
+    function openModal(projectId) {
+        document.getElementById("modal" + projectId).style.display = "block";
+    }
+
+    /**
+     * Ferme la modale correspondant à l'ID du projet.
+     * @param {number} projectId - L'ID du projet.
+     */
+    function closeModal(projectId) {
+        document.getElementById("modal" + projectId).style.display = "none";
+    }
+
+    // Ferme la modale si l'utilisateur clique en dehors de son contenu
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            // Ferme toutes les modales (ajuster le nombre selon vos projets)
+            for (let i = 1; i <= 12; i++) closeModal(i);
+        }
+    }
+
+    // Objet de traductions pour toutes les langues supportées
+    const translations = {
+        'fr': {
+            // Navbar
+            'Accueil': 'Accueil',
+            'À propos': 'À propos',
+            'Bilan Personnel': 'Bilan Personnel',
+            'Projets': 'Projets',
+            'Contact': 'Contact',
+            // Titre de la page
+            'Mes Projets Universitaires': 'Mes Projets Universitaires',
+            // Projet 1
+            "Présentation en anglais d'un territoire économique et culturel": "Présentation en anglais d'un territoire économique et culturel",
+            "Présentation en Francais et en Anglais d'un territoire.": "Présentation en Français et en Anglais d'un territoire.",
+            "P1_Desc": "Ce projet consiste à présenter un territoire ayant accueilli les Jeux Olympiques, en utilisant deux langues : le français, qui aborde l’aspect historique, architectural ainsi que l’impact sur la ville, et l’anglais, qui traite des aspects géographique, humain et économique. Ce travail de groupe, réalisé à trois, nous a amenés à choisir une ville. Nous avons opté pour Athènes, car elle possède un passé riche en lien avec les Jeux Olympiques et une histoire très développée à travers la mythologie, ce qui se reflète dans ses nombreux monuments.",
+            "Applications utilisés:": "Applications utilisées:",
+            "P1_Apps": "Word, Power Point ainsi que de nombreux sites internets",
+            "Apprentissages:": "Apprentissages:",
+            "P1_Learning": "Recherche et récupération des informations importantes ainsi qu'une analyse et vérification des données obtenues, suivi d'une présentation de nos résultats avec nos découvertes de la ville.",
+            // Projet 2
+            "Apprendre en situation la production de données en entreprise": "Apprendre en situation la production de données en entreprise",
+            "Réussir a analyser et faire ressortir des données.": "Réussir à analyser et faire ressortir des données.",
+            "P2_Desc_Short": "Ce projet avait pour but de nous une première évaluation de nos compétences à analyser des données et à en retenir les informations qui sont les plus parlantes, ainsi que le fait d'écrire un texte qui permet de faire parler les analyses que nous avons pu mener, accompagnées de graphiques permettant de voir et d'expliquer visuellement le texte.",
+            "P2_Apps": "Word et Excel",
+            "P2_Learning": "Analyse globale des données et explication des recherches",
+            // Projet 3
+            "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple": "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple",
+            "Etablir un tableaux de bord et un compte rendu d'une enquête.": "Établir un tableau de bord et un compte rendu d'une enquête.",
+            "P3_Desc_Short": "Ce projet consistait à retranscrire en numérique une enquête qui a été menée sur papier afin de pouvoir récupérer des informations qui nous ont ensuite servi à faire ressortir les résultats les plus parlants mais aussi les résultats qui étaient les plus surprenants pour ensuite se distribuer le travail avec mon camarade pour faire un bilan visuel ainsi qu'un bilan textuel.",
+            "P3_Apps": "Word et Sphinx",
+            "P3_Learning": "Retranscription de données, analyses approfondies des données ainsi que mise en page des résultats",
+            // Projet 4
+            "Ecriture et lecture de fichiers de données": "Écriture et lecture de fichiers de données",
+            "Prendre un fichier du format JSON et le rendre en CSV.": "Prendre un fichier au format JSON et le rendre en CSV.",
+            "P4_Desc_Short": "Ce projet était en binômes et avait pour objectif de récupérer un fichier au format JSON et de faire un code Python qui permet de le faire passer en fichier CSV, qui est donc un format plus lisible et plus simple d'utilisation.",
+            "P4_Apps": "Python ainsi que des sources externes pour le code",
+            "P4_Learning": "Traitement d'un format et application d'un code de transformation",
+            // Projet 5
+            "Création d’un reporting": "Création d’un reporting",
+            "Création d'une application sur Excel/VBA.": "Création d'une application sur Excel/VBA.",
+            "P5_Desc": "Ce projet consistait à créer une application sur Excel afin d’optimiser la saisie des notes grâce à VBA. Ce travail, réalisé en binôme, nous a permis de répartir les tâches selon nos préférences, tout en veillant à ce que chacun participe à l’ensemble des étapes afin de nous perfectionner et de progresser.",
+            "P5_Apps": "Word et Excel",
+            "P5_Learning": "Connaître les langages Excel ainsi que VBA et faire une notice d'utilisation de l'application.",
+            // Projet 6
+            "Mise en œuvre d'une enquête": "Mise en œuvre d'une enquête",
+            "Récupération, analyse et synthèse de données d'un enquête.": "Récupération, analyse et synthèse de données d'une enquête.",
+            "P6_Desc": "Ce projet consiste à regrouper les données issues d’une enquête et à sélectionner les plus pertinentes afin de les mettre en valeur. Le travail s’est déroulé en binôme : nous avons d’abord rassemblé les informations fournies, puis effectué une analyse avant de mettre en commun les résultats obtenus. Ensuite, nous avons réparti le travail restant pour élaborer une synthèse claire, permettant de valoriser efficacement les résultats, accompagnée d’un compte rendu et d’un tableau de bord.",
+            "P6_Apps": "Sphinx et Word",
+            "P6_Learning": "Analyse et mise en relation de plusieurs variables ainsi que la synthèse et mise en valeur de nombreux résultats.",
+            // Projet 7
+            "Conception et implémentation d'une base de données": "Conception et implémentation d'une base de données",
+            "Création et optimisation d'une base de données correspondant au thème.": "Création et optimisation d'une base de données correspondant au thème.",
+            "P7_Desc": "Ce projet consiste à créer une base de données et à l’alimenter via une application développée en Python, afin d’aider des sauniers à mieux organiser leur production et leurs ventes. Réalisé en binôme, nous avons d’abord pris le temps de bien comprendre le sujet, puis nous avons réparti les tâches en fonction des compétences de chacun. Après un premier travail individuel, nous avons collaboré sur la partie principale du projet : l’automatisation de la base de données à l’aide d’un code Python, en utilisant des fichiers CSV, le tout de manière simplifiée afin de permettre une utilisation accessible à tous.",
+            "P7_Apps": "Python et easy PHP ",
+            "P7_Learning": "Apprendre à créer une base de données, faire une application via Python et connecter un code Python à une base de données.",
+            // Projet 8
+            "Régression sur des données réelles": "Régression sur des données réelles",
+            "Analyse de données réels afin de faire des previsions sur des logements.": "Analyse de données réelles afin de faire des prévisions sur des logements.",
+            "P8_Desc": "Ce projet consiste à établir un lien entre de nombreuses variables afin de pouvoir estimer le prix de différents logements. Réalisé en binôme, ce travail avait pour objectif de déterminer les prix des logements avec la plus grande précision possible. Pour y parvenir, nous avons dû identifier un coefficient de corrélation suffisamment pertinent, en nous appuyant sur de nombreux calculs et une grande variété de variables. Cette tâche s’est révélée complexe, fastidieuse et longue.",
+            "P8_Apps": "Excel et R",
+            "P8_Learning": "Apprentissage du code R ainsi que la création de liens entre de nombreuses variables",
+            // Projet 9
+            "Estimation par échantillonnage": "Estimation par échantillonnage",
+            "Estimer le nombre total d'habitants d'une régions.": "Estimer le nombre total d'habitants d'une région.",
+            "P9_Desc": "Ce projet consiste à écrire un code R permettant de faire des calculs statistiques précis qui nous font ressortir les variables qui ont les liens les plus forts et qui donc nous permettent de les croiser et de pouvoir affirmer des résultats qui ressortent les liens évidents qui se trouvent dans la région choisie qui notre cas était la Bretagne, ensuite nous avons dû les expliquer dans un compte rendu avec en appui le code que nous avons fait.",
+            "P9_Apps": "Excel et Rstudio ",
+            "P9_Learning": "Codage développé avec Rstudio et exploitation de liens significatifs entre des variables",
+            // Projet 10
+            "Dataviz (Concours)": "Dataviz (Concours)",
+            "Faire une infographie sur un thème choisi.": "Faire une infographie sur un thème choisi.",
+            "P10_Desc": "Ce projet est en même temps un concours entre tous les BUT de France ce qui fait que c'est un projet qui est différent des autres car c'est aussi dans une plus grande autonomie car tout ce que nous avons est un fichier et des instructions, donc nous devons ressortir une problématique, un thème et finir par rendre une infographie qui est donc une visualisation mais qui est différente de toutes celles que nous avons pu faire jusqu'ici de par son aspect.",
+            "P10_Apps": "Python, PowerBi, Canva, Rstudio ainsi que des recherches externes",
+            "P10_Learning": "Attribution des tâches pour un temps court pour une quantité de travail conséquente ainsi que l'adaptabilité de la tâche demandée",
+            // Projet 11
+            "Construction et présentation d'indicateurs de performance": "Construction et présentation d'indicateurs de performance",
+            "Etablir un compte rendu visuel et écris sur une entreprise.": "Établir un compte rendu visuel et écrit sur une entreprise.",
+            "P11_Desc": "Ce projet consiste à écrire un code R permettant de faire des calculs statistiques précis qui nous font ressortir les variables qui ont les liens les plus forts et qui donc nous permettent de les croiser et de pouvoir affirmer des résultats qui ressortent les liens évidents qui se trouvent dans la région choisie qui notre cas était la Bretagne, ensuite nous avons dû les expliquer dans un compte rendu avec en appui le code que nous avons fait.", // Re-using description, might need specific for Project 11
+            "P11_Apps": "Excel et Rstudio ", // Re-using apps
+            "P11_Learning": "Codage développé avec Rstudio et exploitation de liens significatifs entre des variables", // Re-using learning
+            // Projet 12
+            "Analyse de données, reporting et datavisualisation": "Analyse de données, reporting et datavisualisation",
+            "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.": "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en France.",
+            "P12_Desc": "Ce dernier projet de l’année, réalisé en groupe de quatre, s’est déroulé sur une période de deux semaines dédiées. En collaboration avec l’organisme Calyxis, l’objectif était de concevoir un outil réutilisable pour l’analyse de futurs questionnaires, permettant de mettre en évidence de manière claire les données clés ou les informations les plus significatives. Pour mener à bien ce projet, nous avons mobilisé une grande partie des compétences acquises au cours de l’année : méthodes de travail en groupe, différents langages de programmation, mises en relation statistiques, ainsi que divers outils et techniques de visualisation des données. Ce projet constitue ainsi un excellent bilan de nos apprentissages de l’année.",
+            "P12_Apps": "Python, R et Power bi",
+            "P12_Learning": "Mettre en place un bon travail de groupe, observer l'importance de chaque vision des choses et chaque demande, ainsi que la gestion du temps avec la quantité de travail."
+        },
+        'en': {
+            // Navbar
+            'Accueil': 'Home',
+            'À propos': 'About',
+            'Bilan Personnel': 'Personal Review',
+            'Projets': 'Projects',
+            'Contact': 'Contact',
+            // Page Title
+            'Mes Projets Universitaires': 'My University Projects',
+            // Project 1
+            "Présentation en anglais d'un territoire économique et culturel": "English Presentation of an Economic and Cultural Territory",
+            "Présentation en Francais et en Anglais d'un territoire.": "Presentation in French and English of a territory.",
+            "P1_Desc": "This project involves presenting a territory that hosted the Olympic Games, using two languages: French, which covers the historical, architectural aspects, and the impact on the city; and English, which addresses geographical, human, and economic aspects. This group work, carried out by three people, led us to choose a city. We opted for Athens, as it has a rich past linked to the Olympic Games and a highly developed history through mythology, reflected in its numerous monuments.",
+            "Applications utilisés:": "Applications used:",
+            "P1_Apps": "Word, Power Point, and numerous websites",
+            "Apprentissages:": "Learning outcomes:",
+            "P1_Learning": "Research and retrieval of important information, as well as analysis and verification of obtained data, followed by a presentation of our results and discoveries about the city.",
+            // Project 2
+            "Apprendre en situation la production de données en entreprise": "Learning Data Production in a Business Context",
+            "Réussir a analyser et faire ressortir des données.": "Succeed in analyzing and extracting data.",
+            "P2_Desc_Short": "This project aimed to provide a first evaluation of our skills in analyzing data and extracting the most relevant information, as well as writing text that makes the analyses we conducted speak, accompanied by graphics to visually represent and explain the text.",
+            "P2_Apps": "Word and Excel",
+            "P2_Learning": "Global data analysis and explanation of research",
+            // Project 3
+            "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple": "Preparation and Synthesis of a Data Table for Simple Exploratory Analysis",
+            "Etablir un tableaux de bord et un compte rendu d'une enquête.": "Establish a dashboard and a survey report.",
+            "P3_Desc_Short": "This project consisted of digitizing a paper survey to extract information that we then used to highlight the most striking results, as well as surprising ones. We then divided the work with my colleague to create a visual and textual summary.",
+            "P3_Apps": "Word and Sphinx",
+            "P3_Learning": "Data transcription, in-depth data analysis, and results formatting",
+            // Project 4
+            "Ecriture et lecture de fichiers de données": "Writing and Reading Data Files",
+            "Prendre un fichier du format JSON et le rendre en CSV.": "Take a JSON file and convert it to CSV.",
+            "P4_Desc_Short": "This pair project aimed to retrieve a JSON file and write a Python code to convert it into a CSV file, which is a more readable and easier-to-use format.",
+            "P4_Apps": "Python and external code sources",
+            "P4_Learning": "Format processing and application of a transformation code",
+            // Project 5
+            "Création d’un reporting": "Creation of a Reporting Tool",
+            "Création d'une application sur Excel/VBA.": "Creation of an application on Excel/VBA.",
+            "P5_Desc": "This project involved creating an application on Excel to optimize grade entry using VBA. This work, carried out in pairs, allowed us to divide tasks according to our preferences, while ensuring that everyone participated in all stages to improve and progress.",
+            "P5_Apps": "Word and Excel",
+            "P5_Learning": "Understanding Excel and VBA languages and creating a user manual for the application.",
+            // Project 6
+            "Mise en œuvre d'une enquête": "Implementation of a Survey",
+            "Récupération, analyse et synthèse de données d'un enquête.": "Data collection, analysis, and synthesis from a survey.",
+            "P6_Desc": "This project consists of gathering data from a survey and selecting the most relevant information to highlight it. The work was carried out in pairs: we first collected the provided information, then performed an analysis before pooling the results. Subsequently, we divided the remaining work to develop a clear synthesis, effectively showcasing the results, accompanied by a report and a dashboard.",
+            "P6_Apps": "Sphinx and Word",
+            "P6_Learning": "Analysis and correlation of multiple variables, as well as synthesis and highlighting of numerous results.",
+            // Project 7
+            "Conception et implémentation d'une base de données": "Database Design and Implementation",
+            "Création et optimisation d'une base de données correspondant au thème.": "Creation and optimization of a database corresponding to the theme.",
+            "P7_Desc": "This project involves creating a database and populating it via an application developed in Python, to help salt producers better organize their production and sales. Carried out in pairs, we first took the time to fully understand the subject, then divided tasks based on each person's skills. After initial individual work, we collaborated on the main part of the project: automating the database using Python code, utilizing CSV files, all in a simplified manner to allow accessible use for everyone.",
+            "P7_Apps": "Python and easy PHP ",
+            "P7_Learning": "Learning to create a database, building an application via Python, and connecting Python code to a database.",
+            // Project 8
+            "Régression sur des données réelles": "Regression on Real Data",
+            "Analyse de données réels afin de faire des previsions sur des logements.": "Analysis of real data to make housing price predictions.",
+            "P8_Desc": "This project involves establishing a relationship between numerous variables to estimate the price of different properties. Carried out in pairs, this work aimed to determine housing prices with the highest possible accuracy. To achieve this, we had to identify a sufficiently relevant correlation coefficient, relying on numerous calculations and a wide variety of variables. This task proved to be complex, tedious, and time-consuming.",
+            "P8_Apps": "Excel and R",
+            "P8_Learning": "Learning R code and creating relationships between numerous variables.",
+            // Project 9
+            "Estimation par échantillonnage": "Estimation by Sampling",
+            "Estimer le nombre total d'habitants d'une regions.": "Estimate the total number of inhabitants of a region.",
+            "P9_Desc": "This project consists of writing an R code to perform precise statistical calculations that highlight the strongest links between variables, allowing us to cross-reference them and confirm evident relationships in the chosen region, which in our case was Brittany. We then had to explain them in a report, supported by the code we wrote.",
+            "P9_Apps": "Excel and Rstudio ",
+            "P9_Learning": "Developed coding with Rstudio and exploitation of significant links between variables",
+            // Project 10
+            "Dataviz (Concours)": "Dataviz (Competition)",
+            "Faire une infographie sur un thème choisi.": "Create an infographic on a chosen theme.",
+            "P10_Desc": "This project is also a competition among all BUTs in France, making it different from others as it offers greater autonomy. We are given a file and instructions, and we must define a problem, choose a theme, and finally submit an infographic, which is a visualization that differs from all previous ones due to its appearance.",
+            "P10_Apps": "Python, PowerBi, Canva, Rstudio, and external research",
+            "P10_Learning": "Task assignment for a short time for a significant amount of work, as well as adaptability to the requested task.",
+            // Projet 11
+            "Construction et présentation d'indicateurs de performance": "Construction and Presentation of Performance Indicators",
+            "Etablir un compte rendu visuel et écris sur une entreprise.": "Establish a visual and written report on a company.",
+            "P11_Desc": "This project consists of writing an R code to perform precise statistical calculations that highlight the strongest links between variables, allowing us to cross-reference them and confirm evident relationships in the chosen region, which in our case was Brittany. We then had to explain them in a report, supported by the code we wrote.",
+            "P11_Apps": "Excel and Rstudio ",
+            "P11_Learning": "Developed coding with Rstudio and exploitation of significant links between variables",
+            // Project 12
+            "Analyse de données, reporting et datavisualisation": "Data Analysis, Reporting, and Data Visualization",
+            "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.": "Creation of a dynamic tool to determine the extent and characteristics of AcVC in France.",
+            "P12_Desc": "This final project of the year, carried out in a group of four, took place over a dedicated two-week period. In collaboration with the organization Calyxis, the objective was to design a reusable tool for analyzing future questionnaires, clearly highlighting key data or the most significant information. To successfully complete this project, we utilized a large part of the skills acquired during the year: group work methods, various programming languages, statistical correlations, and various data visualization tools and techniques. This project thus represents an excellent summary of our year's learning.",
+            "P12_Apps": "Python, R and Power bi",
+            "P12_Learning": "Establishing good teamwork, observing the importance of each vision and request, as well as time management with the workload."
+        },
+        'es': {
+            // Navbar
+            'Accueil': 'Inicio',
+            'À propos': 'Acerca de',
+            'Bilan Personnel': 'Evaluación Personal',
+            'Projets': 'Proyectos',
+            'Contact': 'Contacto',
+            // Titre de la page
+            'Mes Projets Universitaires': 'Mis Proyectos Universitarios',
+            // Projet 1
+            "Présentation en anglais d'un territoire économique et culturel": "Presentación en inglés de un territorio económico y cultural",
+            "Présentation en Francais et en Anglais d'un territoire.": "Presentación en francés e inglés de un territorio.",
+            "P1_Desc": "Este proyecto consiste en presentar un territorio que haya acogido los Juegos Olímpicos, utilizando dos idiomas: el francés, que aborda el aspecto histórico, arquitectónico y el impacto en la ciudad; y el inglés, que trata los aspectos geográficos, humanos y económicos. Este trabajo en grupo, realizado por tres personas, nos llevó a elegir una ciudad. Optamos por Atenas, ya que posee un pasado rico vinculado a los Juegos Olímpicos y una historia muy desarrollada a través de la mitología, lo que se refleja en sus numerosos monumentos.",
+            "Applications utilisés:": "Aplicaciones utilizadas:",
+            "P1_Apps": "Word, Power Point y numerosos sitios de internet",
+            "Apprentissages:": "Aprendizajes:",
+            "P1_Learning": "Investigación y recuperación de información importante, así como un análisis y verificación de los datos obtenidos, seguido de una presentación de nuestros resultados con nuestros descubrimientos de la ciudad.",
+            // Projet 2
+            "Apprendre en situation la production de données en entreprise": "Aprender en situación la producción de datos en empresa",
+            "Réussir a analyser et faire ressortir des données.": "Lograr analizar y resaltar datos.",
+            "P2_Desc_Short": "Este proyecto tenía como objetivo darnos una primera evaluación de nuestras habilidades para analizar datos y retener la información más relevante, así como escribir un texto que permitiera que los análisis que realizamos hablaran, acompañados de gráficos que permitieran ver y explicar visualmente el texto.",
+            "P2_Apps": "Word y Excel",
+            "P2_Learning": "Análisis global de datos y explicación de la investigación",
+            // Projet 3
+            "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple": "Preparación y síntesis de una tabla de datos para un análisis exploratorio simple",
+            "Etablir un tableaux de bord et un compte rendu d'une enquête.": "Establecer un tablero de control y un informe de una encuesta.",
+            "P3_Desc_Short": "Este proyecto consistía en transcribir digitalmente una encuesta realizada en papel para poder recuperar información que luego nos sirvió para resaltar los resultados más significativos y también los más sorprendentes, para luego distribuir el trabajo con mi compañero y realizar un informe visual y textual.",
+            "P3_Apps": "Word y Sphinx",
+            "P3_Learning": "Transcripción de datos, análisis de datos profundos y formato de resultados",
+            // Projet 4
+            "Ecriture et lecture de fichiers de données": "Escritura y lectura de archivos de datos",
+            "Prendre un fichier du format JSON et le rendre en CSV.": "Tomar un archivo en formato JSON y convertirlo a CSV.",
+            "P4_Desc_Short": "Este proyecto en parejas tenía como objetivo recuperar un archivo en formato JSON y crear un código Python para convertirlo en un archivo CSV, que es un formato más legible y fácil de usar.",
+            "P4_Apps": "Python y fuentes externas para el código",
+            "P4_Learning": "Procesamiento de formato y aplicación de un código de transformación",
+            // Projet 5
+            "Création d’un reporting": "Creación de un informe",
+            "Création d'une application sur Excel/VBA.": "Creación de una aplicación en Excel/VBA.",
+            "P5_Desc": "Este proyecto consistía en crear una aplicación en Excel para optimizar la entrada de calificaciones mediante VBA. Este trabajo, realizado en binomio, nos permitió distribuir las tareas según nuestras preferencias, asegurando que cada uno participara en todas las etapas para perfeccionarnos y progresar.",
+            "P5_Apps": "Word y Excel",
+            "P5_Learning": "Conocer los lenguajes de Excel y VBA y crear un manual de usuario para la aplicación.",
+            // Projet 6
+            "Mise en œuvre d'une enquête": "Implementación de una encuesta",
+            "Récupération, analyse et synthèse de données d'un enquête.": "Recopilación, análisis y síntesis de datos de una encuesta.",
+            "P6_Desc": "Este proyecto consiste en agrupar los datos de una encuesta y seleccionar los más pertinentes para resaltarlos. El trabajo se realizó en binomio: primero reunimos la información proporcionada, luego realizamos un análisis antes de poner en común los resultados obtenidos. Luego, repartimos el trabajo restante para elaborar una síntesis clara, que permitiera valorar eficazmente los resultados, acompañada de un informe y un panel de control.",
+            "P6_Apps": "Sphinx y Word",
+            "P6_Learning": "Análisis y relación de múltiples variables, así como la síntesis y la puesta en valor de numerosos resultados.",
+            // Projet 7
+            "Conception et implémentation d'une base de données": "Diseño e implementación de una base de datos",
+            "Création et optimisation d'une base de données correspondant au thème.": "Creación y optimización de una base de datos correspondiente al tema.",
+            "P7_Desc": "Este proyecto consiste en crear una base de datos y alimentarla a través de una aplicación desarrollada en Python, para ayudar a los salineros a organizar mejor su producción y sus ventas. Realizado en binomio, primero nos tomamos el tiempo para comprender bien el tema, luego distribuimos las tareas en función de las habilidades de cada uno. Después de un primer trabajo individual, colaboramos en la parte principal del proyecto: la automatización de la base de datos mediante un código Python, utilizando archivos CSV, todo de manera simplificada para permitir un uso accesible para todos.",
+            "P7_Apps": "Python y easy PHP ",
+            "P7_Learning": "Aprender a crear una base de datos, hacer una aplicación con Python y conectar un código Python a una base de datos.",
+            // Projet 8
+            "Régression sur des données réelles": "Regresión sobre datos reales",
+            "Analyse de données réels afin de faire des previsions sur des logements.": "Análisis de datos reales para hacer predicciones sobre viviendas.",
+            "P8_Desc": "Este proyecto consiste en establecer un vínculo entre numerosas variables para poder estimar el precio de diferentes viviendas. Realizado en binomio, este trabajo tenía como objetivo determinar los precios de las viviendas con la mayor precisión posible. Para lograrlo, tuvimos que identificar un coeficiente de correlación lo suficientemente pertinente, basándonos en numerosos cálculos y una gran variedad de variables. Esta tarea resultó ser compleja, tediosa y larga.",
+            "P8_Apps": "Excel y R",
+            "P8_Learning": "Aprendizaje del código R y la creación de relaciones entre numerosas variables.",
+            // Projet 9
+            "Estimation par échantillonnage": "Estimación por muestreo",
+            "Estimer le nombre total d'habitants d'une regions.": "Estimar el número total de habitantes de una región.",
+            "P9_Desc": "Este proyecto consiste en escribir un código R que permita realizar cálculos estadísticos precisos que nos muestren las variables con los vínculos más fuertes y que, por lo tanto, nos permitan cruzarlas y poder afirmar resultados que muestren los vínculos evidentes que se encuentran en la región elegida, que en nuestro caso era Bretaña. Luego, tuvimos que explicarlos en un informe con el apoyo del código que hicimos.",
+            "P9_Apps": "Excel y Rstudio ",
+            "P9_Learning": "Codificación desarrollada con Rstudio y explotación de vínculos significativos entre variables",
+            // Projet 10
+            "Dataviz (Concours)": "Dataviz (Concurso)",
+            "Faire une infographie sur un thème choisi.": "Hacer una infografía sobre un tema elegido.",
+            "P10_Desc": "Este proyecto es al mismo tiempo un concurso entre todos los BUT de Francia, lo que lo hace diferente de los demás porque también tiene una mayor autonomía, ya que todo lo que tenemos es un archivo y unas instrucciones, por lo que debemos plantear una problemática, un tema y finalmente presentar una infografía, que es una visualización pero diferente de todas las que hemos podido hacer hasta ahora por su aspecto.",
+            "P10_Apps": "Python, PowerBi, Canva, Rstudio y búsquedas externas",
+            "P10_Learning": "Asignación de tareas para un tiempo corto para una cantidad de trabajo considerable, así como la adaptabilidad de la tarea solicitada.",
+            // Projet 11
+            "Construction et présentation d'indicateurs de performance": "Construcción y presentación de indicadores de rendimiento",
+            "Etablir un compte rendu visuel et écris sur une entreprise.": "Establecer un informe visual y escrito sobre una empresa.",
+            "P11_Desc": "Este proyecto consiste en escribir un código R que permita realizar cálculos estadísticos precisos que nos muestren las variables con los vínculos más fuertes y que, por lo tanto, nos permitan cruzarlas y poder afirmar resultados que muestren los vínculos evidentes que se encuentran en la región elegida, que en nuestro caso era Bretaña. Luego, tuvimos que explicarlos en un informe con el apoyo del código que hicimos.",
+            "P11_Apps": "Excel y Rstudio ",
+            "P11_Learning": "Codificación desarrollada con Rstudio y explotación de vínculos significativos entre variables",
+            // Projet 12
+            "Analyse de données, reporting et datavisualisation": "Análisis de datos, informes y visualización de datos",
+            "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.": "Creación de una herramienta dinámica que permita determinar la magnitud y las características de los AcVC en Francia.",
+            "P12_Desc": "Este último proyecto del año, realizado en grupo de cuatro, se llevó a cabo durante un período de dos semanas dedicadas. En colaboración con la organización Calyxis, el objetivo era diseñar una herramienta reutilizable para el análisis de futuros cuestionarios, permitiendo resaltar de manera clara los datos clave o la información más significativa. Para llevar a cabo este proyecto, movilizamos una gran parte de las competencias adquiridas durante el año: métodos de trabajo en grupo, diferentes lenguajes de programación, correlaciones estadísticas, así como diversas herramientas y técnicas de visualización de datos. Este proyecto constituye así un excelente balance de nuestros aprendizajes del año.",
+            "P12_Apps": "Python, R y Power bi",
+            "P12_Learning": "Establecer un buen trabajo en grupo, observar la importancia de cada visión y cada solicitud, así como la gestión del tiempo con la cantidad de trabajo."
+        },
+        'de': {
+            // Navbar
+            'Accueil': 'Startseite',
+            'À propos': 'Über mich',
+            'Bilan Personnel': 'Persönliche Bilanz',
+            'Projets': 'Projekte',
+            'Contact': 'Kontakt',
+            // Titre de la page
+            'Mes Projets Universitaires': 'Meine Universitären Projekte',
+            // Projet 1
+            "Présentation en anglais d'un territoire économique et culturel": "Englische Präsentation eines wirtschaftlichen und kulturellen Territoriums",
+            "Présentation en Francais et en Anglais d'un territoire.": "Präsentation eines Gebiets auf Französisch und Englisch.",
+            "P1_Desc": "Dieses Projekt besteht darin, ein Gebiet, das die Olympischen Spiele beherbergt hat, in zwei Sprachen zu präsentieren: Französisch, das die historischen, architektonischen Aspekte sowie die Auswirkungen auf die Stadt behandelt; und Englisch, das die geografischen, menschlichen und wirtschaftlichen Aspekte behandelt. Diese Gruppenarbeit, die zu dritt durchgeführt wurde, führte uns dazu, eine Stadt zu wählen. Wir entschieden uns für Athen, da sie eine reiche Vergangenheit im Zusammenhang mit den Olympischen Spielen und eine sehr entwickelte Geschichte durch die Mythologie hat, was sich in ihren zahlreichen Monumenten widerspiegelt.",
+            "Applications utilisés:": "Verwendete Anwendungen:",
+            "P1_Apps": "Word, Power Point sowie zahlreiche Internetseiten",
+            "Apprentissages:": "Lernziele:",
+            "P1_Learning": "Recherche und Abruf wichtiger Informationen sowie Analyse und Verifikation der erhaltenen Daten, gefolgt von einer Präsentation unserer Ergebnisse und Entdeckungen der Stadt.",
+            // Projet 2
+            "Apprendre en situation la production de données en entreprise": "Lernen der Datenproduktion im Unternehmenskontext",
+            "Réussir a analyser et faire ressortir des données.": "Daten erfolgreich analysieren und hervorheben.",
+            "P2_Desc_Short": "Dieses Projekt hatte das Ziel, uns eine erste Einschätzung unserer Fähigkeiten zur Datenanalyse und zur Extraktion der aussagekräftigsten Informationen zu ermöglichen, sowie einen Text zu verfassen, der die von uns durchgeführten Analysen zum Ausdruck bringt, begleitet von Grafiken zur visuellen Darstellung und Erklärung des Textes.",
+            "P2_Apps": "Word und Excel",
+            "P2_Learning": "Globale Datenanalyse und Erklärung der Forschung",
+            // Projet 3
+            "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple": "Vorbereitung und Synthese einer Datentabelle für eine einfache explorative Analyse",
+            "Etablir un tableaux de bord et un compte rendu d'une enquête.": "Ein Dashboard und einen Umfragebericht erstellen.",
+            "P3_Desc_Short": "Dieses Projekt bestand darin, eine auf Papier durchgeführte Umfrage digital zu transkribieren, um Informationen zu gewinnen, die wir dann nutzten, um die aussagekräftigsten und überraschendsten Ergebnisse hervorzuheben. Anschließend teilten wir die Arbeit mit meinem Kollegen auf, um eine visuelle und textuelle Zusammenfassung zu erstellen.",
+            "P3_Apps": "Word und Sphinx",
+            "P3_Learning": "Datentranskription, detaillierte Datenanalyse und Ergebnisformatierung",
+            // Projet 4
+            "Ecriture et lecture de fichiers de données": "Schreiben und Lesen von Datendateien",
+            "Prendre un fichier du format JSON et le rendre en CSV.": "Eine JSON-Datei nehmen und in CSV umwandeln.",
+            "P4_Desc_Short": "Dieses Partnerprojekt hatte das Ziel, eine JSON-Datei abzurufen und einen Python-Code zu erstellen, der sie in eine CSV-Datei umwandelt, die ein besser lesbares und einfacher zu verwendendes Format ist.",
+            "P4_Apps": "Python sowie externe Codequellen",
+            "P4_Learning": "Formatverarbeitung und Anwendung eines Transformationscodes",
+            // Projet 5
+            "Création d’un reporting": "Erstellung eines Reportings",
+            "Création d'une application sur Excel/VBA.": "Erstellung einer Anwendung in Excel/VBA.",
+            "P5_Desc": "Dieses Projekt bestand darin, eine Anwendung in Excel zu erstellen, um die Noteneingabe mit VBA zu optimieren. Diese Arbeit, die zu zweit durchgeführt wurde, ermöglichte es uns, die Aufgaben nach unseren Präferenzen zu verteilen, während wir sicherstellten, dass jeder an allen Schritten teilnahm, um sich zu verbessern und Fortschritte zu erzielen.",
+            "P5_Apps": "Word und Excel",
+            "P5_Learning": "Kenntnis der Excel- und VBA-Sprachen und Erstellung einer Bedienungsanleitung für die Anwendung.",
+            // Projet 6
+            "Mise en œuvre d'une enquête": "Durchführung einer Umfrage",
+            "Récupération, analyse et synthèse de données d'un enquête.": "Erfassung, Analyse und Synthese von Umfragedaten.",
+            "P6_Desc": "Dieses Projekt besteht darin, die Daten einer Umfrage zu gruppieren und die relevantesten auszuwählen, um sie hervorzuheben. Die Arbeit erfolgte im Zweierteam: Wir sammelten zunächst die bereitgestellten Informationen, führten dann eine Analyse durch, bevor wir die Ergebnisse zusammenführten. Anschließend teilten wir die verbleibende Arbeit auf, um eine klare Zusammenfassung zu erstellen, die eine effektive Hervorhebung der Ergebnisse ermöglichte, begleitet von einem Bericht und einem Dashboard.",
+            "P6_Apps": "Sphinx und Word",
+            "P6_Learning": "Analyse und Verknüpfung mehrerer Variablen sowie Synthese und Hervorhebung zahlreicher Ergebnisse.",
+            // Projet 7
+            "Conception et implémentation d'une base de données": "Entwurf und Implementierung einer Datenbank",
+            "Création et optimisation d'une base de données correspondant au thème.": "Erstellung und Optimierung einer Datenbank passend zum Thema.",
+            "P7_Desc": "Dieses Projekt besteht darin, eine Datenbank zu erstellen und diese über eine in Python entwickelte Anwendung zu füllen, um Salinenbetreibern zu helfen, ihre Produktion und Verkäufe besser zu organisieren. In Zweier-Teamarbeit nahmen wir uns zunächst die Zeit, das Thema gründlich zu verstehen, und verteilten dann die Aufgaben entsprechend den Fähigkeiten jedes Einzelnen. Nach einer ersten individuellen Arbeit arbeiteten wir gemeinsam am Hauptteil des Projekts: der Automatisierung der Datenbank mithilfe eines Python-Codes unter Verwendung von CSV-Dateien, alles auf vereinfachte Weise, um eine für jedermann zugängliche Nutzung zu ermöglichen.",
+            "P7_Apps": "Python und easy PHP ",
+            "P7_Learning": "Lernen, eine Datenbank zu erstellen, eine Anwendung über Python zu entwickeln und Python-Code mit einer Datenbank zu verbinden.",
+            // Projet 8
+            "Régression sur des données réelles": "Regression auf realen Daten",
+            "Analyse de données réels afin de faire des previsions sur des logements.": "Analyse von realen Daten, um Vorhersagen über Wohnungen zu treffen.",
+            "P8_Desc": "Dieses Projekt besteht darin, eine Verbindung zwischen zahlreichen Variablen herzustellen, um den Preis verschiedener Wohnungen schätzen zu können. Diese Arbeit wurde zu zweit durchgeführt und hatte das Ziel, die Wohnungspreise so genau wie möglich zu bestimmen. Dafür mussten wir einen ausreichend relevanten Korrelationskoeffizienten identifizieren, basierend auf zahlreichen Berechnungen und einer Vielzahl von Variablen. Diese Aufgabe erwies sich als komplex, mühsam und zeitaufwendig.",
+            "P8_Apps": "Excel und R",
+            "P8_Learning": "Erlernen des R-Codes und der Erstellung von Beziehungen zwischen zahlreichen Variablen.",
+            // Projet 9
+            "Estimation par échantillonnage": "Schätzung durch Stichprobenziehung",
+            "Estimer le nombre total d'habitants d'une regions.": "Die Gesamtzahl der Einwohner einer Region schätzen.",
+            "P9_Desc": "Dieses Projekt besteht darin, einen R-Code zu schreiben, der präzise statistische Berechnungen durchführt, die uns die stärksten Verbindungen zwischen den Variablen aufzeigen und es uns somit ermöglichen, sie zu kreuzen und Ergebnisse zu bestätigen, die die offensichtlichen Verbindungen in der gewählten Region, in unserem Fall der Bretagne, hervorheben. Anschließend mussten wir sie in einem Bericht erläutern, gestützt auf den von uns erstellten Code.",
+            "P9_Apps": "Excel und Rstudio ",
+            "P9_Learning": "Entwickelte Codierung mit Rstudio und Nutzung signifikanter Verbindungen zwischen Variablen",
+            // Projet 10
+            "Dataviz (Concours)": "Dataviz (Wettbewerb)",
+            "Faire une infographie sur un thème choisi.": "Eine Infografik zu einem ausgewählten Thema erstellen.",
+            "P10_Desc": "Dieses Projekt ist gleichzeitig ein Wettbewerb zwischen allen BUTs in Frankreich, was es von anderen Projekten unterscheidet, da es auch eine größere Autonomie bietet. Wir erhalten eine Datei und Anweisungen, müssen dann eine Problemstellung und ein Thema entwickeln und schließlich eine Infografik abliefern, die eine Visualisierung darstellt, sich aber in ihrem Erscheinungsbild von allen bisherigen unterscheidet.",
+            "P10_Apps": "Python, PowerBi, Canva, Rstudio sowie externe Recherchen",
+            "P10_Learning": "Aufgabenverteilung für eine kurze Zeit bei erheblichem Arbeitsaufwand sowie die Anpassungsfähigkeit an die gestellte Aufgabe.",
+            // Projet 11
+            "Construction et présentation d'indicateurs de performance": "Konstruktion und Präsentation von Leistungsindikatoren",
+            "Etablir un compte rendu visuel et écris sur une entreprise.": "Einen visuellen und schriftlichen Bericht über ein Unternehmen erstellen.",
+            "P11_Desc": "Dieses Projekt besteht darin, einen R-Code zu schreiben, der präzise statistische Berechnungen durchführt, die uns die stärksten Verbindungen zwischen den Variablen aufzeigen und es uns somit ermöglichen, sie zu kreuzen und Ergebnisse zu bestätigen, die die offensichtlichen Verbindungen in der gewählten Region, in unserem Fall der Bretagne, hervorheben. Anschließend mussten wir sie in einem Bericht erläutert, gestützt auf den von uns erstellten Code.",
+            "P11_Apps": "Excel und Rstudio ",
+            "P11_Learning": "Entwickelte Codierung mit Rstudio und Nutzung signifikanter Verbindungen zwischen Variablen",
+            // Projet 12
+            "Analyse de données, reporting et datavisualisation": "Datenanalyse, Reporting und Datenvisualisierung",
+            "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.": "Erstellung eines dynamischen Tools zur Bestimmung des Ausmaßes und der Merkmale von AcVC in Frankreich.",
+            "P12_Desc": "Dieses letzte Projekt des Jahres, das in einer Vierergruppe durchgeführt wurde, erstreckte sich über einen Zeitraum von zwei dedizierten Wochen. In Zusammenarbeit mit der Organisation Calyxis bestand das Ziel darin, ein wiederverwendbares Tool für die Analyse zukünftiger Fragebögen zu entwickeln, um Schlüsseldaten oder die signifikantesten Informationen klar hervorzuheben. Um dieses Projekt erfolgreich abzuschließen, mobilisierten wir einen Großteil der im Laufe des Jahres erworbenen Fähigkeiten: Gruppenarbeitsmethoden, verschiedene Programmiersprachen, statistische Korrelationen sowie verschiedene Datenvisualisierungstools und -techniken. Dieses Projekt stellt somit eine hervorragende Bilanz unserer Lernprozesse des Jahres dar.",
+            "P12_Apps": "Python, R und Power bi",
+            "P12_Learning": "Gute Teamarbeit etablieren, die Bedeutung jeder Sichtweise und jeder Anforderung sowie das Zeitmanagement bei der Arbeitsmenge berücksichtigen."
+        },
+        'it': {
+            // Navbar
+            'Accueil': 'Home',
+            'À propos': 'Chi sono',
+            'Bilan Personnel': 'Bilancio Personale',
+            'Projets': 'Progetti',
+            'Contact': 'Contatti',
+            // Titre de la page
+            'Mes Projets Universitaires': 'I Miei Progetti Universitari',
+            // Projet 1
+            "Présentation en anglais d'un territoire économique et culturel": "Presentazione in inglese di un territorio economico e culturale",
+            "Présentation en Francais et en Anglais d'un territoire.": "Presentazione di un territorio in francese e inglese.",
+            "P1_Desc": "Questo progetto consiste nel presentare un territorio che ha ospitato i Giochi Olimpici, utilizzando due lingue: il francese, che affronta l'aspetto storico, architettonico e l'impatto sulla città; e l'inglese, che tratta gli aspetti geografici, umani ed economici. Questo lavoro di gruppo, realizzato in tre, ci ha portato a scegliere una città. Abbiamo optato per Atene, poiché possiede un ricco passato legato ai Giochi Olimpici e una storia molto sviluppata attraverso la mitologia, che si riflette nei suoi numerosi monumenti.",
+            "Applications utilisés:": "Applicazioni utilizzate:",
+            "P1_Apps": "Word, Power Point e numerosi siti internet",
+            "Apprentissages:": "Apprendimenti:",
+            "P1_Learning": "Ricerca e recupero di informazioni importanti, analisi e verifica dei dati ottenuti, seguita da una presentazione dei nostri risultati con le nostre scoperte sulla città.",
+            // Projet 2
+            "Apprendre en situation la production de données en entreprise": "Imparare la produzione di dati in azienda",
+            "Réussir a analyser et faire ressortir des données.": "Riuscire ad analizzare ed estrarre dati.",
+            "P2_Desc_Short": "Questo progetto aveva lo scopo di fornirci una prima valutazione delle nostre capacità di analizzare dati e di estrarre le informazioni più significative, oltre a scrivere un testo che permettesse di esprimere le analisi che avevamo condotto, accompagnate da grafici per visualizzare e spiegare il testo.",
+            "P2_Apps": "Word ed Excel",
+            "P2_Learning": "Analisi globale dei dati e spiegazione della ricerca",
+            // Projet 3
+            "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple": "Preparazione e sintesi di una tabella di dati per una semplice analisi esplorativa",
+            "Etablir un tableaux de bord et un compte rendu d'une enquête.": "Stabilire un dashboard e un resoconto di un'indagine.",
+            "P3_Desc_Short": "Questo progetto consisteva nel trascrivere digitalmente un'indagine condotta su carta per poter recuperare informazioni che ci sono poi servite per evidenziare i risultati più significativi e anche i più sorprendenti, per poi distribuire il lavoro con il mio collega e realizzare un resoconto visivo e testuale.",
+            "P3_Apps": "Word e Sphinx",
+            "P3_Learning": "Trascrizione dei dati, analisi approfondite dei dati e formattazione dei risultati",
+            // Projet 4
+            "Ecriture et lecture de fichiers de données": "Scrittura e lettura di file di dati",
+            "Prendre un fichier du format JSON et le rendre en CSV.": "Prendere un file in formato JSON e convertirlo in CSV.",
+            "P4_Desc_Short": "Questo progetto in coppia aveva l'obiettivo di recuperare un file in formato JSON e di creare un codice Python che lo convertisse in un file CSV, un formato più leggibile e facile da usare.",
+            "P4_Apps": "Python e fonti esterne per il codice",
+            "P4_Learning": "Elaborazione del formato e applicazione di un codice di trasformazione",
+            // Projet 5
+            "Création d’un reporting": "Creazione di un reporting",
+            "Création d'une application sur Excel/VBA.": "Creazione di un'applicazione su Excel/VBA.",
+            "P5_Desc": "Questo progetto consisteva nel creare un'applicazione su Excel per ottimizzare l'inserimento dei voti grazie a VBA. Questo lavoro, realizzato in coppia, ci ha permesso di suddividere i compiti in base alle nostre preferenze, assicurando che ognuno partecipasse a tutte le fasi per perfezionarci e progredire.",
+            "P5_Apps": "Word ed Excel",
+            "P5_Learning": "Conoscere i linguaggi Excel e VBA e creare una guida per l'utilizzo dell'applicazione.",
+            // Projet 6
+            "Mise en œuvre d'une enquête": "Implementazione di un'indagine",
+            "Récupération, analyse et synthèse de données d'un enquête.": "Recupero, analisi e sintesi dei dati di un'indagine.",
+            "P6_Desc": "Questo progetto consiste nel raggruppare i dati di un'indagine e selezionare i più pertinenti per evidenziarli. Il lavoro si è svolto in coppia: abbiamo prima raccolto le informazioni fornite, poi effettuato un'analisi prima di mettere in comune i risultati ottenuti. Successivamente, abbiamo distribuito il lavoro restante per elaborare una sintesi chiara, che permetta di valorizzare efficacemente i risultati, accompagnata da una relazione e un dashboard.",
+            "P6_Apps": "Sphinx e Word",
+            "P6_Learning": "Analisi e correlazione di più variabili, nonché sintesi e valorizzazione di numerosi risultati.",
+            // Projet 7
+            "Conception et implémentation d'une base de données": "Progettazione e implementazione di un database",
+            "Création et optimisation d'une base de données correspondant au thème.": "Creazione e ottimizzazione di un database corrispondente al tema.",
+            "P7_Desc": "Questo progetto consiste nel creare un database e alimentarlo tramite un'applicazione sviluppata in Python, per aiutare i salinai a organizzare meglio la loro produzione e le loro vendite. Realizzato in coppia, ci siamo prima presi il tempo di comprendere bene l'argomento, poi abbiamo suddiviso i compiti in base alle competenze di ciascuno. Dopo un primo lavoro individuale, abbiamo collaborato alla parte principale del progetto: l'automazione del database tramite un codice Python, utilizzando file CSV, il tutto in modo semplificato per consentire un utilizzo accessibile a tutti.",
+            "P7_Apps": "Python ed easy PHP ",
+            "P7_Learning": "Imparare a creare un database, realizzare un'applicazione tramite Python e connettere un codice Python a un database.",
+            // Projet 8
+            "Régression sur des données réelles": "Regressione su dati reali",
+            "Analyse de données réels afin de faire des previsions sur des logements.": "Analisi di dati reali per fare previsioni sugli alloggi.",
+            "P8_Desc": "Questo progetto consiste nello stabilire un legame tra numerose variabili per poter stimare il prezzo di diverse abitazioni. Realizzato in coppia, questo lavoro aveva l'obiettivo di determinare i prezzi delle abitazioni con la massima precisione possibile. Per riuscirci, abbiamo dovuto identificare un coefficiente di correlazione sufficientemente pertinente, basandoci su numerosi calcoli e una grande varietà di variabili. Questo compito si è rivelato complesso, noioso e lungo.",
+            "P8_Apps": "Excel e R",
+            "P8_Learning": "Apprendimento del codice R e creazione di relazioni tra numerose variabili.",
+            // Projet 9
+            "Estimation par échantillonnage": "Stima per campionamento",
+            "Estimer le nombre total d'habitants d'une regions.": "Stimare il numero totale di abitanti di una regione.",
+            "P9_Desc": "Questo progetto consiste nello scrivere un codice R che permetta di effettuare calcoli statistici precisi che evidenzino le variabili con i collegamenti più forti e che quindi ci permettano di incrociarle e di poter affermare risultati che evidenziano i collegamenti evidenti che si trovano nella regione scelta, che nel nostro caso era la Bretagna. Successivamente, abbiamo dovuto spiegarli in un resoconto con il supporto del codice che abbiamo creato.",
+            "P9_Apps": "Excel e Rstudio ",
+            "P9_Learning": "Codifica sviluppata con Rstudio e sfruttamento di collegamenti significativi tra variabili",
+            // Projet 10
+            "Dataviz (Concours)": "Dataviz (Concorso)",
+            "Faire une infographie sur un thème choisi.": "Creare un'infografica su un tema scelto.",
+            "P10_Desc": "Questo progetto è allo stesso tempo un concorso tra tutti i BUT di Francia, il che lo rende diverso dagli altri perché è anche più autonomo, dato che tutto ciò che abbiamo è un file e delle istruzioni, quindi dobbiamo definire una problematica, un tema e infine presentare un'infografica, che è una visualizzazione ma diversa da tutte quelle che abbiamo potuto fare finora per il suo aspetto.",
+            "P10_Apps": "Python, PowerBi, Canva, Rstudio e ricerche esterne",
+            "P10_Learning": "Assegnazione dei compiti per un breve periodo per una quantità di lavoro considerevole, oltre all'adattabilità al compito richiesto.",
+            // Projet 11
+            "Construction et présentation d'indicateurs de performance": "Costruzione e presentazione di indicatori di performance",
+            "Etablir un compte rendu visuel et écris sur une entreprise.": "Stabilire un resoconto visivo e scritto su un'azienda.",
+            "P11_Desc": "Questo progetto consiste nello scrivere un codice R che permetta di effettuare calcoli statistici precisi che evidenzino le variabili con i collegamenti più forti e che quindi ci permettano di incrociarle e di poter affermare risultati che evidenziano i collegamenti evidenti che si trovano nella regione scelta, che nel nostro caso era la Bretagna. Successivamente, abbiamo dovuto spiegarli in un resoconto con il supporto del codice che abbiamo creato.",
+            "P11_Apps": "Excel e Rstudio ",
+            "P11_Learning": "Codifica sviluppata con Rstudio e sfruttamento di collegamenti significativi tra variabili",
+            // Projet 12
+            "Analyse de données, reporting et datavisualisation": "Analisi dei dati, reporting e visualizzazione dei dati",
+            "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.": "Creazione di uno strumento dinamico che permetta di determinare l'entità e le caratteristiche degli AcVC in Francia.",
+            "P12_Desc": "Quest'ultimo progetto dell'anno, realizzato in gruppo di quattro, si è svolto in un periodo di due settimane dedicate. In collaborazione con l'organismo Calyxis, l'obiettivo era di progettare uno strumento riutilizzabile per l'analisi di futuri questionari, permettendo di evidenziare in modo chiaro i dati chiave o le informazioni più significative. Per portare a termine questo progetto, abbiamo mobilitato gran parte delle competenze acquisite durante l'anno: metodi di lavoro di gruppo, diversi linguaggi di programmazione, correlazioni statistiche, nonché diversi strumenti e tecniche di visualizzazione dei dati. Questo progetto costituisce quindi un eccellente bilancio dei nostri apprendimenti dell'anno.",
+            "P12_Apps": "Python, R e Power bi",
+            "P12_Learning": "Implementare un buon lavoro di gruppo, osservare l'importanza di ogni punto di vista e di ogni richiesta, nonché la gestione del tempo con la quantità di lavoro."
+        },
+        'pt': {
+            // Navbar
+            'Accueil': 'Início',
+            'À propos': 'Sobre',
+            'Bilan Personnel': 'Avaliação Pessoal',
+            'Projets': 'Projetos',
+            'Contact': 'Contato',
+            // Titre de la page
+            'Mes Projets Universitaires': 'Meus Projetos Universitários',
+            // Projet 1
+            "Présentation en anglais d'un territoire économique et culturel": "Apresentação em inglês de um território econômico e cultural",
+            "Présentation en Francais et en Anglais d'un territoire.": "Apresentação em francês e inglês de um território.",
+            "P1_Desc": "Este projeto consiste em apresentar um território que sediou os Jogos Olímpicos, utilizando duas línguas: o francês, que aborda o aspecto histórico, arquitetônico e o impacto na cidade; e o inglês, que trata dos aspectos geográficos, humanos e econômicos. Este trabalho em grupo, realizado por três pessoas, nos levou a escolher uma cidade. Optamos por Atenas, pois possui um passado rico ligado aos Jogos Olímpicos e uma história muito desenvolvida através da mitologia, o que se reflete em seus numerosos monumentos.",
+            "Applications utilisés:": "Aplicações utilizadas:",
+            "P1_Apps": "Word, Power Point e vários sites da internet",
+            "Apprentissages:": "Aprendizagens:",
+            "P1_Learning": "Pesquisa e recuperação de informações importantes, bem como análise e verificação dos dados obtidos, seguida de uma apresentação dos nossos resultados com as nossas descobertas da cidade.",
+            // Projet 2
+            "Apprendre en situation la production de données en entreprise": "Aprender produção de dados em contexto empresarial",
+            "Réussir a analyser et faire ressortir des données.": "Conseguir analisar e realçar dados.",
+            "P2_Desc_Short": "Este projeto teve como objetivo nos dar uma primeira avaliação de nossas habilidades em analisar dados e reter as informações mais relevantes, bem como escrever um texto que permita expressar as análises que conduzimos, acompanhadas de gráficos para visualizar e explicar o texto.",
+            "P2_Apps": "Word e Excel",
+            "P2_Learning": "Análise global de dados e explicação da pesquisa",
+            // Projet 3
+            "Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple": "Preparação e síntese de uma tabela de dados para uma análise exploratória simples",
+            "Etablir un tableaux de bord et un compte rendu d'une enquête.": "Estabelecer um painel e um relatório de inquérito.",
+            "P3_Desc_Short": "Este projeto consistia em transcrever digitalmente um inquérito realizado em papel para poder recuperar informações que nos serviram para realçar os resultados mais significativos e também os mais surpreendentes, para depois dividir o trabalho com o meu colega e elaborar um balanço visual e textual.",
+            "P3_Apps": "Word e Sphinx",
+            "P3_Learning": "Transcrição de dados, análises aprofundadas de dados e formatação de resultados",
+            // Projet 4
+            "Ecriture et lecture de fichiers de données": "Escrita e leitura de arquivos de dados",
+            "Prendre un fichier du format JSON et le rendre en CSV.": "Pegar um arquivo no formato JSON e convertê-lo para CSV.",
+            "P4_Desc_Short": "Este projeto em dupla tinha como objetivo recuperar um arquivo no formato JSON e criar um código Python que o convertesse para o formato CSV, que é mais legível e fácil de usar.",
+            "P4_Apps": "Python e fontes externas para o código",
+            "P4_Learning": "Processamento de formato e aplicação de um código de transformação",
+            // Projet 5
+            "Création d’un reporting": "Criação de um relatório",
+            "Création d'une application sur Excel/VBA.": "Criação de uma aplicação em Excel/VBA.",
+            "P5_Desc": "Este projeto consistiu em criar um aplicativo no Excel para otimizar a entrada de notas usando VBA. Este trabalho, realizado em dupla, nos permitiu distribuir as tarefas de acordo com nossas preferências, garantindo que todos participassem de todas as etapas para nos aperfeiçoar e progredir.",
+            "P5_Apps": "Word e Excel",
+            "P5_Learning": "Conhecer as linguagens Excel e VBA e criar um manual de uso para o aplicativo.",
+            // Projet 6
+            "Mise en œuvre d'une enquête": "Implementação de um Inquérito",
+            "Récupération, analyse et synthèse de données d'un enquête.": "Recuperação, análise e síntese de dados de um inquérito.",
+            "P6_Desc": "Este projeto consiste em agrupar os dados de um inquérito e selecionar os mais pertinentes para os valorizar. O trabalho decorreu em dupla: primeiro recolhemos as informações fornecidas, depois efetuámos uma análise antes de partilhar os resultados obtidos. Em seguida, distribuímos o trabalho restante para elaborar uma síntese clara, permitindo valorizar eficazmente os resultados, acompanhada de um relatório e de um painel de controlo.",
+            "P6_Apps": "Sphinx e Word",
+            "P6_Learning": "Análise e correlação de múltiplas variáveis, bem como a síntese e valorização de numerosos resultados.",
+            // Projet 7
+            "Conception et implémentation d'une base de données": "Concepção e Implementação de um Banco de Dados",
+            "Création et optimisation d'une base de données correspondant au thème.": "Criação e otimização de um banco de dados correspondente ao tema.",
+            "P7_Desc": "Este projeto consiste em criar um banco de dados e alimentá-lo através de uma aplicação desenvolvida em Python, a fim de ajudar os produtores de sal a organizar melhor sua produção e vendas. Realizado em dupla, primeiro dedicamos tempo para entender bem o assunto, depois distribuímos as tarefas de acordo com as habilidades de cada um. Após um trabalho individual inicial, colaboramos na parte principal do projeto: a automação do banco de dados utilizando um código Python, com arquivos CSV, tudo de forma simplificada para permitir um uso acessível a todos.",
+            "P7_Apps": "Python e easy PHP ",
+            "P7_Learning": "Aprender a criar um banco de dados, fazer uma aplicação via Python e conectar um código Python a um banco de dados.",
+            // Projet 8
+            "Régression sur des données réelles": "Regressão sobre dados reais",
+            "Analyse de données réels afin de faire des previsions sur des logements.": "Análise de dados reais para fazer previsões sobre imóveis.",
+            "P8_Desc": "Este projeto consiste em estabelecer uma ligação entre várias variáveis para poder estimar o preço de diferentes imóveis. Realizado em dupla, este trabalho tinha como objetivo determinar os preços dos imóveis com a maior precisão possível. Para isso, tivemos de identificar um coeficiente de correlação suficientemente pertinente, baseando-nos em numerosos cálculos e uma grande variedade de variáveis. Esta tarefa revelou-se complexa, tediosa e longa.",
+            "P8_Apps": "Excel e R",
+            "P8_Learning": "Aprendizagem do código R e a criação de relações entre numerosas variáveis.",
+            // Projet 9
+            "Estimation par échantillonnage": "Estimativa por Amostragem",
+            "Estimer le nombre total d'habitants d'une regions.": "Estimar o número total de habitantes de uma região.",
+            "P9_Desc": "Este projeto consiste em escrever um código R que permita realizar cálculos estatísticos precisos que realcem as variáveis com as ligações mais fortes e que, portanto, nos permitam cruzá-las e afirmar resultados que realcem as ligações evidentes que se encontram na região escolhida, que no nosso caso era a Bretanha. Em seguida, tivemos de explicá-los num relatório com o apoio do código que fizemos.",
+            "P9_Apps": "Excel e Rstudio ",
+            "P9_Learning": "Codificação desenvolvida com Rstudio e exploração de ligações significativas entre variáveis",
+            // Projet 10
+            "Dataviz (Concours)": "Dataviz (Concurso)",
+            "Faire une infographie sur un thème choisi.": "Criar um infográfico sobre um tema escolhido.",
+            "P10_Desc": "Este projeto é ao mesmo tempo um concurso entre todos os BUTs da França, o que o torna diferente dos outros, pois também possui maior autonomia, já que tudo o que temos é um arquivo e instruções. Assim, devemos levantar uma problemática, um tema e finalmente apresentar um infográfico, que é uma visualização, mas diferente de todas as que pudemos fazer até agora por sua aparência.",
+            "P10_Apps": "Python, PowerBi, Canva, Rstudio e pesquisas externas",
+            "P10_Learning": "Atribuição de tarefas por um curto período para uma quantidade considerável de trabalho, bem como a adaptabilidade à tarefa solicitada.",
+            // Projet 11
+            "Construction et présentation d'indicateurs de performance": "Construção e apresentação de indicadores de desempenho",
+            "Etablir un compte rendu visuel et écris sur une entreprise.": "Estabelecer um relatório visual e escrito sobre uma empresa.",
+            "P11_Desc": "Este projeto consiste em escrever um código R que permita realizar cálculos estatísticos precisos que realcem as variáveis com as ligações mais fortes e que, portanto, nos permitam cruzá-las e afirmar resultados que realcem as ligações evidentes que se encontram na região escolhida, que no nosso caso era a Bretanha. Em seguida, tivemos de explicá-los num relatório com o apoio do código que fizemos.",
+            "P11_Apps": "Excel e Rstudio ",
+            "P11_Learning": "Codificação desenvolvida com Rstudio e exploração de ligações significativas entre variáveis",
+            // Projet 12
+            "Analyse de données, reporting et datavisualisation": "Análise de Dados, Relatórios e Visualização de Dados",
+            "Création d'un outil dynamique qui permette de déterminer l'ampleur et les caractéristiques des AcVC en Frnace.": "Criação de uma ferramenta dinâmica que permita determinar a extensão e as características dos AcVC em França.",
+            "P12_Desc": "Este último projeto do ano, realizado em grupo de quatro, decorreu durante um período de duas semanas dedicadas. Em colaboração com a organização Calyxis, o objetivo era conceber uma ferramenta reutilizável para a análise de futuros questionários, permitindo destacar de forma clara os dados-chave ou as informações mais significativas. Para levar a cabo este projeto, mobilizámos grande parte das competências adquiridas ao longo do ano: métodos de trabalho em grupo, diferentes linguagens de programação, correlações estatísticas, bem como diversas ferramentas e técnicas de visualização de dados. Este projeto constitui, assim, um excelente balanço das nossas aprendizagens do ano.",
+            "P12_Apps": "Python, R e Power bi",
+            "P12_Learning": "Implementar um bom trabalho de grupo, observar a importância de cada visão e cada pedido, bem como a gestão do tempo com a quantidade de trabalho."
+        }
+    };
+
+    let currentLanguage = 'fr';
+
+    // Crée le sélecteur de langue et l'ajoute à la page
+    function createLanguageSelector() {
+        const container = document.getElementById('language_selector_container');
+        if (!container) return;
+
+        const select = document.createElement('select');
+        select.className = 'language-selector';
+        select.id = 'language-selector';
+
+        const languages = [
+            { code: 'fr', name: '🇫🇷 Français', flag: '🇫🇷' },
+            { code: 'en', name: '🇬🇧 English', flag: '🇬🇧' },
+            { code: 'es', name: '🇪🇸 Español', flag: '🇪🇸' },
+            { code: 'de', name: '🇩🇪 Deutsch', flag: '🇩🇪' },
+            { code: 'it', name: '🇮🇹 Italiano', flag: '🇮🇹' },
+            { code: 'pt', name: '🇵🇹 Português', flag: '🇵🇹' }
+        ];
+
+        languages.forEach(lang => {
+            const option = document.createElement('option');
+            option.value = lang.code;
+            option.textContent = lang.name;
+            select.appendChild(option);
+        });
+
+        select.addEventListener('change', (e) => {
+            translatePage(e.target.value);
+        });
+
+        container.appendChild(select);
+    }
+
+    /**
+     * Traduit le contenu de la page dans la langue cible.
+     * @param {string} targetLang - Le code de la langue cible (ex: 'en', 'fr').
+     */
+    function translatePage(targetLang) {
+        if (!translations[targetLang]) return;
+
+        currentLanguage = targetLang;
+
+        // Sauvegarder le choix de langue de l'utilisateur
+        localStorage.setItem('preferredLanguage', targetLang);
+
+        // Traduire tous les éléments avec l'attribut data-translate
+        const elementsToTranslate = document.querySelectorAll('[data-translate]');
+        elementsToTranslate.forEach(element => {
+            const key = element.getAttribute('data-translate');
+            if (translations[targetLang][key]) {
+                element.textContent = translations[targetLang][key];
+            }
+        });
+
+        // Mettre à jour la langue du document HTML
+        document.documentElement.lang = targetLang;
+
+        // Mettre à jour la sélection dans le sélecteur de langue
+        const selector = document.getElementById('language-selector');
+        if (selector) {
+            selector.value = targetLang;
+        }
+    }
+
+    // Détecte automatiquement la langue du navigateur et applique la traduction
+    function detectAndApplyLanguage() {
+        // Vérifier si l'utilisateur a déjà une préférence sauvegardée
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && translations[savedLang]) {
+            translatePage(savedLang);
+            return;
+        }
+
+        // Récupérer la langue du navigateur
+        const browserLang = navigator.language || navigator.userLanguage;
+        const langCode = browserLang.split('-')[0].toLowerCase();
+
+        console.log('Langue du navigateur détectée:', langCode);
+
+        // Si ce n'est pas français et que la langue est supportée, traduire
+        if (langCode !== 'fr' && translations[langCode]) {
+            translatePage(langCode);
+        } else if (langCode !== 'fr') {
+            // Si la langue n'est pas supportée, utiliser l'anglais par défaut
+            translatePage('en');
+        }
+    }
+
+    // Gère le basculement entre le thème clair et le thème sombre
+    function initTheme() {
+        const themeToggleButton = document.getElementById('theme-toggle');
+        if (!themeToggleButton) return;
+
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                themeToggleButton.textContent = '☀️'; // Icône pour le mode clair
+            } else {
+                document.body.classList.remove('dark-theme');
+                themeToggleButton.textContent = '🌙'; // Icône pour le mode sombre
+            }
+        };
+
+        // Charger le thème sauvegardé
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+
+        themeToggleButton.addEventListener('click', () => {
+            const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            applyTheme(newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+
+    // Initialisation au chargement complet de la page
+    window.addEventListener('DOMContentLoaded', () => {
+        console.log('Page chargée - Initialisation...');
+
+        // Créer le sélecteur de langue
+        createLanguageSelector();
+
+        // Initialiser le thème
+        initTheme();
+
+        // Appliquer la détection automatique après un court délai pour s'assurer que le DOM est prêt
+        setTimeout(() => {
+            detectAndApplyLanguage();
+        }, 100);
+
+        // Afficher la diapositive initiale du carrousel (logique existante)
+        showSlide(currentSlide);
+    });
+
+    // Écoute les changements de langue du navigateur (pour une détection dynamique)
+    window.addEventListener('languagechange', () => {
+        console.log('Changement de langue détecté');
+        detectAndApplyLanguage();
+    });
+</script>
+
+<!-- Modales pour les détails de chaque projet -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(1)">&times;</span>
+        <div class="modal-header" data-translate="Présentation en anglais d'un territoire économique et culturel">Présentation en anglais d'un territoire économique et culturel</div>
+        <div class="modal-body">
+            <p data-translate="P1_Desc">Ce projet consiste à présenter un territoire ayant accueilli les Jeux Olympiques, en utilisant deux langues : le français, qui aborde l’aspect historique, architectural ainsi que l’impact sur la ville, et l’anglais, qui traite des aspects géographique, humain et économique. Ce travail de groupe, réalisé à trois, nous a amenés à choisir une ville. Nous avons opté pour Athènes, car elle possède un passé riche en lien avec les Jeux Olympiques et une histoire très développée à travers la mythologie, ce qui se reflète dans ses nombreux monuments.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P1_Apps">Word, Power Point ainsi que de nombreux sites internets</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P1_Learning">Recherche et récupération des informations importantes ainsi qu'une analyse et vérification des données obtenus suivi d'une présentaion de nos résultats avec nos découvertes de la ville.</p>
+        </div>
+    </div>
+</div>
+<div id="modal2" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(2)">&times;</span>
+        <div class="modal-header" data-translate="Apprendre en situation la production de données en entreprise">Apprendre en situation la production de données en entreprise</div>
+        <div class="modal-body">
+            <p data-translate="P2_Desc_Short">Ce projet avait pour but de nous une première évaluation de nos compétences à analyser des données et à en retenir les informations qui sont les plus parlantes, ainsi que le fait d'écrire un texte qui permet de faire parler les analyses que nous avons pu mener, accompagnées de graphiques permettant de voir et d'expliquer visuellement le texte.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P2_Apps">Word et Excel</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P2_Learning">Analyse globales des données et Explication des recherches</p>
+        </div>
+    </div>
+</div>
+<div id="modal3" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(3)">&times;</span>
+        <div class="modal-header" data-translate="Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple">Préparation et synthèse d'un tableau de données en vue d'une analyse exploratoire simple</div>
+        <div class="modal-body">
+            <p data-translate="P3_Desc_Short">Ce projet consistait à retranscrire en numérique une enquête qui a été menée sur papier afin de pouvoir récupérer des informations qui nous on donc servi ensuite a faire ressortir les résultats les plus parlant mais aussi les résultats qui étaient les plus surprenants pour ensuite se distribuer le travail avec mon camarade pour faire un bilan visuel ainsi qu'un bilan textuel.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P3_Apps">Word et Sphynx</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P3_Learning">Retranscrption de données, Analyses approfondis des données ainsi que mise en page des résultats</p>
+        </div>
+    </div>
+</div>
+<div id="modal4" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(4)">&times;</span>
+        <div class="modal-header" data-translate="Ecriture et lecture de fichiers de données">Ecriture et lecture de fichiers de données</div>
+        <div class="modal-body">
+            <p data-translate="P4_Desc_Short">Ce projet été en binômes et avait pour objectif de récuperer un fichier sous format json et de faire un code python qui permet de le faire passer en fichier csv qui est donc un format qui est plus lisible et plus simple d'utilisation.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P4_Apps">python ainsi que des sources exterieurs pour le codes </p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P4_Learning">Traitement d'un format et application d'un code de transformation</p>
+        </div>
+    </div>
+</div>
+
+
+<div id="modal5" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(5)">&times;</span>
+        <div class="modal-header" data-translate="Création d’un reporting">Création d'un reporting</div>
+        <div class="modal-body">
+            <p data-translate="P5_Desc">Ce projet consistait à créer une application sur Excel afin d’optimiser la saisie des notes grâce à VBA.Ce travail, réalisé en binôme, nous a permis de répartir les tâches selon nos préférences, tout en veillant à ce que chacun participe à l’ensemble des étapes afin de nous perfectionner et de progresser.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P5_Apps">Word et Excel</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P5_Learning">Connaitre les langages Excel ainsi que VBA et faire une notice d'utilisation de l'application.<p></p>
+        </div>
+    </div>
+</div>
+
+<div id="modal6" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(6)">&times;</span>
+        <div class="modal-header" data-translate="Mise en œuvre d'une enquête">Mise en oeuvre d'une enquête</div>
+        <div class="modal-body">
+            <p data-translate="P6_Desc">Ce projet consiste à regrouper les données issues d’une enquête et à sélectionner les plus pertinentes afin de les mettre en valeur.Le travail s’est déroulé en binôme : nous avons d’abord rassemblé les informations fournies, puis effectué une analyse avant de mettre en commun les résultats obtenus. Ensuite, nous avons réparti le travail restant pour élaborer une synthèse claire, permettant de valoriser efficacement les résultats, accompagnée d’un compte rendu et d’un tableau de bord.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P6_Apps">Sphinx et Word</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P6_Learning">Analyse et mise en relation de plusieurs variables ainsi que la synthèse et mise en valeur de nombreux résultats.</p>
+        </div>
+    </div>
+</div>
+<div id="modal7" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(7)">&times;</span>
+        <div class="modal-header" data-translate="Conception et implémentation d'une base de données">Conception et implémentation d'une base de données</div>
+        <div class="modal-body">
+            <p data-translate="P7_Desc">Ce projet consiste à créer une base de données et à l’alimenter via une application développée en Python, afin d’aider des sauniers à mieux organiser leur production et leurs ventes. Réalisé en binôme, nous avons d’abord pris le temps de bien comprendre le sujet, puis nous avons réparti les tâches en fonction des compétences de chacun. Après un premier travail individuel, nous avons collaboré sur la partie principale du projet : l’automatisation de la base de données à l’aide d’un code Python, en utilisant des fichiers CSV, le tout de manière simplifiée afin de permettre une utilisation accessible à tous.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P7_Apps">Python et easy PHP </p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P7_Learning">Apprendre à créer une base de données, faire une application via python et connécter un code python à une base de données.</p>
+        </div>
+    </div>
+</div>
+<div id="modal8" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(8)">&times;</span>
+        <div class="modal-header" data-translate="Régression sur des données réelles">Régression sur des données réelles</div>
+        <div class="modal-body">
+            <p data-translate="P8_Desc">Ce projet consiste à établir un lien entre de nombreuses variables afin de pouvoir estimer le prix de différents logements. Réalisé en binôme, ce travail avait pour objectif de déterminer les prix des logements avec la plus grande précision possible. Pour y parvenir, nous avons dû identifier un coefficient de corrélation suffisamment pertinent, en nous appuyant sur de nombreux calculs et une grande variété de variables. Cette tâche s’est révélée complexe, fastidieuse et longue.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P8_Apps">Excel et R</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P8_Learning">Apprentissage du code R ainsi que la création de liens entre de nombreuses variables</p>
+        </div>
+    </div>
+</div>
+<div id="modal9" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(9)">&times;</span>
+        <div class="modal-header" data-translate="Estimation par échantillonnage">Estimation par échantillonnage </div>
+        <div class="modal-body">
+            <p data-translate="P9_Desc">Ce projet consiste à écrire un code R permettant de faire des calculs statistiques précis qui nous font ressortir les variables qui ont les liens les plus forts et qui donc nous permettent de les croiser et de pouvoir affirmer des résultats qui ressortent les liens évidents qui se trouvent dans la région choisie qui notre cas était la Bretagne, ensuite nous avons du les expliqué dans un compte rendus avec en appui le code que nous avons fait.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P9_Apps">Excel et Rstudio </p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P9_Learning">Codage développés avec Rstudio et exploitation de liens significatifs entre des variables</p>
+        </div>
+    </div>
+</div>
+<div id="modal10" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(10)">&times;</span>
+        <div class="modal-header" data-translate="Dataviz (Concours)">Dataviz (Concours)</div>
+        <div class="modal-body">
+            <p data-translate="P10_Desc">Ce projet est en même temps un concours entre tous les BUT de France ce qui fait que c'est un projet qui est différent des autres car c'est aussi dans une plus grande autonomie car tous ce que nous avons est un fichier est un instructions donc nous devons ressortir une problématique un thèmes et finir par rendre une infographie qui est donc une visualisation mais qui est différentes de toutes celles que nous avons pu faire jusqu'ici de part son aspect.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P10_Apps">Python, PowerBi, Canva, Rstudio ainsi que des recherches exterieurs</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P10_Learning">Attribution des tâches pour un temps courts pour une quantité de travaille conséquentes ainsi que l'adaptabilité de la tâche demandé</p>
+        </div>
+    </div>
+</div>
+<div id="modal11" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(11)">&times;</span>
+        <div class="modal-header" data-translate="Construction et présentation d'indicateurs de performance">Construction et présentation d'indicateurs de performance </div>
+        <div class="modal-body">
+            <p data-translate="P11_Desc">Ce projet consiste à écrire un code R permettant de faire des calculs statistiques précis qui nous font ressortir les variables qui ont les liens les plus forts et qui donc nous permettent de les croiser et de pouvoir affirmer des résultats qui ressortent les liens évidents qui se trouvent dans la région choisie qui notre cas était la Bretagne, ensuite nous avons dû les expliquer dans un compte rendus avec en appui le code que nous avons fait.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P11_Apps">Excel et Rstudio </p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P11_Learning">Codage développés avec Rstudio et exploitation de liens significatifs entre des variables</p>
+        </div>
+    </div>
+</div>
+<div id="modal12" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal(12)">&times;</span>
+        <div class="modal-header" data-translate="Analyse de données, reporting et datavisualisation">Analyse de données, reporting et datavisualisation</div>
+        <div class="modal-body">
+            <p data-translate="P12_Desc">Ce dernier projet de l’année, réalisé en groupe de quatre, s’est déroulé sur une période de deux semaines dédiées. En collaboration avec l’organisme Calyxis, l’objectif était de concevoir un outil réutilisable pour l’analyse de futurs questionnaires, permettant de mettre en évidence de manière claire les données clés ou les informations les plus significatives. Pour mener à bien ce projet, nous avons mobilisé une grande partie des compétences acquises au cours de l’année : méthodes de travail en groupe, différents langages de programmation, mises en relation statistiques, ainsi que divers outils et techniques de visualisation des données. Ce projet constitue ainsi un excellent bilan de nos apprentissages de l’année.</p></div>
+        <div class="modal-header" data-translate="Applications utilisés:">Applications utilisés:</div>
+            <div class="modal-body"><p data-translate="P12_Apps">Python, R et Power bi</p></div>
+        <div class="modal-header" data-translate="Apprentissages:">Apprentissages:</div>
+            <div class="modal-body"><p data-translate="P12_Learning">Mettre en place un bon travaille de groupe, observer l'importance de chaque vision des choses et chaque demandes ainsi que la gestion du temps avec la quantité de travaille.</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1448 @@
+/* Importing the 'Inter' font from Google Fonts, as used in styleA2.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base body styles matching styleA2.css */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background: linear-gradient(to bottom, #9B111E, #8A2BE2);
+    overflow-x: hidden;
+    display: block;
+    min-height: 100vh;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+/* Éléments géométriques subtils en arrière-plan - stylisés comme styleA2 */
+.background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.03;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 { width: 200px; height: 200px; top: 10%; left: 10%; animation-delay: 0s; }
+.shape-2 { width: 150px; height: 150px; top: 60%; right: 15%; animation-delay: 7s; }
+.shape-3 { width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: 14s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(120deg); }
+    66% { transform: translateY(30px) rotate(240deg); }
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    transition: background-color 0.5s ease;
+    backdrop-filter: blur(10px);
+    /* Animation d'apparition de la navbar */
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: navbarSlideIn 1s ease 0.1s forwards;
+}
+
+@keyframes navbarSlideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar .name {
+    flex-shrink: 0;
+}
+
+.navbar .name a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    /* Animation d'apparition du nom */
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease 0.3s forwards;
+}
+
+@keyframes fadeInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.navbar .name a:hover {
+    color: transparent;
+    background: linear-gradient(to right, #9B111E, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transform: scale(1.05);
+}
+
+/* Navigation links container */
+.navbar > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* Animation d'apparition des liens */
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 1s ease 0.4s forwards;
+}
+
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.navbar a:not(.navbar .name a) {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar a:not(.navbar .name a):hover {
+    color: transparent;
+    background: linear-gradient(to right, #9B111E, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-button {
+    background: none;
+    border: 2px solid white;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: white;
+    padding: 0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 45px;
+    min-height: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+}
+
+.theme-toggle-button:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.theme-toggle-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1) rotate(180deg);
+}
+
+.theme-toggle-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+/* Sélecteur de langue optimisé */
+.language-selector {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 2px solid white !important;
+    color: white !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(10px) !important;
+    font-size: 14px !important;
+    min-height: 35px !important;
+    outline: none !important;
+}
+
+.language-selector:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    transform: translateY(-2px) !important;
+}
+
+.language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3) !important;
+}
+
+.language-selector option {
+    background: #000 !important;
+    color: white !important;
+    padding: 8px !important;
+}
+
+/* ========================================================= */
+/* --- Styles pour le Thème Sombre (.dark-theme) --- */
+/* ========================================================= */
+
+body.dark-theme {
+    background: linear-gradient(to bottom, #0D1B2A, #001F3F);
+    color: #f0f0f0;
+}
+
+body.dark-theme .navbar {
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-theme .navbar .name {
+    color: #8A2BE2;
+}
+
+body.dark-theme .navbar a {
+    color: #ccc;
+}
+
+body.dark-theme .navbar a:hover {
+    color: transparent;
+    background: linear-gradient(to right, #007BFF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+body.dark-theme .navbar a:not(.navbar .name a):hover { /* Survol en dégradé de bleu/violet */
+    color: transparent;
+    background: linear-gradient(to right, #007BFF, #8A2BE2); /* Dégradé de bleu au violet */
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-color: transparent; /* Ajouté pour annuler le fond blanc en mode sombre */
+}
+
+body.dark-theme .theme-toggle-button {
+    border-color: #8A2BE2;
+    color: #8A2BE2;
+    background: rgba(138, 43, 226, 0.1);
+}
+
+body.dark-theme .theme-toggle-button:hover {
+    background-color: rgba(138, 43, 226, 0.2);
+}
+
+body.dark-theme .theme-toggle-button:focus {
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3);
+}
+
+body.dark-theme .language-selector {
+    background-color: rgba(138, 43, 226, 0.1) !important;
+    border-color: #8A2BE2 !important;
+    color: #8A2BE2 !important;
+}
+
+body.dark-theme .language-selector:hover {
+    background-color: rgba(138, 43, 226, 0.2) !important;
+}
+
+body.dark-theme .language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3) !important;
+}
+
+
+/* Enhanced container styles with styleA2 aesthetic */
+.container {
+    width: 100%;
+    max-width: 1000px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 100px auto 50px auto;
+    color: #2d3748;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.container:hover::before {
+    transform: scaleX(1);
+}
+
+.container:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Containers spécifiques avec même style */
+.containerA, .containerBP {
+    width: 100%;
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 100px auto 50px auto;
+    color: #2d3748;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.containerA::before, .containerBP::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.containerA:hover::before, .containerBP:hover::before {
+    transform: scaleX(1);
+}
+
+.containerA:hover, .containerBP:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme pour les containers */
+body.dark-theme .container,
+body.dark-theme .containerA,
+body.dark-theme .containerBP {
+    background: rgba(26, 41, 58, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+}
+
+body.dark-theme .container h1,
+body.dark-theme .container h2,
+body.dark-theme .containerA h1,
+body.dark-theme .containerA h2,
+body.dark-theme .containerBP h1,
+body.dark-theme .containerBP h2 {
+    color: #f0f0f0 !important;
+}
+
+body.dark-theme .container p,
+body.dark-theme .containerA p,
+body.dark-theme .containerBP p {
+    color: #f0f0f0 !important;
+}
+
+body.dark-theme .container::before,
+body.dark-theme .containerA::before,
+body.dark-theme .containerBP::before {
+    background: linear-gradient(135deg, #007BFF, #4A90E2) !important;
+}
+
+/* Main content pour index.html - style amélioré */
+.main-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 50px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    gap: 50px;
+    width: 100%;
+    max-width: 1000px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.content-box:hover::before {
+    transform: scaleX(1);
+}
+
+.content-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Dark theme pour content-box */
+body.dark-theme .content-box {
+    background: rgba(26, 41, 58, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+}
+
+body.dark-theme .content-box h1,
+body.dark-theme .content-box h2 {
+    color: #f0f0f0 !important;
+}
+
+body.dark-theme .content-box p {
+    color: #f0f0f0 !important;
+}
+
+body.dark-theme .content-box::before {
+    background: linear-gradient(135deg, #007BFF, #4A90E2) !important;
+}
+
+/* Typography enhanced */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #2d3748;
+    transition: color 0.3s ease;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #2d3748;
+    transition: color 0.3s ease;
+}
+
+p, p-1 {
+    font-size: 1.15em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #4a5568;
+    transition: color 0.3s ease;
+    text-align: justify;
+}
+
+/* Styles pour les boutons d'année - améliorés avec effet styleA2 */
+.year-buttons {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.year-button {
+    background: linear-gradient(135deg, #8A2BE2, #9B111E);
+    padding: 20px 40px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.6em;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: all 0.4s ease;
+    min-width: 200px;
+    box-shadow: 0 10px 25px rgba(138, 43, 226, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.year-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.year-button:hover::before {
+    left: 100%;
+}
+
+.year-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(138, 43, 226, 0.4);
+}
+
+.disabled-button {
+    background: #666;
+    border: 2px solid #777;
+    cursor: not-allowed;
+    color: #ccc;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.disabled-button:hover {
+    transform: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Photo de profil avec effet styleA2 */
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark theme pour profile-pic */
+body.dark-theme .profile-pic {
+    border: 4px solid #8A2BE2;
+}
+
+/* CTA Button enhanced */
+.cta-button {
+    margin-top: 20px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 25px rgba(155, 17, 30, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(155, 17, 30, 0.4);
+}
+
+/* Modal styles enhanced */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    margin: 15% auto;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: #2d3748;
+}
+
+.close {
+    color: #2d3748;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover,
+.close:focus {
+    color: #9B111E;
+    text-decoration: none;
+}
+
+.modal-header {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #9B111E;
+    font-weight: bold;
+}
+
+.modal-body p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #4a5568;
+}
+
+/* Dark theme pour modal */
+body.dark-theme .modal-content {
+    background: rgba(26, 41, 58, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+}
+
+body.dark-theme .close {
+    color: #f0f0f0;
+}
+
+body.dark-theme .close:hover {
+    color: #8A2BE2;
+}
+
+body.dark-theme .modal-header {
+    color: #8A2BE2;
+}
+
+body.dark-theme .modal-body p {
+    color: #f0f0f0;
+}
+
+/* Carousel styles enhanced */
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    overflow: hidden;
+    height: 450px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    color: #2d3748;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #9B111E;
+}
+
+.project-card p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #4a5568;
+}
+
+.project-card button {
+    background: linear-gradient(135deg, #8A2BE2, #9B111E);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+}
+
+.project-card button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.4);
+}
+
+/* Dark theme pour project-card */
+body.dark-theme .project-card {
+    background: rgba(26, 41, 58, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    color: #f0f0f0;
+}
+
+body.dark-theme .project-card::before {
+    background: linear-gradient(135deg, #007BFF, #4A90E2) !important;
+}
+
+body.dark-theme .project-card h3 {
+    color: #8A2BE2;
+}
+
+body.dark-theme .project-card p {
+    color: #f0f0f0;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 5;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn.left {
+    left: 10px;
+}
+
+.carousel-btn.right {
+    right: 10px;
+}
+
+.carousel-btn:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact info styles enhanced */
+.contact-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.contact-info {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: center;
+    margin-top: 20px;
+    color: #4a5568;
+}
+
+.contact-info a {
+    color: #9B111E;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #8A2BE2;
+    text-decoration: underline;
+}
+
+/* Dark theme pour contact-info */
+body.dark-theme .contact-info {
+    color: #f0f0f0;
+}
+
+body.dark-theme .contact-info a {
+    color: #8A2BE2;
+}
+
+body.dark-theme .contact-info a:hover {
+    color: #007BFF;
+}
+
+.cv-container {
+    width: 100%;
+    max-width: 800px;
+    height: 600px;
+    margin-top: 40px;
+}
+
+.cv-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Timeline enhanced avec style styleA2 */
+.timeline {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px 0;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+}
+
+.timeline-item {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 25px;
+    position: relative;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -23px;
+    top: 25px;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(155, 17, 30, 0.2);
+    z-index: 1;
+}
+
+.timeline-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-date {
+    font-weight: 600;
+    color: #9B111E;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.timeline-title {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.timeline-description {
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+/* Dark theme pour timeline */
+body.dark-theme .timeline::before {
+    background: linear-gradient(135deg, #8A2BE2, #007BFF) !important;
+}
+
+body.dark-theme .timeline-item {
+    background: rgba(26, 41, 58, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-theme .timeline-item::before {
+    background: linear-gradient(135deg, #8A2BE2, #007BFF) !important;
+    border: 3px solid #1A293A;
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.4);
+}
+
+body.dark-theme .timeline-date {
+    color: #8A2BE2;
+}
+
+body.dark-theme .timeline-title {
+    color: #f0f0f0;
+}
+
+body.dark-theme .timeline-description {
+    color: #f0f0f0;
+}
+
+/* Boutons d'année en thème sombre */
+body.dark-theme .year-button {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+body.dark-theme .year-button::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+body.dark-theme .year-button:hover {
+    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.4);
+}
+
+body.dark-theme .disabled-button {
+    background: #2d3748;
+    border: 2px solid #4a5568;
+    color: #718096;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-theme .disabled-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* CTA Button en thème sombre */
+body.dark-theme .cta-button {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.3);
+}
+
+body.dark-theme .cta-button:hover {
+    box-shadow: 0 15px 35px rgba(0, 123, 255, 0.4);
+}
+
+/* Boutons des project-card en thème sombre */
+body.dark-theme .project-card button {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+body.dark-theme .project-card button:hover {
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Boutons du carousel en thème sombre */
+body.dark-theme .carousel-btn {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-theme .carousel-btn:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Theme toggle button en thème sombre */
+body.dark-theme .theme-toggle-button {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+body.dark-theme .theme-toggle-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 20px;
+    }
+    .navbar .name {
+        margin-bottom: 10px;
+    }
+
+    .container, .containerA, .containerBP, .content-box {
+        padding: 30px 20px;
+        margin-top: 120px;
+    }
+
+    .main-content .content-box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p, p-1 {
+        font-size: 1em;
+    }
+
+    .year-button {
+        padding: 15px 30px;
+        font-size: 1.4em;
+        min-width: 180px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+        padding: 20px;
+    }
+
+    .carousel-wrapper {
+        height: auto;
+    }
+
+    .project-card {
+        max-width: 100%;
+        min-height: auto;
+        padding: 20px;
+    }
+
+    .carousel-btn {
+        font-size: 1.2em;
+        padding: 12px;
+    }
+
+    .carousel-btn.left {
+        left: 5px;
+    }
+
+    .carousel-btn.right {
+        right: 5px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+
+    .timeline-item::before {
+        left: -13px;
+    }
+
+    /* Sélecteur de langue responsive */
+    .language-selector {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+        min-height: 32px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar > div:last-child {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+
+
+/* 1. KEYFRAMES DES ANIMATIONS */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Animation des titres */
+h1, h2 {
+    opacity: 0;
+    animation: fadeInUp 1s ease 0.2s forwards;
+}
+
+/* Animation des containers */
+.container {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease 0.4s forwards;
+}
+
+/* Délais progressifs pour plusieurs containers */
+.container:nth-child(1) { animation-delay: 0.4s; }
+.container:nth-child(2) { animation-delay: 0.6s; }
+.container:nth-child(3) { animation-delay: 0.8s; }
+.container:nth-child(4) { animation-delay: 1s; }
+
+/* Animation des cartes de projet */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease 0.6s forwards;
+}
+
+/* Animation en alternance pour les cartes */
+.carousel-slide:nth-child(odd) .project-card {
+    animation: slideInLeft 0.8s ease 0.6s forwards;
+}
+
+.carousel-slide:nth-child(even) .project-card {
+    animation: slideInRight 0.8s ease 0.6s forwards;
+}
+
+/* Animation des boutons de carousel */
+.carousel-btn {
+    opacity: 0;
+    animation: fadeInScale 0.8s ease 1s forwards;
+}
+
+.carousel-btn.left {
+    animation-delay: 1.1s;
+}
+
+.carousel-btn.right {
+    animation-delay: 1.2s;
+}
+
+
+/* 3. ANIMATIONS POUR LES ÉLÉMENTS SPÉCIFIQUES */
+
+/* Animation des images dans les cartes */
+.project-card img {
+    opacity: 0;
+    transform: scale(0.9);
+    animation: fadeInScale 0.8s ease 0.8s forwards;
+}
+
+/* Animation des textes dans les cartes */
+.project-card h3 {
+    opacity: 0;
+    animation: slideInLeft 0.6s ease 1s forwards;
+}
+
+.project-card p {
+    opacity: 0;
+    animation: slideInRight 0.6s ease 1.1s forwards;
+}
+
+.project-card button {
+    opacity: 0;
+    animation: fadeInUp 0.6s ease 1.2s forwards;
+}
+
+/* 4. ANIMATIONS POUR LES FORMES GÉOMÉTRIQUES AMÉLIORÉES */
+
+@keyframes floatEnhanced {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg) scale(1);
+    }
+    25% { 
+        transform: translateY(-20px) rotate(90deg) scale(1.05);
+    }
+    50% { 
+        transform: translateY(-40px) rotate(180deg) scale(0.95);
+    }
+    75% { 
+        transform: translateY(-20px) rotate(270deg) scale(1.05);
+    }
+}
+
+.shape {
+    animation: floatEnhanced 25s infinite ease-in-out;
+}
+
+/* Délais différents pour chaque forme */
+.shape-1 { animation-delay: 0s; }
+.shape-2 { animation-delay: 8s; }
+.shape-3 { animation-delay: 16s; }
+
+/* 5. ANIMATIONS DE SURVOL AMÉLIORÉES */
+
+/* Effet de pulsation pour les boutons */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.project-card button:hover {
+    animation: pulse 0.6s ease-in-out;
+}
+
+/* Effet de rebond léger pour les cartes */
+.project-card:hover {
+    animation: none; /* Annule l'animation d'entrée */
+    transform: translateY(-8px) scale(1.02);
+    transition: all 0.3s ease;
+}
+
+/* 6. EFFET TYPING PURE CSS (optionnel) */
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 50% { border-color: transparent; }
+    51%, 100% { border-color: #9B111E; }
+}
+
+/* Classe pour l'effet typing (à ajouter à un h1 ou h2) */
+.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #9B111E;
+    width: 0;
+    animation: 
+        typing 3s steps(40, end) 0.5s forwards,
+        blink 1s infinite 0.5s;
+}
+
+/* 7. ANIMATIONS POUR LES MODALES (sans JavaScript) */
+
+/* L'animation se déclenche avec :target */
+.modal:target {
+    display: block;
+    animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.modal:target .modal-content {
+    animation: modalSlideIn 0.3s ease forwards;
+}
+
+@keyframes modalSlideIn {
+    from {
+        transform: scale(0.7) translateY(-50px);
+    }
+    to {
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* 8. RESPONSIVE - Garder les animations sur mobile */
+
+@media (max-width: 768px) {
+    /* Réduire les délais pour une expérience plus rapide */
+    .navbar { animation-delay: 0s; }
+    .navbar a { animation-delay: 0.1s; }
+    h1, h2 { animation-delay: 0.1s; }
+    .container { animation-delay: 0.2s; }
+    .project-card { animation-delay: 0.3s; }
+    
+    /* Réduire les distances de déplacement */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
