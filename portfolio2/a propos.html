@@ -378,13 +378,16 @@ function translatePage(targetLang) {
     // Mettre à jour la langue du document
     document.documentElement.lang = targetLang;
 
-    // Mettre à jour la sélection
-    const selector = document.getElementById('language-selector');
-    if (selector) {
-        selector.value = targetLang;
-    }
+    // Mettre à jour la sélection - AMÉLIORATION ICI
+    setTimeout(() => {
+        const selector = document.getElementById('language-selector');
+        if (selector && selector.value !== targetLang) {
+            selector.value = targetLang;
+        }
+    }, 50);
     
     console.log('Page traduite en:', targetLang);
+}
 }
 
         // Détection automatique de la langue
