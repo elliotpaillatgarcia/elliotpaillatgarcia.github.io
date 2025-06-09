@@ -388,16 +388,18 @@ function translatePage(targetLang) {
 }
 
         // Détection automatique de la langue
-        function detectAndApplyLanguage() {
+        // Fonction corrigée - Remplacez votre fonction detectAndApplyLanguage() actuelle par celle-ci :
+
+function detectAndApplyLanguage() {
     // Vérifier si l'utilisateur a déjà une préférence sauvegardée
     const savedLang = localStorage.getItem('preferredLanguage');
     if (savedLang && translations[savedLang]) {
         console.log('Langue sauvegardée trouvée:', savedLang);
         translatePage(savedLang);
-        return;
+        return; // IMPORTANT : Sortir ici pour éviter la suite
     }
 
-    // Récupérer la langue du navigateur seulement si pas de préférence sauvegardée
+    // Le code ci-dessous ne s'exécute QUE s'il n'y a pas de langue sauvegardée
     const browserLang = navigator.language || navigator.userLanguage;
     const langCode = browserLang.split('-')[0].toLowerCase();
 
@@ -409,9 +411,8 @@ function translatePage(targetLang) {
     } else if (langCode !== 'fr') {
         // Si la langue n'est pas supportée, utiliser l'anglais par défaut
         translatePage('en');
-    }
-    // Si langCode === 'fr', on reste en français (mais on met à jour le sélecteur)
-    else {
+    } else {
+        // Si langCode === 'fr', on reste en français
         const selector = document.getElementById('language-selector');
         if (selector) {
             selector.value = 'fr';
