@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>À propos - Elliot Paillat--Garcia</title>
-    <link rel="stylesheet" href="styleA.css"> </head>
+    <link rel="stylesheet" href="styleA.css">
+</head>
 <body>
     <div class="background-shapes">
         <div class="shape shape-1"></div>
@@ -172,22 +173,28 @@
         // --- Logique du bouton de changement de thème ---
         const themeToggleButton = document.getElementById('theme-toggle');
 
-        if (themeToggleButton) {
-            // Fonction pour appliquer le thème
-            const applyTheme = (theme) => {
-                if (theme === 'dark') {
-                    document.body.classList.add('dark-theme');
+        // Fonction pour appliquer le thème
+        const applyTheme = (theme) => {
+            if (theme === 'dark') {
+                document.body.classList.add('dark-theme');
+                if (themeToggleButton) {
                     themeToggleButton.textContent = '☀️'; // Icône soleil pour le mode sombre
-                } else {
-                    document.body.classList.remove('dark-theme');
+                }
+            } else {
+                document.body.classList.remove('dark-theme');
+                if (themeToggleButton) {
                     themeToggleButton.textContent = '🌙'; // Icône lune pour le mode clair
                 }
-            };
+            }
+        };
 
-            // Appliquer le thème sauvegardé au chargement de la page
+        // Fonction pour initialiser le thème (à appeler au chargement de la page)
+        const initTheme = () => {
             const savedTheme = localStorage.getItem('theme');
             applyTheme(savedTheme || 'light'); // Par défaut, thème clair si rien n'est sauvegardé
+        };
 
+        if (themeToggleButton) {
             // Gérer le clic sur le bouton
             themeToggleButton.addEventListener('click', () => {
                 const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
@@ -239,7 +246,7 @@
                 'Analyse de données': 'Data Analysis',
                 'Mes centres d\'intérêt': 'My Interests',
                 'Je m\'intéresse à de nombreux sujets tels que la Formule 1, l\'automobile ou encore la musique, mais certains sujets ont une place plus importante car je m\'y intéresse depuis bien plus longtemps, tels que le fonctionnement du cerveau humain, l\'étude des comportements, ou encore les jeux vidéo et l\'informatique, qui me permettent de me détendre ou de créer une bulle personnelle. C\'est aussi ce qui a guidé mes études.': 'I am interested in many topics such as Formula 1, automobiles, and music, but some topics hold a more significant place as I\'ve been interested in them for much longer, such as the functioning of the human brain, the study of behavior, and video games and IT, which allow me to relax or create a personal bubble. This has also guided my studies.',
-                'J\'aime aussi passer du temps avec ma famille ou mes amis, avec qui je sors et m\'amuse de nombreuses manières.': 'I also enjoy spending time with my family and friends, with whom I go out and have fun in many ways.'
+                'J\'aime aussi passer du temps avec ma famille ou mes amis, with whom I go out and have fun in many ways.': 'I also enjoy spending time with my family and friends, with whom I go out and have fun in many ways.'
             },
             'es': {
                 'Accueil': 'Inicio',
@@ -255,11 +262,11 @@
                 'BUT Sciences des Données': 'BUT Ciencias de Datos',
                 'Je suis actuellement en première année de BUT en sciences des données, développant des compétences en analyse ainsi que dans différents langages de programmation.': 'Actualmente estoy en mi primer año de BUT en ciencias de datos, desarrollando habilidades en análisis y en diferentes lenguajes de programación.',
                 'Formation Générale - Niort': 'Formación General - Niort',
-                'J\'ai toujours été à Niort en suivant une filière générale, mais je m\'intéressais plus aux matières scientifiques.': 'Siempre estuve en Niort siguiendo una formación general, pero me interesaban más las materias científicas.',
+                'J\'ai toujours été à Niort en suivant une filière générale, pero me interesaban más las materias científicas.': 'Siempre estuve en Niort siguiendo una formación general, pero me interesaban más las materias científicas.',
                 'Analyse de données': 'Análisis de datos',
                 'Mes centres d\'intérêt': 'Mis intereses',
                 'Je m\'intéresse à de nombreux sujets tels que la Formule 1, l\'automobile ou encore la musique, mais certains sujets ont une place plus importante car je m\'y intéresse depuis bien plus longtemps, tels que le fonctionnement du cerveau humain, l\'étude des comportements, ou encore les jeux vidéo et l\'informatique, qui me permettent de me détendre ou de créer une bulle personnelle. C\'est aussi ce qui a guidé mes études.': 'Me interesan muchos temas como la Fórmula 1, el automóvil o la música, pero algunos temas tienen un lugar más importante porque me interesan desde hace mucho más tiempo, como el funcionamiento del cerebro humano, el estudio de los comportamientos, o los videojuegos y la informática, que me permiten relajarme o crear una burbuja personal. Esto también ha guiado mis estudios.',
-                'J\'aime aussi passer du temps avec ma famille ou mes amis, avec qui je sors et m\'amuse de nombreuses manières.': 'También me gusta pasar tiempo con mi familia o mis amigos, con quienes salgo y me divierto de muchas maneras.'
+                'J\'aime aussi passer du temps avec ma famille ou mes amis, con quienes salgo y me divierto de muchas maneras.': 'También me gusta pasar tiempo con mi familia o mis amigos, con quienes salgo y me divierto de muchas maneras.'
             },
             'de': {
                 'Accueil': 'Startseite',
@@ -275,7 +282,7 @@
                 'BUT Sciences des Données': 'BUT Datenwissenschaften',
                 'Je suis actuellement en première année de BUT en sciences des données, développant des compétences en analyse ainsi que dans différents langages de programmation.': 'Ich bin derzeit im ersten Jahr des BUT in Datenwissenschaften und entwickle Fähigkeiten in der Analyse sowie in verschiedenen Programmiersprachen.',
                 'Formation Générale - Niort': 'Allgemeine Bildung - Niort',
-                'J\'ai toujours été à Niort en suivant une filière générale, mais je m\'intéressais plus aux matières scientifiques.': 'Ich war immer in Niort und habe eine allgemeine Ausbildung absolviert, aber ich interessierte mich mehr für naturwissenschaftliche Fächer.',
+                'J\'ai toujours été à Niort en suivant une filière générale, aber ich interessierte mich mehr für naturwissenschaftliche Fächer.': 'Ich war immer in Niort und habe eine allgemeine Ausbildung absolviert, aber ich interessierte mich mehr für naturwissenschaftliche Fächer.',
                 'Analyse de données': 'Datenanalyse',
                 'Mes centres d\'intérêt': 'Meine Interessen',
                 'Je m\'intéresse à de nombreux sujets tels que la Formule 1, l\'automobile ou encore la musique, mais certains sujets ont une place plus importante car je m\'y intéresse depuis bien plus longtemps, tels que le fonctionnement du cerveau humain, l\'étude des comportements, ou encore les jeux vidéo et l\'informatique, qui me permettent de me détendre ou de créer une bulle personnelle. C\'est aussi ce qui a guidé mes études.': 'Ich interessiere mich für viele Themen wie Formel 1, Automobile oder Musik, aber einige Themen haben einen wichtigeren Platz, da ich mich schon viel länger dafür interessiere, wie die Funktionsweise des menschlichen Gehirns, das Studium von Verhaltensweisen oder Videospiele und Informatik, die es mir ermöglichen, mich zu entspannen oder eine persönliche Blase zu schaffen. Dies hat auch mein Studium geleitet.',
@@ -295,11 +302,11 @@
                 'BUT Sciences des Données': 'BUT Scienze dei Dati',
                 'Je suis actuellement en première année de BUT en sciences des données, développant des compétences en analyse ainsi que dans différents langages de programmation.': 'Attualmente sono al primo anno di BUT in scienze dei dati, sviluppando competenze nell\'analisi e in diversi linguaggi di programmazione.',
                 'Formation Générale - Niort': 'Formazione Generale - Niort',
-                'J\'ai toujours été à Niort en suivant une filière générale, mais je m\'intéressais plus aux matières scientifiques.': 'Sono sempre stato a Niort seguendo un percorso generale, ma mi interessavo di più alle materie scientifiche.',
+                'J\'ai toujours été à Niort en suivant une filière générale, ma mi interessavo di più alle materie scientifiche.': 'Sono sempre stato a Niort seguendo un percorso generale, ma mi interessavo di più alle materie scientifiche.',
                 'Analyse de données': 'Analisi dei dati',
                 'Mes centres d\'intérêt': 'I miei interessi',
                 'Je m\'intéresse à de nombreux sujets tels que la Formule 1, l\'automobile ou encore la musique, mais certains sujets ont une place plus importante car je m\'y intéresse depuis bien plus longtemps, tels que le fonctionnement du cerveau humain, l\'étude des comportements, ou encore les jeux vidéo et l\'informatique, qui me permettent de me détendre ou de créer une bulle personnelle. C\'est aussi ce qui a guidé mes études.': 'Mi interesso a molti argomenti come la Formula 1, l\'automobile o la musica, ma alcuni argomenti hanno un posto più importante perché mi interessano da molto più tempo, come il funzionamento del cervello umano, lo studio dei comportamenti, o i videogiochi e l\'informatica, che mi permettono di rilassarmi o creare una bolla personale. Questo ha anche guidato i miei studi.',
-                'J\'aime aussi passer du temps avec ma famille ou mes amis, avec qui je esco e mi diverto in molti modi.': 'Mi piace anche passare del tempo con la mia famiglia o i miei amici, con cui esco e mi diverto in molti modi.'
+                'J\'aime aussi passer du temps avec ma famille ou mes amis, con cui esco e mi diverto in molti modi.': 'Mi piace anche passare del tempo con la mia famiglia o i miei amici, con cui esco e mi diverto in molti modi.'
             },
             'pt': {
                 'Accueil': 'Início',
@@ -315,7 +322,7 @@
                 'BUT Sciences des Données': 'BUT Ciência de Dados',
                 'Je suis actuellement en première année de BUT en sciences des données, développant des compétences en analyse ainsi que dans différents langages de programmation.': 'Atualmente, estou no primeiro ano do BUT em ciência de dados, desenvolvendo habilidades em análise e em diferentes linguagens de programação.',
                 'Formation Générale - Niort': 'Formação Geral - Niort',
-                'J\'ai toujours été à Niort en suivant une filière générale, mais je m\'intéressais plus aux matières scientifiques.': 'Sempre estudei em Niort seguindo uma formação geral, mas me interessava mais por matérias científicas.',
+                'J\'ai toujours été à Niort en suivant une filière générale, mas me interessava mais por matérias científicas.': 'Sempre estudei em Niort seguindo uma formação geral, mas me interessava mais por matérias científicas.',
                 'Analyse de données': 'Análise de dados',
                 'Mes centres d\'intérêt': 'Meus interesses',
                 'Je m\'intéresse à de nombreux sujets tels que la Formule 1, l\'automobile ou encore la musique, mais certains sujets ont une place plus importante car je m\'y intéresse depuis bien plus longtemps, tels que le fonctionnement du cerveau humain, l\'étude des comportements, ou encore les jeux vidéo et l\'informatique, qui me permettent de me détendre ou de créer une bulle personnelle. C\'est aussi ce qui a guidé mes études.': 'Interesso-me por muitos assuntos como Fórmula 1, automóveis ou música, mas alguns assuntos têm um lugar mais importante porque me interesso por eles há muito mais tempo, como o funcionamento do cérebro humano, o estudo dos comportamentos, ou videojogos e informática, que me permitem relaxar ou criar uma bolha pessoal. Isso também guiou meus estudos.',
