@@ -358,70 +358,57 @@
         }
 
         // Fonction de traduction améliorée
-function translatePage(targetLang) {
-    if (!translations[targetLang]) return;
+        function translatePage(targetLang) {
+            if (!translations[targetLang]) return;
 
-    currentLanguage = targetLang;
+            currentLanguage = targetLang;
 
-    // Sauvegarder le choix de langue
-    localStorage.setItem('preferredLanguage', targetLang);
+            // Sauvegarder le choix de langue
+            localStorage.setItem('preferredLanguage', targetLang);
 
-    // Traduire tous les éléments avec l'attribut data-translate
-    const elementsToTranslate = document.querySelectorAll('[data-translate]');
-    elementsToTranslate.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[targetLang][key]) {
-            element.textContent = translations[targetLang][key];
+            // Traduire tous les éléments avec l'attribut data-translate
+            const elementsToTranslate = document.querySelectorAll('[data-translate]');
+            elementsToTranslate.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[targetLang][key]) {
+                    element.textContent = translations[targetLang][key];
+                }
+            });
+
+            // Mettre à jour la langue du document
+            document.documentElement.lang = targetLang;
+
+            // Mettre à jour la sélection
+            const selector = document.getElementById('language-selector');
+            if (selector) {
+                selector.value = targetLang;
+            }
         }
-    });
-
-    // Mettre à jour la langue du document
-    document.documentElement.lang = targetLang;
-
-    // Mettre à jour la sélection - AMÉLIORATION ICI
-    setTimeout(() => {
-        const selector = document.getElementById('language-selector');
-        if (selector && selector.value !== targetLang) {
-            selector.value = targetLang;
-        }
-    }, 50);
-    
-    console.log('Page traduite en:', targetLang);
-}
-}
 
         // Détection automatique de la langue
-        // Fonction corrigée - Remplacez votre fonction detectAndApplyLanguage() actuelle par celle-ci :
+        function detectAndApplyLanguage() {
+            // Vérifier si l'utilisateur a déjà une préférence sauvegardée
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && translations[savedLang]) {
+                translatePage(savedLang);
+                return;
+            }
 
-function detectAndApplyLanguage() {
-    // Vérifier si l'utilisateur a déjà une préférence sauvegardée
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && translations[savedLang]) {
-        console.log('Langue sauvegardée trouvée:', savedLang);
-        translatePage(savedLang);
-        return; // IMPORTANT : Sortir ici pour éviter la suite
-    }
+            // Récupérer la langue du navigateur
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.split('-')[0].toLowerCase();
 
-    // Le code ci-dessous ne s'exécute QUE s'il n'y a pas de langue sauvegardée
-    const browserLang = navigator.language || navigator.userLanguage;
-    const langCode = browserLang.split('-')[0].toLowerCase();
+            console.log('Langue du navigateur détectée:', langCode);
 
-    console.log('Langue du navigateur détectée:', langCode);
-
-    // Si la langue du navigateur est supportée et différente du français, l'utiliser
-    if (langCode !== 'fr' && translations[langCode]) {
-        translatePage(langCode);
-    } else if (langCode !== 'fr') {
-        // Si la langue n'est pas supportée, utiliser l'anglais par défaut
-        translatePage('en');
-    } else {
-        // Si langCode === 'fr', on reste en français
-        const selector = document.getElementById('language-selector');
-        if (selector) {
-            selector.value = 'fr';
+            // Si ce n'est pas français et que la langue est supportée, traduire
+            if (langCode !== 'fr' && translations[langCode]) {
+                translatePage(langCode);
+            } else if (langCode !== 'fr') {
+                // Si la langue n'est pas supportée, utiliser l'anglais par default
+                translatePage('en');
+            }
         }
-    }
-}
+
         // Initialisation au chargement de la page
         window.addEventListener('DOMContentLoaded', () => {
             console.log('Page chargée - Initialisation...');
