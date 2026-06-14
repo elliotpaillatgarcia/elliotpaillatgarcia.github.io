@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="Title_Contact">Contact</title>
+    <link rel="stylesheet" href="styleC.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="a propos.html" data-translate="À propos">À propos</a>
+            <a href="bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
+            <a href="projets.html" data-translate="Projets">Projets</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container" style="display:inline-block;"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1 data-translate="Titre_H1">Contacts</h1>
+            <div class="contact-info">
+                <p><span data-translate="Label_Email">Email :</span> <a href="mailto:elliot.paillat.garcia@gmail.com">elliot.paillat.garcia@gmail.com</a></p>
+                <p><span data-translate="Label_Tel">Téléphone :</span> <a href="tel:+336493591142">+33 6 49 35 91 42</a></p>
+                <p><span data-translate="Label_LinkedIn">LinkedIn :</span> <a href="https://www.linkedin.com/in/elliot-paillat-garcia-94793b340/" target="_blank" data-translate="Lien_LinkedIn">Mon profil</a></p>
+            </div>
+        </div>
+        <div class="cv-container">
+            <h1 data-translate="Titre_CV">Mon CV</h1>
+            <iframe src="cv 2.pdf"></iframe>
+        </div>
+    </div>
+
+    <script>
+    window.PAGE_TRANSLATIONS = {
+        fr: { 'Title_Contact':'Contact', 'Titre_H1':'Contacts', 'Label_Email':'Email :', 'Label_Tel':'Téléphone :', 'Label_LinkedIn':'LinkedIn :', 'Lien_LinkedIn':'Mon profil', 'Titre_CV':'Mon CV' },
+        en: { 'Title_Contact':'Contact', 'Titre_H1':'Contacts', 'Label_Email':'Email:', 'Label_Tel':'Phone:', 'Label_LinkedIn':'LinkedIn:', 'Lien_LinkedIn':'My profile', 'Titre_CV':'My Resume' },
+        es: { 'Title_Contact':'Contacto', 'Titre_H1':'Contactos', 'Label_Email':'Email:', 'Label_Tel':'Teléfono:', 'Label_LinkedIn':'LinkedIn:', 'Lien_LinkedIn':'Mi perfil', 'Titre_CV':'Mi CV' },
+        de: { 'Title_Contact':'Kontakt', 'Titre_H1':'Kontakte', 'Label_Email':'E-Mail:', 'Label_Tel':'Telefon:', 'Label_LinkedIn':'LinkedIn:', 'Lien_LinkedIn':'Mein Profil', 'Titre_CV':'Mein Lebenslauf' },
+        it: { 'Title_Contact':'Contatto', 'Titre_H1':'Contatti', 'Label_Email':'Email:', 'Label_Tel':'Telefono:', 'Label_LinkedIn':'LinkedIn:', 'Lien_LinkedIn':'Il mio profilo', 'Titre_CV':'Il mio CV' },
+        pt: { 'Title_Contact':'Contacto', 'Titre_H1':'Contatos', 'Label_Email':'Email:', 'Label_Tel':'Telefone:', 'Label_LinkedIn':'LinkedIn:', 'Lien_LinkedIn':'Meu perfil', 'Titre_CV':'Meu CV' },
+    };
+    </script>
+    <script src="portfolio.js"></script>
+</body>
+</html>

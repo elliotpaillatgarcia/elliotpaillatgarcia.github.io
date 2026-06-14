@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="Title_Projets">Mes Projets Universitaires</title>
+    <link rel="stylesheet" href="styleP.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="a propos.html" data-translate="À propos">À propos</a>
+            <a href="bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
+            <a href="contact.html" data-translate="Contacts">Contacts</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container" style="display:inline-block;"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1 data-translate="Titre_H1">Mes Projets Universitaires</h1>
+            <div class="year-buttons">
+                <a href="1ere année.html">
+                    <button class="year-button" data-translate="Btn_1ere">1ère Année</button>
+                </a>
+                <a href="2eme année.html">
+                    <button class="year-button" data-translate="Btn_2nde">2nde Année</button>
+                </a>
+                <button class="year-button disabled-button" data-translate="Btn_3eme">3ème Année - Indisponible pour le moment</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    window.PAGE_TRANSLATIONS = {
+        fr: { 'Title_Projets':'Mes Projets Universitaires', 'Titre_H1':'Mes Projets Universitaires', 'Btn_1ere':'1ère Année', 'Btn_2nde':'2nde Année', 'Btn_3eme':'3ème Année - Indisponible pour le moment' },
+        en: { 'Title_Projets':'My University Projects', 'Titre_H1':'My University Projects', 'Btn_1ere':'1st Year', 'Btn_2nde':'2nd Year', 'Btn_3eme':'3rd Year - Unavailable for now' },
+        es: { 'Title_Projets':'Mis Proyectos Universitarios', 'Titre_H1':'Mis Proyectos Universitarios', 'Btn_1ere':'1er Año', 'Btn_2nde':'2do Año', 'Btn_3eme':'3er Año - No disponible por el momento' },
+        de: { 'Title_Projets':'Meine Universitätsprojekte', 'Titre_H1':'Meine Universitätsprojekte', 'Btn_1ere':'1. Jahr', 'Btn_2nde':'2. Jahr', 'Btn_3eme':'3. Jahr - Derzeit nicht verfügbar' },
+        it: { 'Title_Projets':'I Miei Progetti Universitari', 'Titre_H1':'I Miei Progetti Universitari', 'Btn_1ere':'1° Anno', 'Btn_2nde':'2° Anno', 'Btn_3eme':'3° Anno - Non disponibile al momento' },
+        pt: { 'Title_Projets':'Meus Projetos Universitários', 'Titre_H1':'Meus Projetos Universitários', 'Btn_1ere':'1º Ano', 'Btn_2nde':'2º Ano', 'Btn_3eme':'3º Ano - Indisponível no momento' },
+    };
+    </script>
+    <script src="portfolio.js"></script>
+</body>
+</html>

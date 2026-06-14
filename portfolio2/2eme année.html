@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="Mes Projets Universitaires">Mes Projets Universitaires - Deuxième Année</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="a propos.html" data-translate="À propos">À propos</a>
+            <a href="bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
+            <a href="projets.html" data-translate="Projets">Projets</a>
+            <a href="contact.html" data-translate="Contacts">Contacts</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container" style="display:inline-block;"></div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="container">
+            <h1 data-translate="Mes Projets Universitaires">Mes Projets Universitaires - Deuxième Année</h1>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-btn left" onclick="changeSlide(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <div class="carousel-slide active"><div class="project-card" onclick="openModal(1)"><img src="images/SAE WebScrapp.png" alt="Projet 1"><h3 data-translate="Titre_P1">Collecte automatisée de données web</h3><p data-translate="SousTitre_P1">API Vélib' et web scraping d'offres d'emploi restitués sur une page web interactive.</p></div></div>
+                <div class="carousel-slide"><div class="project-card" onclick="openModal(2)"><img src="images/SAE Droit.png" alt="Projet 2"><h3 data-translate="Titre_P2">Conformité réglementaire des données</h3><p data-translate="SousTitre_P2">Synthèse des obligations RGPD pour les entreprises.</p></div></div>
+                <div class="carousel-slide"><div class="project-card" onclick="openModal(3)"><img src="images/SAE besoinsdt.png" alt="Projet 3"><h3 data-translate="Titre_P3">Métiers de la donnée : répondre aux besoins du territoire</h3><p data-translate="SousTitre_P3">Intervention pédagogique en lycée sur HTML et CSS.</p></div></div>
+                <div class="carousel-slide"><div class="project-card" onclick="openModal(4)"><img src="images/SAE Lias.png" alt="Projet 4"><h3 data-translate="Titre_P4">Développement d'un composant décisionnel</h3><p data-translate="SousTitre_P4">Tableau de bord analytique pour le laboratoire LIAS.</p></div></div>
+                <div class="carousel-slide"><div class="project-card" onclick="openModal(5)"><img src="images/SAE final2.png" alt="Projet 5"><h3 data-translate="Titre_P5">Reporting d'une analyse multivariée</h3><p data-translate="SousTitre_P5">Outil de suivi-évaluation de la pauvreté en France via R Shiny.</p></div></div>
+
+                <button class="carousel-btn right" onclick="changeSlide(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modales — même structure que 1ère année -->
+    <div id="modal1" class="modal"><div class="modal-content"><span class="close" onclick="closeModal(1)">&times;</span><div class="modal-header" data-translate="Titre_P1"></div><div class="modal-body"><p data-translate="P1_Desc"></p></div><div class="modal-header" data-translate="App_Label"></div><div class="modal-body"><p data-translate="P1_Apps"></p></div><div class="modal-header" data-translate="Comp_Label"></div><div class="modal-body"><ul data-translate="P1_Comp"></ul></div><div class="modal-header" data-translate="Result_Label"></div><div class="modal-body"><p data-translate="P1_Result"></p></div></div></div>
+    <div id="modal2" class="modal"><div class="modal-content"><span class="close" onclick="closeModal(2)">&times;</span><div class="modal-header" data-translate="Titre_P2"></div><div class="modal-body"><p data-translate="P2_Desc"></p></div><div class="modal-header" data-translate="App_Label"></div><div class="modal-body"><p data-translate="P2_Apps"></p></div><div class="modal-header" data-translate="Comp_Label"></div><div class="modal-body"><ul data-translate="P2_Comp"></ul></div><div class="modal-header" data-translate="Result_Label"></div><div class="modal-body"><p data-translate="P2_Result"></p></div></div></div>
+    <div id="modal3" class="modal"><div class="modal-content"><span class="close" onclick="closeModal(3)">&times;</span><div class="modal-header" data-translate="Titre_P3"></div><div class="modal-body"><p data-translate="P3_Desc"></p></div><div class="modal-header" data-translate="App_Label"></div><div class="modal-body"><p data-translate="P3_Apps"></p></div><div class="modal-header" data-translate="Comp_Label"></div><div class="modal-body"><ul data-translate="P3_Comp"></ul></div><div class="modal-header" data-translate="Result_Label"></div><div class="modal-body"><p data-translate="P3_Result"></p></div></div></div>
+    <div id="modal4" class="modal"><div class="modal-content"><span class="close" onclick="closeModal(4)">&times;</span><div class="modal-header" data-translate="Titre_P4"></div><div class="modal-body"><p data-translate="P4_Desc"></p></div><div class="modal-header" data-translate="App_Label"></div><div class="modal-body"><p data-translate="P4_Apps"></p></div><div class="modal-header" data-translate="Comp_Label"></div><div class="modal-body"><ul data-translate="P4_Comp"></ul></div><div class="modal-header" data-translate="Result_Label"></div><div class="modal-body"><p data-translate="P4_Result"></p></div></div></div>
+    <div id="modal5" class="modal"><div class="modal-content"><span class="close" onclick="closeModal(5)">&times;</span><div class="modal-header" data-translate="Titre_P5"></div><div class="modal-body"><p data-translate="P5_Desc"></p></div><div class="modal-header" data-translate="App_Label"></div><div class="modal-body"><p data-translate="P5_Apps"></p></div><div class="modal-header" data-translate="Comp_Label"></div><div class="modal-body"><ul data-translate="P5_Comp"></ul></div><div class="modal-header" data-translate="Result_Label"></div><div class="modal-body"><p data-translate="P5_Result"></p></div></div></div>
+
+    <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active');
+            if (i === index) slide.classList.add('active');
+        });
+    }
+
+    function changeSlide(direction) {
+        currentSlide += direction;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+        if (currentSlide >= slides.length) currentSlide = 0;
+        showSlide(currentSlide);
+    }
+
+    function openModal(projectId) { document.getElementById("modal" + projectId).style.display = "block"; }
+    function closeModal(projectId) { document.getElementById("modal" + projectId).style.display = "none"; }
+    window.onclick = function(event) {
+        if (event.target.classList.contains('modal')) {
+            for (let i = 1; i <= 5; i++) closeModal(i);
+        }
+    }
+    </script>
+
+    <script>
+    window.PAGE_TRANSLATIONS = {
+        'fr': {
+            'Accueil': 'Accueil', 'À propos': 'À propos', 'Bilan Personnel': 'Bilan Personnel', 'Projets': 'Projets', 'Contacts': 'Contacts',
+            'Mes Projets Universitaires': 'Mes Projets Universitaires - Deuxième Année',
+            'App_Label': 'Applications utilisées :', 'Result_Label': 'Résultats obtenus :', 'Comp_Label': 'Compétences travaillées :',
+
+            'Titre_P1': "Collecte automatisée de données web", 'SousTitre_P1': "API Vélib' et web scraping d'offres d'emploi restitués sur une page web interactive.",
+            'P1_Desc': "L'objectif de ce projet était de créer des indicateurs à partir de deux sources de données : d'une part, une API relative aux stations Vélib' à Paris, et d'autre part, un web scraping recensant les offres d'emploi en Nouvelle-Aquitaine. Le tout devait être restitué sur une page web structurée, accompagné d'une carte interactive et d'analyses statistiques.",
+            'P1_Apps': "Python et Excel (CSV).",
+            'P1_Comp': "<li>Webscraping et utilisation d'API pour collecter des données web en Python</li><li>Traitement et visualisation de données structurées et non structurées</li><li>Programmation web (HTML / CSS / JavaScript)</li><li>Visualisation de données géographiques (carte interactive)</li>",
+            'P1_Result': "La page web finale est composée de trois onglets. Le premier traite de l'API Vélib' : une carte affichant le nombre de vélos disponibles par station à Paris, un sélecteur de commune et trois graphiques statistiques. Le deuxième onglet présente les résultats du web scraping des offres d'emploi, avec une carte et deux graphiques. Le troisième onglet regroupe un compte rendu du projet : difficultés rencontrées, bilan général, fonctionnalités opérationnelles et répartition des tâches.",
+
+            'Titre_P2': "Conformité réglementaire des données", 'SousTitre_P2': "Synthèse des obligations RGPD pour les entreprises.",
+            'P2_Desc': "En groupe de cinq, l'objectif de ce projet était de recenser et de synthétiser les différentes réglementations du RGPD applicables au sein d'une entreprise. Il s'agissait de présenter les obligations à respecter, les bonnes pratiques à adopter, ainsi que les sanctions encourues en cas de non-conformité. Ce travail a nécessité des recherches approfondies et une bonne compréhension des enjeux juridiques liés à la protection des données.",
+            'P2_Apps': "Recherche web et Word.",
+            'P2_Comp': "<li>Conformité réglementaire pour analyser et traiter des données (RGPD)</li><li>Exploitation et analyse de données réglementaires</li>",
+            'P2_Result': "Le livrable final est un document Word structuré comme un règlement intérieur, réunissant l'ensemble des informations collectées avec les autres membres du groupe. Il détaille les exigences du RGPD de façon accessible et opérationnelle, à destination de toute personne souhaitant comprendre ses obligations en matière de protection des données personnelles.",
+
+            'Titre_P3': "Métiers de la donnée : répondre aux besoins du territoire", 'SousTitre_P3': "Intervention pédagogique en lycée sur HTML et CSS.",
+            'P3_Desc': "Ce projet en binôme s'est déroulé tout au long de l'année. L'objectif était de concevoir et d'animer une activité pédagogique en lien avec la donnée à destination d'élèves de première. Avec mon camarade, nous avons choisi d'enseigner le HTML et le CSS au lycée Paul Guérin à Niort. Nous avons d'abord défini les modalités d'intervention avec le professeur référent, puis construit les cours et leurs supports de présentation, avant de les dispenser directement aux élèves.",
+            'P3_Apps': "Recherche web, Word, PowerPoint et Google Forms.",
+            'P3_Comp': "<li>Programmation web — enseignement du HTML et du CSS</li><li>Exploitation et visualisation de données dans un contexte pédagogique</li><li>Mise en œuvre d'une démarche d'enquête par questionnaire (satisfaction)</li>",
+            'P3_Result': "Les résultats sont particulièrement concrets : nous avons pu proposer aux élèves un mini-projet final qui leur a valu une bonne note et qui nous a permis d'évaluer l'efficacité de notre enseignement à travers les sites web qu'ils ont réalisés. Un questionnaire de satisfaction rempli par les élèves nous a également donné un retour direct sur la qualité de nos interventions.",
+
+            'Titre_P4': "Développement d'un composant décisionnel", 'SousTitre_P4': "Tableau de bord analytique pour le laboratoire LIAS.",
+            'P4_Desc': "Ce projet en groupe de quatre s'est déroulé sur une semaine intensive. Le laboratoire de recherche LIAS nous a mandatés pour réaliser une analyse statistique permettant d'évaluer si la fusion de leurs deux équipes serait bénéfique, et d'identifier les conséquences du transfert éventuel d'un membre d'une équipe à l'autre. Nous avons conduit toutes les étapes du projet, de la collecte des données jusqu'à leur valorisation et leur mise en visualisation.",
+            'P4_Apps': "Python, Docker et recherche web.",
+            'P4_Comp': "<li>Traitement et visualisation de données structurées et non structurées</li><li>Visualisation des données et automatisation de reporting (Python / Dash)</li><li>Validation et déploiement d'applications (Docker, tests unitaires)</li><li>Méthodes factorielles (ACP, AFC, AFCM)</li><li>Classification automatique (k-means, CAH)</li>",
+            'P4_Result': "Le livrable final est un tableau de bord interactif permettant d'analyser les deux équipes sous plusieurs angles : vue d'ensemble de chaque équipe, fiche individuelle de chaque membre, visualisation des liens entre collaborateurs et projections sur les évolutions futures. Cet outil offre une analyse approfondie des dynamiques d'équipe et permet de simuler des scénarios futurs pouvant s'avérer déterminants pour les décisions du laboratoire.",
+
+            'Titre_P5': "Reporting d'une analyse multivariée", 'SousTitre_P5': "Outil de suivi-évaluation de la pauvreté en France via R Shiny.",
+            'P5_Desc': "Ce projet en groupe de trois avait pour objectif de concevoir un outil visuel et automatisé de suivi-évaluation de la pauvreté en France, à l'échelle départementale et régionale. En 2021, environ 9,1 millions de personnes vivaient en dessous du seuil de pauvreté monétaire en France métropolitaine, soit 14 % de la population. Notre employeur fictif nous a demandé de créer plusieurs tableaux de bord pour analyser ce phénomène en profondeur, en comparant notamment les 5 départements les plus pauvres et les 5 les moins touchés, et en menant une analyse multifactorielle.",
+            'P5_Apps': "R (Shiny) et INSEE – Statistiques locales.",
+            'P5_Comp': "<li>Visualisation des données et automatisation de reporting avec R Shiny</li><li>Étude statistique multivariée (ACP, AFC, AFCM)</li><li>Classification automatique et Machine Learning (k-means, CAH)</li><li>Exploitation et visualisation de données économiques (tableaux de bord)</li><li>Visualisation de données géographiques (carte par département)</li>",
+            'P5_Result': "Le livrable est une application Shiny interactive accessible via un lien web. Elle permet de visualiser et comparer les indicateurs clés de pauvreté entre départements : répartition de la population par âge, taux de pauvreté par type de ménage, niveau d'éducation, logement, fiscalité, prestations sociales, services de proximité et équipements publics. Une analyse multifactorielle complète l'outil afin d'identifier les départements similaires ou opposés du point de vue de la pauvreté."
+        },
+        'en': {
+            'Accueil': 'Home', 'À propos': 'About', 'Bilan Personnel': 'Personal Review', 'Projets': 'Projects', 'Contacts': 'Contacts',
+            'Mes Projets Universitaires': 'My University Projects - Second Year',
+            'App_Label': 'Applications used:', 'Result_Label': 'Results obtained:', 'Comp_Label': 'Skills developed:',
+
+            'Titre_P1': "Automated Web Data Collection", 'SousTitre_P1': "Vélib' API and job offer scraping presented on an interactive web page.",
+            'P1_Desc': "The aim of this project was to create indicators from two data sources: an API related to Vélib' stations in Paris, and a web scraping process listing job offers in the Nouvelle-Aquitaine region. Everything was presented on a structured web page with an interactive map and statistical analyses.",
+            'P1_Apps': "Python and Excel (CSV).",
+            'P1_Comp': "<li>Web scraping and API usage to collect web data in Python</li><li>Processing and visualising structured and unstructured data</li><li>Web programming (HTML / CSS / JavaScript)</li><li>Geographic data visualisation (interactive map)</li>",
+            'P1_Result': "The final web page has three tabs. The first covers the Vélib' API: an interactive map showing the number of bikes per station in Paris, a commune selector and three statistical charts. The second tab shows job offer scraping results with a map and two charts. The third tab is a project report covering difficulties, an overall assessment, working features and task distribution.",
+
+            'Titre_P2': "Data Regulatory Compliance", 'SousTitre_P2': "Summary of GDPR obligations for companies.",
+            'P2_Desc': "In a group of five, the aim of this project was to identify and summarise the GDPR regulations applicable within a company. This meant presenting the obligations to comply with, best practices to adopt and the penalties incurred in case of non-compliance. The work required in-depth research and a solid understanding of the legal issues around data protection.",
+            'P2_Apps': "Web research and Word.",
+            'P2_Comp': "<li>Regulatory compliance for data processing and analysis (GDPR)</li><li>Exploitation and analysis of regulatory data</li>",
+            'P2_Result': "The final deliverable is a Word document structured like an internal regulation, compiling all the information gathered with the other group members. It details the GDPR requirements in an accessible and practical way, aimed at anyone wishing to understand their obligations regarding personal data protection.",
+
+            'Titre_P3': "Data Careers: Meeting Local Needs", 'SousTitre_P3': "Educational intervention in a secondary school on HTML and CSS.",
+            'P3_Desc': "This two-person project took place throughout the year. The goal was to design and deliver a data-related educational activity aimed at year 12 students. With my partner, we chose to teach HTML and CSS at Lycée Paul Guérin in Niort. We first defined the teaching arrangements with the supervising teacher, then built the lesson content and presentation materials before delivering the sessions to the students.",
+            'P3_Apps': "Web research, Word, PowerPoint and Google Forms.",
+            'P3_Comp': "<li>Web programming — teaching HTML and CSS</li><li>Data exploitation and visualisation in an educational context</li><li>Implementing a questionnaire-based survey (satisfaction)</li>",
+            'P3_Result': "The results are particularly tangible: we gave students a final mini-project that earned them a good grade and allowed us to assess the effectiveness of our teaching through the websites they created. A satisfaction questionnaire completed by the students also gave us direct feedback on the quality of our sessions.",
+
+            'Titre_P4': "Development of a Decision-Support Component", 'SousTitre_P4': "Analytical dashboard for the LIAS research lab.",
+            'P4_Desc': "This four-person project took place over an intensive week. The LIAS research lab commissioned us to carry out a statistical analysis to assess whether merging their two teams would be beneficial, and to identify the consequences of potentially transferring a team member. We handled every step of the project, from data collection through to analysis and visualisation.",
+            'P4_Apps': "Python, Docker and web research.",
+            'P4_Comp': "<li>Processing and visualising structured and unstructured data</li><li>Data visualisation and reporting automation (Python / Dash)</li><li>Application validation and deployment (Docker, unit testing)</li><li>Factor analysis methods (PCA, CA, MCA)</li><li>Automatic classification (k-means, hierarchical clustering)</li>",
+            'P4_Result': "The final deliverable is an interactive dashboard analysing both teams from multiple angles: an overview of each team, individual profiles for each member, visualisation of connections between collaborators and projections on future developments. This tool provides an in-depth analysis of team dynamics and allows future scenarios to be simulated.",
+
+            'Titre_P5': "Multivariate Analysis Reporting", 'SousTitre_P5': "Poverty monitoring tool for France via an interactive R Shiny application.",
+            'P5_Desc': "This three-person project aimed to design an automated visual tool for monitoring and evaluating poverty in France at the departmental and regional level. In 2021, approximately 9.1 million people in metropolitan France lived below the monetary poverty threshold, representing 14% of the population. Our fictional employer asked us to create several dashboards to analyse this phenomenon in depth, comparing the 5 poorest departments with the 5 least affected, and conducting a multifactorial analysis.",
+            'P5_Apps': "R (Shiny) and INSEE – Local Statistics.",
+            'P5_Comp': "<li>Data visualisation and reporting automation with R Shiny</li><li>Multivariate statistical analysis (PCA, CA, MCA)</li><li>Automatic classification and Machine Learning (k-means, hierarchical clustering)</li><li>Exploitation and visualisation of economic data (dashboards)</li><li>Geographic data visualisation (map by department)</li>",
+            'P5_Result': "The deliverable is an interactive Shiny application accessible via a web link. It enables users to visualise and compare key poverty indicators across departments: age distribution, poverty rate by household type, education level, housing, taxation, social benefits, local services and public facilities. A multifactorial analysis completes the tool to identify departments that are similar or contrasting in terms of poverty."
+        },
+        'es': {
+            'Accueil': 'Inicio', 'À propos': 'Acerca de', 'Bilan Personnel': 'Evaluación Personal', 'Projets': 'Proyectos', 'Contacts': 'Contactos',
+            'Mes Projets Universitaires': 'Mis Proyectos Universitarios - Segundo Año',
+            'App_Label': 'Aplicaciones utilizadas:', 'Result_Label': 'Resultados obtenidos:', 'Comp_Label': 'Competencias trabajadas:',
+
+            'Titre_P1': "Recopilación automatizada de datos web", 'SousTitre_P1': "API Vélib' y web scraping de ofertas de empleo en una página web interactiva.",
+            'P1_Desc': "El objetivo de este proyecto era crear indicadores a partir de dos fuentes de datos: una API sobre las estaciones Vélib' de París y un web scraping de las ofertas de empleo en Nueva Aquitania. Todo se presentó en una página web estructurada con un mapa interactivo y análisis estadísticos.",
+            'P1_Apps': "Python y Excel (CSV).",
+            'P1_Comp': "<li>Web scraping y uso de API para recopilar datos web en Python</li><li>Tratamiento y visualización de datos estructurados y no estructurados</li><li>Programación web (HTML / CSS / JavaScript)</li><li>Visualización de datos geográficos (mapa interactivo)</li>",
+            'P1_Result': "La página web final tiene tres pestañas. La primera trata sobre la API Vélib': un mapa interactivo, un selector de municipio y tres gráficos estadísticos. La segunda muestra los resultados del web scraping con mapa y dos gráficos. La tercera contiene un informe del proyecto: dificultades, balance, funcionalidades y reparto de tareas.",
+
+            'Titre_P2': "Conformidad reglamentaria de los datos", 'SousTitre_P2': "Síntesis de las obligaciones RGPD para empresas.",
+            'P2_Desc': "En grupo de cinco, el objetivo de este proyecto era identificar y resumir las regulaciones del RGPD aplicables dentro de una empresa, presentando las obligaciones, las buenas prácticas y las sanciones en caso de incumplimiento. El trabajo requirió investigación en profundidad y buen conocimiento jurídico.",
+            'P2_Apps': "Investigación web y Word.",
+            'P2_Comp': "<li>Conformidad reglamentaria para analizar y tratar datos (RGPD)</li><li>Explotación y análisis de datos reglamentarios</li>",
+            'P2_Result': "El entregable final es un documento Word estructurado como reglamento interno, con toda la información recopilada. Presenta los requisitos del RGPD de forma accesible y operativa para cualquier persona que quiera entender sus obligaciones de protección de datos.",
+
+            'Titre_P3': "Empleos de datos: responder a las necesidades del territorio", 'SousTitre_P3': "Intervención pedagógica en bachillerato sobre HTML y CSS.",
+            'P3_Desc': "Este proyecto en binomio se desarrolló a lo largo de todo el año. Con mi compañero, elegimos enseñar HTML y CSS en el Lycée Paul Guérin de Niort. Primero definimos las modalidades de intervención con el profesor, luego construimos los cursos y los soportes antes de impartirlos directamente a los alumnos.",
+            'P3_Apps': "Investigación web, Word, PowerPoint y Google Forms.",
+            'P3_Comp': "<li>Programación web — enseñanza de HTML y CSS</li><li>Explotación y visualización de datos en contexto pedagógico</li><li>Implementación de una encuesta por cuestionario (satisfacción)</li>",
+            'P3_Result': "Los resultados son especialmente concretos: propusimos a los alumnos un mini-proyecto final que les permitió obtener una buena nota y evaluar la eficacia de nuestra enseñanza a través de los sitios web que realizaron. Un cuestionario de satisfacción nos aportó un retorno directo sobre la calidad de nuestras intervenciones.",
+
+            'Titre_P4': "Desarrollo de un componente de soporte a la decisión", 'SousTitre_P4': "Panel de control analítico para el laboratorio LIAS.",
+            'P4_Desc': "Este proyecto en grupo de cuatro se desarrolló durante una semana intensiva. El laboratorio LIAS nos encargó un análisis estadístico para evaluar si la fusión de sus dos equipos sería beneficiosa e identificar las consecuencias del posible traslado de un miembro. Gestionamos todas las etapas, desde la recopilación de datos hasta la visualización.",
+            'P4_Apps': "Python, Docker e investigación web.",
+            'P4_Comp': "<li>Tratamiento y visualización de datos estructurados y no estructurados</li><li>Visualización de datos y automatización de reporting (Python / Dash)</li><li>Validación y despliegue de aplicaciones (Docker, pruebas unitarias)</li><li>Métodos factoriales (ACP, AFC, AFCM)</li><li>Clasificación automática (k-means, CAH)</li>",
+            'P4_Result': "El entregable final es un panel interactivo que analiza los dos equipos desde múltiples ángulos: visión general, fichas individuales, vínculos entre colaboradores y proyecciones futuras. La herramienta ofrece un análisis profundo de las dinámicas de equipo y permite simular escenarios futuros.",
+
+            'Titre_P5': "Reporting de un análisis multivariado", 'SousTitre_P5': "Herramienta de seguimiento de la pobreza en Francia mediante R Shiny.",
+            'P5_Desc': "Este proyecto en grupo de tres tenía como objetivo diseñar una herramienta visual y automatizada de seguimiento de la pobreza en Francia a escala departamental. En 2021, aproximadamente 9,1 millones de personas vivían por debajo del umbral de pobreza monetaria (14% de la población). Debíamos crear dashboards comparando los 5 departamentos más pobres con los 5 menos afectados, y realizar un análisis multifactorial.",
+            'P5_Apps': "R (Shiny) e INSEE – Estadísticas locales.",
+            'P5_Comp': "<li>Visualización de datos y automatización de reporting con R Shiny</li><li>Estudio estadístico multivariado (ACP, AFC, AFCM)</li><li>Clasificación automática y Machine Learning (k-means, CAH)</li><li>Explotación y visualización de datos económicos (cuadros de mando)</li><li>Visualización de datos geográficos (mapa por departamento)</li>",
+            'P5_Result': "El entregable es una aplicación Shiny interactiva accesible mediante enlace web. Permite visualizar y comparar indicadores clave de pobreza entre departamentos: distribución por edad, tasa de pobreza por tipo de hogar, nivel educativo, vivienda, fiscalidad, prestaciones sociales y equipamientos públicos. Un análisis multifactorial identifica los departamentos similares u opuestos."
+        },
+        'de': {
+            'Accueil': 'Startseite', 'À propos': 'Über mich', 'Bilan Personnel': 'Persönliche Bilanz', 'Projets': 'Projekte', 'Contacts': 'Kontakte',
+            'Mes Projets Universitaires': 'Meine Universitätsprojekte - Zweites Jahr',
+            'App_Label': 'Verwendete Anwendungen:', 'Result_Label': 'Ergebnisse:', 'Comp_Label': 'Eingesetzte Kompetenzen:',
+
+            'Titre_P1': "Automatisierte Web-Datenerhebung", 'SousTitre_P1': "Vélib'-API und Job-Scraping auf einer interaktiven Webseite.",
+            'P1_Desc': "Ziel dieses Projekts war es, Indikatoren aus zwei Datenquellen zu erstellen: einer API zu Vélib'-Stationen in Paris und einem Web-Scraping zu Stellenangeboten in der Nouvelle-Aquitaine. Alles wurde auf einer strukturierten Webseite mit interaktiver Karte und statistischen Analysen präsentiert.",
+            'P1_Apps': "Python und Excel (CSV).",
+            'P1_Comp': "<li>Web-Scraping und API-Nutzung zur Datenerhebung in Python</li><li>Verarbeitung und Visualisierung strukturierter und unstrukturierter Daten</li><li>Webprogrammierung (HTML / CSS / JavaScript)</li><li>Geografische Datenvisualisierung (interaktive Karte)</li>",
+            'P1_Result': "Die fertige Webseite besteht aus drei Tabs. Der erste befasst sich mit der Vélib'-API: interaktive Karte, Gemeinde-Selektor und drei Statistikdiagramme. Der zweite zeigt die Job-Scraping-Ergebnisse mit Karte und zwei Diagrammen. Der dritte enthält einen Projektbericht mit Schwierigkeiten, Bilanz, Funktionalitäten und Aufgabenverteilung.",
+
+            'Titre_P2': "Regulatorische Daten-Compliance", 'SousTitre_P2': "Zusammenfassung der DSGVO-Pflichten für Unternehmen.",
+            'P2_Desc': "In einer Gruppe von fünf Personen sollten die geltenden DSGVO-Vorschriften für Unternehmen erfasst und zusammengefasst werden — einzuhaltende Pflichten, Best Practices und Sanktionen bei Nichteinhaltung. Die Arbeit erforderte umfangreiche Recherchen und ein gutes Verständnis der Datenschutzfragen.",
+            'P2_Apps': "Webrecherche und Word.",
+            'P2_Comp': "<li>Regulatorische Compliance bei der Datenverarbeitung (DSGVO)</li><li>Auswertung und Analyse regulatorischer Daten</li>",
+            'P2_Result': "Das Endergebnis ist ein Word-Dokument, das wie eine interne Richtlinie aufgebaut ist und alle gesammelten Informationen bündelt. Es stellt die DSGVO-Anforderungen zugänglich und praxisnah dar.",
+
+            'Titre_P3': "Datenberufe: Regionale Bedürfnisse erfüllen", 'SousTitre_P3': "Pädagogische Intervention in einer Schule zu HTML und CSS.",
+            'P3_Desc': "Dieses Zweier-Projekt fand das gesamte Jahr über statt. Mit meinem Partner entschieden wir uns, HTML und CSS am Lycée Paul Guérin in Niort zu unterrichten. Wir legten zunächst die Unterrichtsmodalitäten fest, erstellten dann die Kursinhalte und Präsentationsunterlagen und hielten die Stunden selbst.",
+            'P3_Apps': "Webrecherche, Word, PowerPoint und Google Forms.",
+            'P3_Comp': "<li>Webprogrammierung — Unterricht in HTML und CSS</li><li>Datenauswertung und -visualisierung im Lehrkontext</li><li>Durchführung einer Fragebogenerhebung (Zufriedenheit)</li>",
+            'P3_Result': "Die Ergebnisse sind besonders greifbar: Wir konnten den Schülerinnen und Schülern ein abschließendes Mini-Projekt anbieten, das ihnen eine gute Note einbrachte und uns ermöglichte, die Wirksamkeit unseres Unterrichts anhand der erstellten Websites zu beurteilen. Ein Zufriedenheitsfragebogen lieferte uns direktes Feedback.",
+
+            'Titre_P4': "Entwicklung einer Entscheidungsunterstützungskomponente", 'SousTitre_P4': "Analytisches Dashboard für das LIAS-Forschungslabor.",
+            'P4_Desc': "Dieses Vierer-Projekt fand in einer intensiven Woche statt. Das LIAS-Labor beauftragte uns, eine statistische Analyse durchzuführen, um zu beurteilen, ob die Fusion ihrer beiden Teams vorteilhaft wäre, und die Auswirkungen einer möglichen Versetzung zu ermitteln. Wir führten alle Projektschritte durch, von der Datenerhebung bis zur Visualisierung.",
+            'P4_Apps': "Python, Docker und Webrecherche.",
+            'P4_Comp': "<li>Verarbeitung und Visualisierung strukturierter und unstrukturierter Daten</li><li>Datenvisualisierung und Reporting-Automatisierung (Python / Dash)</li><li>Validierung und Deployment von Anwendungen (Docker, Unit-Tests)</li><li>Faktoranalysemethoden (PCA, CA, MCA)</li><li>Automatische Klassifikation (k-means, hierarchisches Clustering)</li>",
+            'P4_Result': "Das Endergebnis ist ein interaktives Dashboard, das beide Teams aus verschiedenen Blickwinkeln analysiert: Gesamtübersicht, individuelle Profile, Verbindungen zwischen Kollegen und Zukunftsprojektionen. Das Tool ermöglicht die Simulation zukünftiger Szenarien für die Entscheidungen des Labors.",
+
+            'Titre_P5': "Berichterstattung einer multivariaten Analyse", 'SousTitre_P5': "Armuts-Monitoring-Tool für Frankreich via R Shiny.",
+            'P5_Desc': "Dieses Dreier-Projekt hatte zum Ziel, ein automatisiertes visuelles Instrument zur Überwachung der Armut in Frankreich auf Departements- und Regionalebene zu entwickeln. 2021 lebten rund 9,1 Millionen Menschen (14 % der Bevölkerung) unterhalb der Armutsgrenze. Unser fiktiver Arbeitgeber bat uns, mehrere Dashboards zu erstellen und eine multifaktorielle Analyse durchzuführen.",
+            'P5_Apps': "R (Shiny) und INSEE – Lokale Statistiken.",
+            'P5_Comp': "<li>Datenvisualisierung und Reporting-Automatisierung mit R Shiny</li><li>Multivariate statistische Analyse (PCA, CA, MCA)</li><li>Automatische Klassifikation und Machine Learning (k-means, CAH)</li><li>Auswertung und Visualisierung wirtschaftlicher Daten (Dashboards)</li><li>Geografische Datenvisualisierung (Karte nach Departement)</li>",
+            'P5_Result': "Das Ergebnis ist eine interaktive Shiny-Anwendung, die über einen Weblink zugänglich ist. Sie ermöglicht den Vergleich wichtiger Armutsindikatorenzwischen Departements: Altersverteilung, Armutsquote, Bildungsniveau, Wohnsituation, Besteuerung, Sozialleistungen und öffentliche Einrichtungen. Eine multifaktorielle Analyse vervollständigt das Tool."
+        },
+        'it': {
+            'Accueil': 'Home', 'À propos': 'Chi sono', 'Bilan Personnel': 'Bilancio Personale', 'Projets': 'Progetti', 'Contacts': 'Contatti',
+            'Mes Projets Universitaires': 'I miei Progetti Universitari - Secondo Anno',
+            'App_Label': 'Applicazioni utilizzate:', 'Result_Label': 'Risultati ottenuti:', 'Comp_Label': 'Competenze mobilitate:',
+
+            'Titre_P1': "Raccolta automatizzata di dati web", 'SousTitre_P1': "API Vélib' e web scraping di offerte di lavoro su una pagina web interattiva.",
+            'P1_Desc': "L'obiettivo del progetto era creare indicatori da due fonti: un'API relativa alle stazioni Vélib' a Parigi e un web scraping delle offerte di lavoro in Nuova Aquitania. Il tutto è stato presentato su una pagina web strutturata, con mappa interattiva e analisi statistiche.",
+            'P1_Apps': "Python e Excel (CSV).",
+            'P1_Comp': "<li>Web scraping e utilizzo di API per raccogliere dati web in Python</li><li>Trattamento e visualizzazione di dati strutturati e non strutturati</li><li>Programmazione web (HTML / CSS / JavaScript)</li><li>Visualizzazione di dati geografici (mappa interattiva)</li>",
+            'P1_Result': "La pagina web finale è composta da tre schede. La prima riguarda l'API Vélib': mappa interattiva, selettore di comune e tre grafici statistici. La seconda scheda mostra i risultati del web scraping con mappa e due grafici. La terza contiene un resoconto del progetto: difficoltà, bilancio, funzionalità e distribuzione dei compiti.",
+
+            'Titre_P2': "Conformità normativa dei dati", 'SousTitre_P2': "Sintesi degli obblighi GDPR per le aziende.",
+            'P2_Desc': "In un gruppo di cinque, l'obiettivo era identificare e sintetizzare le normative GDPR applicabili all'interno di un'azienda — obblighi, buone pratiche e sanzioni in caso di non conformità. Il lavoro ha richiesto ricerche approfondite e buona comprensione delle questioni giuridiche.",
+            'P2_Apps': "Ricerca web e Word.",
+            'P2_Comp': "<li>Conformità normativa per l'analisi e il trattamento dei dati (GDPR)</li><li>Sfruttamento e analisi di dati normativi</li>",
+            'P2_Result': "Il deliverable finale è un documento Word strutturato come regolamento interno, che raccoglie tutte le informazioni del gruppo. Illustra i requisiti GDPR in modo accessibile e operativo.",
+
+            'Titre_P3': "Professioni dei dati: rispondere ai bisogni del territorio", 'SousTitre_P3': "Intervento didattico in un liceo su HTML e CSS.",
+            'P3_Desc': "Questo progetto in coppia si è svolto nel corso dell'intero anno. Con il mio compagno, abbiamo scelto di insegnare HTML e CSS al Lycée Paul Guérin di Niort. Abbiamo prima definito le modalità di intervento con il professore, poi costruito i corsi e i materiali prima di tenerli direttamente agli studenti.",
+            'P3_Apps': "Ricerca web, Word, PowerPoint e Google Forms.",
+            'P3_Comp': "<li>Programmazione web — insegnamento di HTML e CSS</li><li>Sfruttamento e visualizzazione dei dati in contesto didattico</li><li>Realizzazione di un'indagine tramite questionario (soddisfazione)</li>",
+            'P3_Result': "I risultati sono particolarmente concreti: abbiamo proposto agli studenti un mini-progetto finale che ha permesso loro di ottenere un buon voto e a noi di valutare l'efficacia dell'insegnamento attraverso i siti web realizzati. Un questionario di soddisfazione ci ha fornito un riscontro diretto.",
+
+            'Titre_P4': "Sviluppo di un componente decisionale", 'SousTitre_P4': "Dashboard analitico per il laboratorio LIAS.",
+            'P4_Desc': "Questo progetto in gruppo di quattro si è svolto nel corso di una settimana intensiva. Il laboratorio LIAS ci ha incaricati di effettuare un'analisi statistica per valutare se la fusione dei loro due team sarebbe vantaggiosa e per identificare le conseguenze del possibile trasferimento di un membro. Abbiamo gestito tutte le fasi del progetto.",
+            'P4_Apps': "Python, Docker e ricerca web.",
+            'P4_Comp': "<li>Trattamento e visualizzazione di dati strutturati e non strutturati</li><li>Visualizzazione dei dati e automazione del reporting (Python / Dash)</li><li>Validazione e deployment di applicazioni (Docker, test unitari)</li><li>Metodi fattoriali (ACP, AFC, AFCM)</li><li>Classificazione automatica (k-means, CAH)</li>",
+            'P4_Result': "Il deliverable finale è un dashboard interattivo che analizza i due team da più angolazioni: panoramica, schede individuali, legami tra collaboratori e proiezioni future. Lo strumento permette di simulare scenari futuri determinanti per le decisioni del laboratorio.",
+
+            'Titre_P5': "Reporting di un'analisi multivariata", 'SousTitre_P5': "Strumento di monitoraggio della povertà in Francia via R Shiny.",
+            'P5_Desc': "Questo progetto in gruppo di tre mirava a progettare uno strumento visivo e automatizzato per il monitoraggio della povertà in Francia a livello dipartimentale. Nel 2021, circa 9,1 milioni di persone (14% della popolazione) vivevano sotto la soglia di povertà. Dovevamo creare dashboard comparativi e un'analisi multifattoriale.",
+            'P5_Apps': "R (Shiny) e INSEE – Statistiche locali.",
+            'P5_Comp': "<li>Visualizzazione dei dati e automazione del reporting con R Shiny</li><li>Analisi statistica multivariata (ACP, AFC, AFCM)</li><li>Classificazione automatica e Machine Learning (k-means, CAH)</li><li>Sfruttamento e visualizzazione di dati economici (dashboard)</li><li>Visualizzazione di dati geografici (mappa per dipartimento)</li>",
+            'P5_Result': "Il deliverable è un'applicazione Shiny interattiva accessibile via web. Permette di confrontare indicatori chiave di povertà tra dipartimenti: distribuzione per età, tasso di povertà per tipo di nucleo, istruzione, alloggio, fiscalità, prestazioni sociali ed equipaggiamenti pubblici. Un'analisi multifattoriale completa lo strumento."
+        },
+        'pt': {
+            'Accueil': 'Início', 'À propos': 'Sobre', 'Bilan Personnel': 'Avaliação Pessoal', 'Projets': 'Projetos', 'Contacts': 'Contatos',
+            'Mes Projets Universitaires': 'Meus Projetos Universitários - Segundo Ano',
+            'App_Label': 'Aplicações utilizadas:', 'Result_Label': 'Resultados obtidos:', 'Comp_Label': 'Competências trabalhadas:',
+
+            'Titre_P1': "Recolha automatizada de dados web", 'SousTitre_P1': "API Vélib' e web scraping de ofertas de emprego numa página web interativa.",
+            'P1_Desc': "O objetivo deste projeto era criar indicadores a partir de duas fontes de dados: uma API relativa às estações Vélib' em Paris e um web scraping das ofertas de emprego na Nouvelle-Aquitaine. Tudo foi apresentado numa página web estruturada, com mapa interativo e análises estatísticas.",
+            'P1_Apps': "Python e Excel (CSV).",
+            'P1_Comp': "<li>Web scraping e utilização de API para recolher dados web em Python</li><li>Tratamento e visualização de dados estruturados e não estruturados</li><li>Programação web (HTML / CSS / JavaScript)</li><li>Visualização de dados geográficos (mapa interativo)</li>",
+            'P1_Result': "A página web final é composta por três separadores. O primeiro aborda a API Vélib': mapa interativo, seletor de município e três gráficos estatísticos. O segundo apresenta os resultados do web scraping com mapa e dois gráficos. O terceiro contém um relatório do projeto: dificuldades, balanço, funcionalidades e distribuição de tarefas.",
+
+            'Titre_P2': "Conformidade regulatória dos dados", 'SousTitre_P2': "Síntese das obrigações RGPD para empresas.",
+            'P2_Desc': "Em grupo de cinco, o objetivo era recensear e sintetizar os regulamentos RGPD aplicáveis numa empresa — obrigações, boas práticas e sanções em caso de incumprimento. O trabalho exigiu pesquisas aprofundadas e boa compreensão das questões jurídicas de proteção de dados.",
+            'P2_Apps': "Pesquisa web e Word.",
+            'P2_Comp': "<li>Conformidade regulatória para analisar e tratar dados (RGPD)</li><li>Exploração e análise de dados regulatórios</li>",
+            'P2_Result': "O entregável final é um documento Word estruturado como regulamento interno, reunindo todas as informações recolhidas. Apresenta os requisitos do RGPD de forma acessível e operacional.",
+
+            'Titre_P3': "Profissões dos dados: responder às necessidades do território", 'SousTitre_P3': "Intervenção pedagógica num liceu sobre HTML e CSS.",
+            'P3_Desc': "Este projeto em par decorreu ao longo de todo o ano. Com o meu colega, escolhemos ensinar HTML e CSS no Lycée Paul Guérin em Niort. Começámos por definir as modalidades de intervenção com o professor, depois construímos os cursos e suportes antes de os ministrarmos diretamente aos alunos.",
+            'P3_Apps': "Pesquisa web, Word, PowerPoint e Google Forms.",
+            'P3_Comp': "<li>Programação web — ensino de HTML e CSS</li><li>Exploração e visualização de dados em contexto pedagógico</li><li>Implementação de um inquérito por questionário (satisfação)</li>",
+            'P3_Result': "Os resultados são particularmente concretos: pudemos propor aos alunos um mini-projeto final que lhes valeu uma boa nota e nos permitiu avaliar a eficácia do nosso ensino através dos sites web que realizaram. Um questionário de satisfação forneceu-nos retorno direto sobre a qualidade das nossas intervenções.",
+
+            'Titre_P4': "Desenvolvimento de um componente de suporte à decisão", 'SousTitre_P4': "Dashboard analítico para o laboratório LIAS.",
+            'P4_Desc': "Este projeto em grupo de quatro decorreu ao longo de uma semana intensiva. O laboratório LIAS encomendou-nos uma análise estatística para avaliar se a fusão das suas duas equipas seria benéfica e identificar as consequências da eventual transferência de um membro. Gerimos todas as etapas do projeto.",
+            'P4_Apps': "Python, Docker e pesquisa web.",
+            'P4_Comp': "<li>Tratamento e visualização de dados estruturados e não estruturados</li><li>Visualização de dados e automatização de reporting (Python / Dash)</li><li>Validação e deployment de aplicações (Docker, testes unitários)</li><li>Métodos fatoriais (ACP, AFC, AFCM)</li><li>Classificação automática (k-means, CAH)</li>",
+            'P4_Result': "O entregável final é um dashboard interativo que analisa as duas equipas sob vários ângulos: visão geral, fichas individuais, ligações entre colaboradores e projeções futuras. A ferramenta permite simular cenários futuros determinantes para as decisões do laboratório.",
+
+            'Titre_P5': "Reporting de uma análise multivariada", 'SousTitre_P5': "Ferramenta de monitorização da pobreza em França via R Shiny.",
+            'P5_Desc': "Este projeto em grupo de três tinha como objetivo conceber uma ferramenta visual e automatizada de monitorização da pobreza em França à escala departamental. Em 2021, cerca de 9,1 milhões de pessoas (14% da população) viviam abaixo do limiar de pobreza. Devíamos criar dashboards comparativos e realizar uma análise multifatorial.",
+            'P5_Apps': "R (Shiny) e INSEE – Estatísticas locais.",
+            'P5_Comp': "<li>Visualização de dados e automatização de reporting com R Shiny</li><li>Estudo estatístico multivariado (ACP, AFC, AFCM)</li><li>Classificação automática e Machine Learning (k-means, CAH)</li><li>Exploração e visualização de dados económicos (dashboards)</li><li>Visualização de dados geográficos (mapa por departamento)</li>",
+            'P5_Result': "O entregável é uma aplicação Shiny interativa acessível via web. Permite visualizar e comparar indicadores-chave de pobreza entre departamentos: distribuição por idade, taxa de pobreza por tipo de agregado, educação, habitação, fiscalidade, prestações sociais e equipamentos públicos. Uma análise multifatorial completa a ferramenta."
+        }
+    };
+    </script>
+    <script src="portfolio.js"></script>
+</body>
+</html>

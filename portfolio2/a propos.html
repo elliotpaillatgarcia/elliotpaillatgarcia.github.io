@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Elliot Paillat--Garcia</title>
+    <link rel="stylesheet" href="styleA.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+
+    <div class="navbar">
+        <div class="name"><a href="../index.html">Elliot Paillat--Garcia</a></div>
+        <div>
+            <a href="../index.html" data-translate="Accueil">Accueil</a>
+            <a href="bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
+            <a href="projets.html" data-translate="Projets">Projets</a>
+            <a href="contact.html" data-translate="Contacts">Contacts</a>
+            <button id="theme-toggle" class="theme-toggle-button">🌙</button>
+            <div id="language_selector_container" style="display:inline-block;"></div>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-container">
+            <h1 class="hero-title" data-translate="About_Title">À propos de moi</h1>
+            <p class="hero-subtitle" data-translate="About_Subtitle">Découvrez mon parcours, mes compétences et mes passions</p>
+            <div class="profile-container">
+                <img src="images/Photo propos.jpg" alt="Elliot Paillat--Garcia" class="profile-pic">
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <div class="container">
+
+            <div class="section-card" data-aos="fade-up">
+                <div class="section-header">
+                    <div class="section-icon">👨‍💼</div>
+                    <h2 class="section-title" data-translate="Qui_Suis_Je_Title">Qui suis-je ?</h2>
+                </div>
+                <p class="section-text" data-translate="Qui_Suis_Je_Text">
+                    Je m'appelle Elliot Paillat--Garcia. D'un naturel attentif et observateur, j'aime analyser le monde qui m'entoure tout en restant très à l'écoute des autres. Curieux de nature, j'apprécie faire de nouvelles rencontres, partager mes connaissances et continuer d'apprendre au quotidien. Bien que mon tempérament plutôt discret me place parfois en retrait, ma curiosité prend le dessus et me pousse naturellement à échanger. Professionnellement, je m'épanouis avec la même aisance en totale autonomie qu'au sein d'une équipe.
+                </p>
+            </div>
+
+            <div class="section-card" data-aos="fade-up">
+                <div class="section-header">
+                    <div class="section-icon">🎓</div>
+                    <h2 class="section-title" data-translate="Parcours_Title">Mon parcours académique</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023 - Présent</div>
+                        <div class="timeline-title" data-translate="BUT_Title">BUT Sciences des Données</div>
+                        <div class="timeline-description" data-translate="BUT_Desc">
+                            Je suis actuellement en deuxième année de BUT en sciences des données, développant des compétences en analyse ainsi que dans différents langages de programmation.
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Jusqu'en 2023</div>
+                        <div class="timeline-title" data-translate="Niort_Title">Formation Générale - Niort</div>
+                        <div class="timeline-description" data-translate="Niort_Desc">
+                            J'ai toujours été à Niort en suivant une filière générale, mais je m'intéressais plus aux matières scientifiques.
+                        </div>
+                    </div>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <div class="skill-name">Python</div>
+                        <div class="skill-bar"><div class="skill-progress" style="width:60%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">R</div>
+                        <div class="skill-bar"><div class="skill-progress" style="width:40%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">HTML/CSS</div>
+                        <div class="skill-bar"><div class="skill-progress" style="width:70%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">VBA</div>
+                        <div class="skill-bar"><div class="skill-progress" style="width:40%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name" data-translate="Analyse_Donnees">Analyse de données</div>
+                        <div class="skill-bar"><div class="skill-progress" style="width:65%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card interests-card" data-aos="fade-up">
+                <div class="section-header">
+                    <div class="section-icon">⚡</div>
+                    <h2 class="section-title" data-translate="Interets_Title">Mes centres d'intérêt</h2>
+                </div>
+                <p class="section-text interests-intro" data-translate="Interets_Intro">
+                    Cliquez sur une bulle pour en savoir plus.
+                </p>
+                <div class="bubble-area" id="bubbleArea"></div>
+                <div class="bubble-overlay" id="bubbleOverlay" onclick="closeBubblePanel()"></div>
+                <div class="bubble-panel" id="bubblePanel">
+                    <button class="bubble-panel-close" onclick="closeBubblePanel()" data-translate="Close_Btn">✕ Fermer</button>
+                    <div class="bubble-panel-header">
+                        <div class="bubble-panel-icon" id="bpIcon"></div>
+                        <h3 class="bubble-panel-title" id="bpTitle"></h3>
+                    </div>
+                    <div class="bubble-panel-body" id="bpBody"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+    const INTERESTS_DATA = [
+        {
+            label: 'Formule 1',
+            label_en: 'Formula 1', label_es: 'Fórmula 1', label_de: 'Formel 1',
+            label_it: 'Formula 1', label_pt: 'Fórmula 1',
+            icon: 'ti-steering-wheel',
+            size: 110,
+            img: 'images/F1.png',
+            desc_fr: "La Formule 1, c'est un sport que j'ai découvert il y a un peu plus de deux ans. Au départ, c'était surtout l'aspect compétitif qui m'attirait, mais en suivant les courses et en échangeant avec des amis passionnés, j'ai vite réalisé que la technique y était presque aussi importante que le pilotage lui-même. Cet équilibre m'a vraiment intrigué et aujourd'hui j'y prête autant d'attention qu'aux duels en piste. C'est devenu un passe-temps qui me pousse à mieux comprendre la mécanique et à m'intéresser davantage aux véhicules qui nous entourent.",
+            desc_en: "Formula 1 is a sport I discovered a little over two years ago. At first, it was mainly the competitive side that drew me in, but following the races and talking with passionate friends made me quickly realize that the technical side is almost as important as the driving itself. That balance genuinely intrigued me, and today I pay just as much attention to it as to the on-track battles. It's become a hobby that pushes me to better understand mechanics and take a greater interest in the vehicles around us.",
+            desc_es: "La Fórmula 1 es un deporte que descubrí hace poco más de dos años. Al principio, era sobre todo el aspecto competitivo lo que me atraía, pero siguiendo las carreras y hablando con amigos apasionados, pronto me di cuenta de que la técnica es casi tan importante como la conducción. Ese equilibrio me intrigó de verdad, y hoy le presto tanta atención como a los duelos en pista. Se ha convertido en un pasatiempo que me impulsa a entender mejor la mecánica.",
+            desc_de: "Die Formel 1 ist ein Sport, den ich vor etwas mehr als zwei Jahren entdeckt habe. Anfangs war es vor allem der Wettbewerbsaspekt, der mich anzog, aber durch das Verfolgen der Rennen und den Austausch mit begeisterten Freunden erkannte ich schnell, dass die Technik fast genauso wichtig ist wie das Fahren selbst. Dieses Gleichgewicht hat mich wirklich fasziniert, und heute schenke ich ihm genauso viel Aufmerksamkeit wie den Kämpfen auf der Strecke.",
+            desc_it: "La Formula 1 è uno sport che ho scoperto poco più di due anni fa. All'inizio era soprattutto l'aspetto competitivo ad attrarmi, ma seguendo le gare e parlando con amici appassionati ho capito subito che la tecnica è quasi altrettanto importante della guida. Quell'equilibrio mi ha davvero incuriosito, e oggi vi presto tanta attenzione quanto ai duelli in pista.",
+            desc_pt: "A Fórmula 1 é um desporto que descobri há pouco mais de dois anos. No início, era sobretudo o aspeto competitivo que me atraía, mas ao seguir as corridas e ao falar com amigos apaixonados percebi rapidamente que a técnica é quase tão importante como a pilotagem. Esse equilíbrio fascinou-me de verdade, e hoje presto-lhe tanta atenção como aos duelos em pista.",
+            tags: ['Stratégie', 'Technologie', 'Adrénaline']
+        },
+        {
+            label: 'Musique',
+            label_en: 'Music', label_es: 'Música', label_de: 'Musik',
+            label_it: 'Musica', label_pt: 'Música',
+            icon: 'ti-music',
+            size: 98,
+            img: '',
+	    carousel: ['images/orelsan.png', 'images/bigfloli.png', 'images/lujipeka.jpg', 'images/coldplay.png', 'images/aznavour.png', 'images/disiz.png', 'images/vald.png', 'images/orel2.png'],
+            desc_fr: "C'est au collège qu'une rencontre m'a ouvert les oreilles à la musique — avant ça, je n'en écoutais vraiment pas. Aujourd'hui c'est devenu quelque chose d'essentiel dans ma vie. Ce qui me fascine, c'est l'infinité des possibilités : des accords qui, seuls, ne disent pas grand-chose, mais assemblés créent un son capable de provoquer des émotions, de rappeler des souvenirs, des personnes. J'écoute des styles très variés et j'aime autant découvrir de nouveaux genres que de nouveaux artistes qui y apportent leur touche.",
+            desc_en: "It was at secondary school that an encounter opened my ears to music — before that, I genuinely didn't listen to any. Today it's become something essential in my life. What fascinates me is the infinite range of possibilities: chords that, on their own, don't mean much, but together create a sound capable of stirring emotions, bringing back memories, or making you think of certain people. I listen to very varied styles and enjoy discovering new genres as much as new artists who bring their own touch to them.",
+            desc_es: "Fue en el colegio donde un encuentro me abrió los oídos a la música — antes de eso, realmente no escuchaba nada. Hoy se ha convertido en algo esencial en mi vida. Lo que me fascina es la infinidad de posibilidades: acordes que solos no dicen gran cosa, pero juntos crean un sonido capaz de provocar emociones, recordar momentos o personas. Escucho estilos muy variados y disfruto tanto descubriendo nuevos géneros como nuevos artistas.",
+            desc_de: "In der Schule hat mir eine Begegnung die Ohren für Musik geöffnet — davor hörte ich wirklich keine. Heute ist sie zu etwas Wesentlichem in meinem Leben geworden. Was mich fasziniert, ist die Unendlichkeit der Möglichkeiten: Akkorde, die für sich allein wenig bedeuten, aber zusammen einen Klang erzeugen, der Emotionen wecken, Erinnerungen zurückbringen kann. Ich höre sehr unterschiedliche Stilrichtungen und entdecke gerne neue Genres und Künstler.",
+            desc_it: "È alle medie che un incontro mi ha aperto le orecchie alla musica — prima non ne ascoltavo davvero. Oggi è diventata qualcosa di essenziale nella mia vita. Ciò che mi affascina è l'infinità delle possibilità: accordi che da soli dicono poco, ma insieme creano un suono capace di suscitare emozioni, richiamare ricordi, far pensare a persone. Ascolto stili molto vari e mi piace scoprire nuovi generi e nuovi artisti.",
+            desc_pt: "Foi no colégio que um encontro me abriu os ouvidos à música — antes disso, não ouvia mesmo nada. Hoje tornou-se algo essencial na minha vida. O que me fascina é a infinidade de possibilidades: acordes que sozinhos não dizem muito, mas juntos criam um som capaz de provocar emoções, trazer memórias, fazer pensar em pessoas. Ouço estilos muito variados e gosto tanto de descobrir novos géneros como novos artistas.",
+            tags: ['Écoute', 'Découverte', 'Expression']
+        },
+        {
+            label: 'Jeux vidéo',
+            label_en: 'Video Games', label_es: 'Videojuegos', label_de: 'Videospiele',
+            label_it: 'Videogiochi', label_pt: 'Videojogos',
+            icon: 'ti-device-gamepad-2',
+            size: 104,
+            img: '',
+            carousel: ['images/zelda.jpg', 'images/lego.jpg', 'images/elden.png', 'images/Spiderman.png', 'images/GOW.jpg'],
+            desc_fr: "Les jeux vidéo, c'est quelque chose que j'ai toujours aimé. Et avec le temps, je me suis aussi intéressé à ce qui les entoure : leur création, leur conception, les technologies qui les font avancer. Aujourd'hui je joue peut-être moins qu'avant, mais je continue de suivre les actualités du milieu et j'essaie de m'y remettre régulièrement — parce qu'au-delà du divertissement, les jeux vidéo sont pour moi un vrai reflet de l'évolution technologique de notre époque.",
+            desc_en: "Video games are something I've always loved. And over time, I also became interested in what surrounds them: their creation, their design, the technologies that drive them forward. Today I may play less than before, but I keep following the industry's news and try to get back into it regularly — because beyond entertainment, video games are for me a genuine reflection of the technological evolution of our era.",
+            desc_es: "Los videojuegos son algo que siempre he amado. Con el tiempo, también me interesé por lo que los rodea: su creación, su diseño, las tecnologías que los hacen avanzar. Hoy quizás juego menos que antes, pero sigo las noticias del sector e intento retomarlo con regularidad — porque más allá del entretenimiento, los videojuegos son para mí un reflejo real de la evolución tecnológica de nuestra época.",
+            desc_de: "Videospiele sind etwas, das ich schon immer geliebt habe. Mit der Zeit interessierte ich mich auch für das, was sie umgibt: ihre Entstehung, ihr Design, die Technologien, die sie voranbringen. Heute spiele ich vielleicht weniger als früher, aber ich verfolge weiterhin die Branchennews und versuche, regelmäßig wieder einzusteigen — denn über die Unterhaltung hinaus sind Videospiele für mich ein echtes Spiegelbild der technologischen Entwicklung unserer Zeit.",
+            desc_it: "I videogiochi sono qualcosa che ho sempre amato. Con il tempo mi sono interessato anche a ciò che li circonda: la loro creazione, il loro design, le tecnologie che li fanno avanzare. Oggi gioco forse meno di prima, ma continuo a seguire le notizie del settore e cerco di tornarci regolarmente — perché oltre all'intrattenimento, i videogiochi sono per me un vero riflesso dell'evoluzione tecnologica della nostra epoca.",
+            desc_pt: "Os videojogos são algo que sempre adorei. Com o tempo, também me interessei pelo que os rodeia: a sua criação, o seu design, as tecnologias que os fazem avançar. Hoje jogo talvez menos do que antes, mas continuo a acompanhar as notícias do setor e a tentar retomá-los regularmente — porque para além do entretenimento, os videojogos são para mim um verdadeiro reflexo da evolução tecnológica da nossa época.",
+            tags: ['Stratégie', 'Multijoueur', 'Créativité']
+        },
+        {
+            label: 'Informatique',
+            label_en: 'Computing', label_es: 'Informática', label_de: 'Informatik',
+            label_it: 'Informatica', label_pt: 'Informática',
+            icon: 'ti-terminal-2',
+            size: 114,
+            img: '',
+            desc_fr: "L'informatique est un domaine en perpétuelle évolution, et c'est précisément ce qui le rend passionnant. Voir ce qui est en cours de développement — comme les avancées de l'IA — et imaginer où ça mènera, c'est quelque chose qui m'anime. C'est aussi le domaine que j'ai choisi pour une partie de mes études, et j'apprécie tout autant l'aspect pratique du code que la compréhension des mécanismes derrière les outils qu'on utilise au quotidien.",
+            desc_en: "Computing is a field in perpetual evolution, and that's precisely what makes it exciting. Seeing what's currently being developed — like advances in AI — and imagining where it will lead is something that drives me. It's also the field I chose for part of my studies, and I enjoy both the practical side of coding and understanding the mechanisms behind the tools we use every day.",
+            desc_es: "La informática es un campo en perpetua evolución, y eso es precisamente lo que la hace apasionante. Ver lo que está en desarrollo — como los avances de la IA — e imaginar a dónde llevará es algo que me motiva. Es también el campo que elegí para parte de mis estudios, y disfruto tanto del aspecto práctico del código como de entender los mecanismos detrás de las herramientas que usamos a diario.",
+            desc_de: "Die Informatik ist ein Bereich in ständiger Evolution, und genau das macht sie spannend. Zu sehen, was gerade entwickelt wird — wie die Fortschritte der KI — und sich vorzustellen, wohin das führt, treibt mich an. Es ist auch das Feld, das ich für einen Teil meines Studiums gewählt habe, und ich schätze sowohl den praktischen Aspekt des Programmierens als auch das Verständnis der Mechanismen hinter den Tools, die wir täglich nutzen.",
+            desc_it: "L'informatica è un campo in perenne evoluzione, ed è proprio questo a renderla appassionante. Vedere cosa è in fase di sviluppo — come i progressi dell'IA — e immaginare dove porterà è qualcosa che mi entusiasma. È anche il campo che ho scelto per parte dei miei studi, e apprezzo tanto l'aspetto pratico del codice quanto la comprensione dei meccanismi dietro gli strumenti che usiamo ogni giorno.",
+            desc_pt: "A informática é uma área em perpétua evolução, e é precisamente isso que a torna apaixonante. Ver o que está a ser desenvolvido — como os avanços da IA — e imaginar para onde vai levar é algo que me motiva. É também a área que escolhi para parte dos meus estudos, e aprecio tanto o lado prático do código como compreender os mecanismos por trás das ferramentas que usamos no dia a dia.",
+            tags: ['Programmation', 'Résolution', 'Curiosité']
+        },
+        {
+            label: 'Cerveau &\nComportement',
+            label_en: 'Brain &\nBehaviour', label_es: 'Cerebro &\nComportamiento',
+            label_de: 'Gehirn &\nVerhalten', label_it: 'Cervello &\nComportamento',
+            label_pt: 'Cérebro &\nComportamento',
+            icon: 'ti-brain',
+            size: 108,
+            img: '',
+            desc_fr: "Le fonctionnement du cerveau humain m'a toujours intrigué — la façon dont les émotions interviennent, les raisons qui poussent une personne à agir d'une certaine manière. De nature observateur, je fais attention à ces choses depuis longtemps, dans mon quotidien : savoir comment réagir pour ne pas blesser quelqu'un, quoi dire pour rassurer. C'est pour moi une manière de mieux comprendre les gens qui m'entourent, d'anticiper ce qui peut les affecter, et finalement de mieux m'y adapter.",
+            desc_en: "How the human brain works has always intrigued me — the way emotions come into play, the reasons that push a person to act in a certain way. By nature an observer, I've been paying attention to these things for a long time in my daily life: knowing how to react so as not to hurt someone, what to say to reassure. For me it's a way of better understanding the people around me, anticipating what might affect them, and ultimately adapting better.",
+            desc_es: "El funcionamiento del cerebro humano siempre me ha intrigado — la manera en que intervienen las emociones, las razones que llevan a una persona a actuar de cierta manera. De naturaleza observador, llevo mucho tiempo prestando atención a estas cosas en mi día a día: saber cómo reaccionar para no herir a alguien, qué decir para tranquilizar. Para mí es una forma de entender mejor a las personas que me rodean y de adaptarme mejor.",
+            desc_de: "Die Funktionsweise des menschlichen Gehirns hat mich schon immer fasziniert — wie Emotionen ins Spiel kommen, welche Gründe einen Menschen dazu bringen, auf eine bestimmte Weise zu handeln. Von Natur aus beobachtend, achte ich seit Langem auf diese Dinge in meinem Alltag: zu wissen, wie man reagiert, um jemanden nicht zu verletzen, was man sagt, um zu beruhigen. Für mich ist das eine Möglichkeit, die Menschen um mich herum besser zu verstehen.",
+            desc_it: "Il funzionamento del cervello umano mi ha sempre incuriosito — il modo in cui intervengono le emozioni, le ragioni che spingono una persona ad agire in un certo modo. Di natura osservatore, presto attenzione a queste cose da molto tempo nella mia vita quotidiana: sapere come reagire per non ferire qualcuno, cosa dire per rassicurare. Per me è un modo di capire meglio le persone che mi circondano e di adattarmi meglio a loro.",
+            desc_pt: "O funcionamento do cérebro humano sempre me intrigou — a forma como as emoções intervêm, as razões que levam uma pessoa a agir de determinada maneira. De natureza observador, há muito que presto atenção a estas coisas no meu quotidiano: saber como reagir para não magoar alguém, o que dizer para tranquilizar. Para mim é uma forma de compreender melhor as pessoas à minha volta e de me adaptar melhor.",
+            tags: ['Psychologie', 'Neurosciences', 'Analyse']
+        },
+        {
+            label: 'Famille\n& Amis',
+            label_en: 'Family\n& Friends', label_es: 'Familia\n& Amigos',
+            label_de: 'Familie\n& Freunde', label_it: 'Famiglia\n& Amici',
+            label_pt: 'Família\n& Amigos',
+            icon: 'ti-users',
+            size: 100,
+            img: '',
+            desc_fr: "La famille, c'est quelque chose qui compte beaucoup pour moi — malgré les distances qui peuvent se créer ou les conflits qui arrivent parfois, elle reste présente. J'ai regroupé les amis dans la même bulle parce qu'on dit souvent qu'il existe trois types de famille : celle qu'on nous donne, celle qu'on choisit, et celle qu'on crée. Les amis appartiennent à la deuxième. Ça veut dire qu'on les choisit vraiment, et que ce lien mérite d'être entretenu — pas forcé, mais soigné.",
+            desc_en: "Family is something that matters a great deal to me — despite the distances that can grow or the conflicts that sometimes arise, it remains present. I've grouped friends in the same bubble because people often say there are three types of family: the one you're given, the one you choose, and the one you create. Friends belong to the second. That means you truly choose them, and that bond deserves to be nurtured — not forced, but cared for.",
+            desc_es: "La familia es algo que me importa mucho — a pesar de las distancias que pueden crearse o los conflictos que a veces surgen, sigue presente. He agrupado a los amigos en la misma burbuja porque suele decirse que hay tres tipos de familia: la que te dan, la que eliges y la que creas. Los amigos pertenecen a la segunda. Eso significa que realmente los eliges, y ese vínculo merece ser cuidado.",
+            desc_de: "Familie bedeutet mir sehr viel — trotz der Distanzen, die entstehen können, oder der Konflikte, die manchmal auftauchen, bleibt sie präsent. Ich habe Freunde in derselben Blase zusammengefasst, weil man oft sagt, es gibt drei Arten von Familie: die, die man bekommt, die, die man wählt, und die, die man erschafft. Freunde gehören zur zweiten. Das bedeutet, man wählt sie wirklich — und diese Bindung verdient es, gepflegt zu werden.",
+            desc_it: "La famiglia è qualcosa che conta molto per me — nonostante le distanze che possono crearsi o i conflitti che a volte capitano, rimane presente. Ho raggruppato gli amici nella stessa bolla perché si dice spesso che esistono tre tipi di famiglia: quella che ti viene data, quella che scegli e quella che crei. Gli amici appartengono alla seconda. Significa che li scegli davvero, e quel legame merita di essere curato.",
+            desc_pt: "A família é algo que me importa muito — apesar das distâncias que podem surgir ou dos conflitos que às vezes acontecem, ela permanece presente. Agrupei os amigos na mesma bolha porque se diz frequentemente que existem três tipos de família: a que nos é dada, a que escolhemos e a que criamos. Os amigos pertencem à segunda. Isso significa que os escolhemos verdadeiramente, e esse laço merece ser cuidado.",
+            tags: ['Partage', 'Liens', 'Ressourcement']
+        },
+        {
+            label: 'Dessin',
+            label_en: 'Drawing', label_es: 'Dibujo', label_de: 'Zeichnen',
+            label_it: 'Disegno', label_pt: 'Desenho',
+            icon: 'ti-pencil',
+            size: 94,
+            img: '',
+            carousel: ['images/rose.heic', 'images/coeur.heic', 'images/calcifer.jpg', 'images/snoopy.heic', 'images/dragon.heic', 'images/ailes.heic'],
+            desc_fr: "Le dessin, c'est ma façon de m'exprimer quand les mots ne suffisent pas. Ça me permet d'évacuer ce que je ressens, de comprendre mes émotions en les posant sur le papier. C'est aussi un espace de création — reproduire quelque chose que j'aime, laisser aller ma créativité, ou simplement me détendre et perdre la notion du temps. Je pratique depuis environ un an et j'y suis vraiment attaché.",
+            desc_en: "Drawing is my way of expressing myself when words aren't enough. It lets me release what I'm feeling, understand my emotions by putting them on paper. It's also a creative space — reproducing something I love, letting my creativity flow, or simply relaxing and losing track of time. I've been doing it for about a year and I've grown really attached to it.",
+            desc_es: "El dibujo es mi manera de expresarme cuando las palabras no son suficientes. Me permite liberar lo que siento, entender mis emociones poniéndolas sobre el papel. Es también un espacio de creación — reproducir algo que amo, dejar fluir mi creatividad, o simplemente relajarme y perder la noción del tiempo. Lo practico desde hace aproximadamente un año y le tengo mucho cariño.",
+            desc_de: "Zeichnen ist meine Art, mich auszudrücken, wenn Worte nicht ausreichen. Es ermöglicht mir, das loszulassen, was ich fühle, meine Emotionen zu verstehen, indem ich sie zu Papier bringe. Es ist auch ein kreativer Raum — etwas nachzuzeichnen, das ich liebe, meiner Kreativität freien Lauf zu lassen oder einfach zu entspannen und das Zeitgefühl zu verlieren. Ich mache das seit etwa einem Jahr und bin wirklich damit verbunden.",
+            desc_it: "Il disegno è il mio modo di esprimermi quando le parole non bastano. Mi permette di liberare ciò che sento, di capire le mie emozioni mettendole su carta. È anche uno spazio creativo — riprodurre qualcosa che amo, lasciare fluire la mia creatività, o semplicemente rilassarmi e perdere la cognizione del tempo. Lo pratico da circa un anno e ci sono davvero affezionato.",
+            desc_pt: "O desenho é a minha forma de me expressar quando as palavras não chegam. Permite-me libertar o que sinto, compreender as minhas emoções colocando-as no papel. É também um espaço de criação — reproduzir algo que adoro, deixar fluir a minha criatividade, ou simplesmente relaxar e perder a noção do tempo. Pratico há cerca de um ano e estou mesmo apegado a isso.",
+            tags: ['Créativité', 'Expression', 'Détente']
+        },
+    ];
+    </script>
+
+    <script>
+    window.PAGE_TRANSLATIONS = {
+        fr: {
+            'About_Title': 'À propos de moi',
+            'About_Subtitle': 'Découvrez mon parcours, mes compétences et mes passions',
+            'Qui_Suis_Je_Title': 'Qui suis-je ?',
+            'Qui_Suis_Je_Text': "Je m'appelle Elliot Paillat--Garcia. D'un naturel attentif et observateur, j'aime analyser le monde qui m'entoure tout en restant très à l'écoute des autres. Curieux de nature, j'apprécie faire de nouvelles rencontres, partager mes connaissances et continuer d'apprendre au quotidien. Bien que mon tempérament plutôt discret me place parfois en retrait, ma curiosité prend le dessus et me pousse naturellement à échanger. Professionnellement, je m'épanouis avec la même aisance en totale autonomie qu'au sein d'une équipe.",
+            'Parcours_Title': 'Mon parcours académique',
+            'BUT_Title': 'BUT Sciences des Données',
+            'BUT_Desc': "Je suis actuellement en deuxième année de BUT en sciences des données, développant des compétences en analyse ainsi que dans différents langages de programmation.",
+            'Niort_Title': 'Formation Générale - Niort',
+            'Niort_Desc': "J'ai toujours été à Niort en suivant une filière générale, mais je m'intéressais plus aux matières scientifiques.",
+            'Analyse_Donnees': 'Analyse de données',
+            'Interets_Title': "Mes centres d'intérêt",
+            'Interets_Intro': 'Cliquez sur une bulle pour en savoir plus.',
+            'Close_Btn': '✕ Fermer'
+        },
+        en: {
+            'About_Title': 'About Me', 'About_Subtitle': 'Discover my journey, skills, and passions',
+            'Qui_Suis_Je_Title': 'Who am I?',
+            'Qui_Suis_Je_Text': "My name is Elliot Paillat--Garcia. Naturally attentive and observant, I like to analyze the world around me while remaining very attentive to others. Curious by nature, I enjoy meeting new people, sharing my knowledge, and continuing to learn every day. Although my rather discreet temperament sometimes places me in the background, my curiosity takes over and naturally pushes me to interact. Professionally, I thrive with the same ease in total autonomy as within a team.",
+            'Parcours_Title': 'My Academic Journey', 'BUT_Title': 'BUT Data Science',
+            'BUT_Desc': "I am currently in my second year of a BUT in Data Science, developing skills in analysis and various programming languages.",
+            'Niort_Title': 'General Education - Niort',
+            'Niort_Desc': "I always lived in Niort and pursued a general curriculum, but I was more interested in scientific subjects.",
+            'Analyse_Donnees': 'Data Analysis', 'Interets_Title': 'My Interests',
+            'Interets_Intro': 'Click on a bubble to learn more.',
+            'Close_Btn': '✕ Close'
+        },
+        es: {
+            'About_Title': 'Sobre mí', 'About_Subtitle': 'Descubre mi trayectoria, habilidades y pasiones',
+            'Qui_Suis_Je_Title': '¿Quién soy?',
+            'Qui_Suis_Je_Text': "Me llamo Elliot Paillat--Garcia. De naturaleza atento y observador, me gusta analizar el mundo que me rodea sin dejar de escuchar a los demás. Curioso por naturaleza, disfruto conociendo gente nueva, compartiendo mis conocimientos y siguiendo aprendiendo cada día. Aunque mi temperamento más bien discreto a veces me mantiene en un segundo plano, mi curiosidad toma el control y me impulsa naturalmente a interactuar. Profesionalmente, me desenvuelvo con la misma facilidad tanto de forma totalmente autónoma como dentro de un equipo.",
+            'Parcours_Title': 'Mi trayectoria académica', 'BUT_Title': 'BUT Ciencias de Datos',
+            'BUT_Desc': "Actualmente estoy en mi segundo año de BUT en ciencias de datos, desarrollando habilidades en análisis y en diferentes lenguajes de programación.",
+            'Niort_Title': 'Formación General - Niort',
+            'Niort_Desc': "Siempre estuve en Niort siguiendo una formación general, pero me interesaban más las materias científicas.",
+            'Analyse_Donnees': 'Análisis de datos', 'Interets_Title': 'Mis intereses',
+            'Interets_Intro': 'Haz clic en una burbuja para saber más.',
+            'Close_Btn': '✕ Cerrar'
+        },
+        de: {
+            'About_Title': 'Über mich', 'About_Subtitle': 'Entdecken Sie meinen Werdegang, meine Fähigkeiten und Leidenschaften',
+            'Qui_Suis_Je_Title': 'Wer bin ich?',
+            'Qui_Suis_Je_Text': "Mein Name ist Elliot Paillat--Garcia. Von Natur aus aufmerksam und beobachtend, analysiere ich gerne die Welt um mich herum und habe gleichzeitig ein offenes Ohr für andere. Von Natur aus neugierig, genieße ich es, neue Leute kennenzulernen, mein Wissen zu teilen und jeden Tag weiterzulernen. Obwohl mich mein eher zurückhaltendes Temperament manchmal in den Hintergrund drängt, überwiegt meine Neugier und treibt mich auf natürliche Weise zum Austausch an. Beruflich blühe ich in völliger Autonomie genauso leicht auf wie im Team.",
+            'Parcours_Title': 'Mein akademischer Werdegang', 'BUT_Title': 'BUT Datenwissenschaften',
+            'BUT_Desc': "Ich bin derzeit im zweiten Jahr des BUT in Datenwissenschaften und entwickle Fähigkeiten in der Analyse sowie in verschiedenen Programmiersprachen.",
+            'Niort_Title': 'Allgemeine Bildung - Niort',
+            'Niort_Desc': "Ich war immer in Niort und absolvierte eine allgemeine Ausbildung, aber ich interessierte mich mehr für naturwissenschaftliche Fächer.",
+            'Analyse_Donnees': 'Datenanalyse', 'Interets_Title': 'Meine Interessen',
+            'Interets_Intro': 'Klicken Sie auf eine Blase, um mehr zu erfahren.',
+            'Close_Btn': '✕ Schließen'
+        },
+        it: {
+            'About_Title': 'Su di me', 'About_Subtitle': 'Scopri il mio percorso, le mie competenze e le mie passioni',
+            'Qui_Suis_Je_Title': 'Chi sono?',
+            'Qui_Suis_Je_Text': "Mi chiamo Elliot Paillat--Garcia. Di natura attenta e osservatrice, mi piace analizzare il mondo che mi circonda pur rimanendo molto in ascolto degli altri. Curioso di natura, mi piace fare nuovi incontri, condividere le mie conoscenze e continuare a imparare ogni giorno. Sebbene il mio temperamento piuttosto discreto a volte mi metta in secondo piano, la mia curiosità prende il sopravvento e mi spinge naturalmente a interagire. Professionalmente, mi trovo a mio agio sia in totale autonomia che in squadra.",
+            'Parcours_Title': 'Il mio percorso accademico', 'BUT_Title': 'BUT Scienze dei Dati',
+            'BUT_Desc': "Attualmente sono al secondo anno di BUT in scienze dei dati, sviluppando competenze in analisi e in diversi linguaggi di programmazione.",
+            'Niort_Title': 'Formazione Generale - Niort',
+            'Niort_Desc': "Sono sempre stato a Niort seguendo un percorso generale, ma mi interessavo di più alle materie scientifiche.",
+            'Analyse_Donnees': 'Analisi dei dati', 'Interets_Title': 'I miei interessi',
+            'Interets_Intro': 'Clicca su una bolla per saperne di più.',
+            'Close_Btn': '✕ Chiudi'
+        },
+        pt: {
+            'About_Title': 'Sobre mim', 'About_Subtitle': 'Descubra minha jornada, habilidades e paixões',
+            'Qui_Suis_Je_Title': 'Quem sou eu?',
+            'Qui_Suis_Je_Text': "O meu nome é Elliot Paillat--Garcia. De natureza atento e observador, gosto de analisar o mundo à minha volta mantendo-me muito atento aos outros. Curioso por natureza, gosto de conhecer novas pessoas, partilhar os meus conhecimentos e continuar a aprender todos os dias. Embora o meu temperamento bastante discreto por vezes me coloque em segundo plano, a minha curiosidade toma conta e empurra-me naturalmente para a interação. Profissionalmente, prospero com a mesma facilidade em total autonomia ou numa equipa.",
+            'Parcours_Title': 'Minha jornada acadêmica', 'BUT_Title': 'BUT Ciência de Dados',
+            'BUT_Desc': "Atualmente, estou no segundo ano do BUT em ciência de dados, desenvolvendo competências em análise e em várias linguagens de programação.",
+            'Niort_Title': 'Formação Geral - Niort',
+            'Niort_Desc': "Sempre estudei em Niort seguindo uma formação geral, mas me interessava mais por matérias científicas.",
+            'Analyse_Donnees': 'Análise de dados', 'Interets_Title': 'Meus interesses',
+            'Interets_Intro': 'Clique em uma bolha para saber mais.',
+            'Close_Btn': '✕ Fechar'
+        },
+    };
+    </script>
+
+    <script src="portfolio.js"></script>
+
+    <script>
+    (function () {
+        function initBubbles() {
+            const area = document.getElementById('bubbleArea');
+            if (!area || typeof INTERESTS_DATA === 'undefined') return;
+            area.style.height = '380px';
+
+            function getLang() {
+                const lsLang = localStorage.getItem('lang') || localStorage.getItem('language') || localStorage.getItem('portfolio_lang');
+                if (lsLang) return lsLang;
+                const htmlLang = document.documentElement.lang;
+                if (htmlLang && ['fr', 'en', 'es', 'de', 'it', 'pt'].includes(htmlLang)) {
+                    return htmlLang;
+                }
+                return 'fr';
+            }
+
+            function getDesc(d) {
+                const lang = getLang();
+                const key = 'desc_' + lang;
+                return d[key] || d.desc_fr || '';
+            }
+
+            function getLabel(d) {
+                const lang = getLang();
+                if (lang !== 'fr') {
+                    const key = 'label_' + lang;
+                    if (d[key]) return d[key];
+                }
+                return d.label;
+            }
+
+            function startPhysics() {
+                let W = area.offsetWidth || area.parentElement.offsetWidth || 800;
+                const H = 380;
+                let paused = false;
+
+                const bubbles = INTERESTS_DATA.map((d, i) => {
+                    const el = document.createElement('div');
+                    el.className = 'interest-bubble';
+                    
+                    // Enregistrement de l'index pour la traduction en direct
+                    el.dataset.index = i; 
+                    
+                    el.style.width  = d.size + 'px';
+                    el.style.height = d.size + 'px';
+                    
+                    const labelText = getLabel(d).replace(/\n/g, '<br>');
+                    el.innerHTML = `<i class="ti ${d.icon}"></i><span class="bubble-text">${labelText}</span>`;
+                    
+                    el.addEventListener('click', () => openBubblePanel(d));
+                    el.addEventListener('mouseenter', () => { b.vx *= 0.3; b.vy *= 0.3; });
+                    area.appendChild(el);
+
+                    const r = d.size / 2;
+                    const angle = (i / INTERESTS_DATA.length) * Math.PI * 2;
+                    const cx = W / 2 + Math.cos(angle) * (W * 0.25);
+                    const cy = H / 2 + Math.sin(angle) * (H * 0.25);
+                    const speed = 0.35 + Math.random() * 0.45;
+                    const va = Math.random() * Math.PI * 2;
+                    const b = {
+                        el, r,
+                        x: Math.max(r, Math.min(W - r, cx)),
+                        y: Math.max(r, Math.min(H - r, cy)),
+                        vx: Math.cos(va) * speed,
+                        vy: Math.sin(va) * speed,
+                    };
+                    return b;
+                });
+
+                function tick() {
+                    if (!paused) {
+                        W = area.offsetWidth || W;
+                        for (let i = 0; i < bubbles.length; i++) {
+                            const a = bubbles[i];
+                            a.x += a.vx; a.y += a.vy;
+                            if (a.x - a.r < 0)  { a.x = a.r;     a.vx =  Math.abs(a.vx); }
+                            if (a.x + a.r > W)  { a.x = W - a.r; a.vx = -Math.abs(a.vx); }
+                            if (a.y - a.r < 0)  { a.y = a.r;     a.vy =  Math.abs(a.vy); }
+                            if (a.y + a.r > H)  { a.y = H - a.r; a.vy = -Math.abs(a.vy); }
+                            for (let j = i + 1; j < bubbles.length; j++) {
+                                const b = bubbles[j];
+                                const dx = b.x - a.x, dy = b.y - a.y;
+                                const dist = Math.sqrt(dx*dx + dy*dy) || 0.01;
+                                const minD = a.r + b.r + 5;
+                                if (dist < minD) {
+                                    const ov = (minD - dist) / 2;
+                                    const nx = dx/dist, ny = dy/dist;
+                                    a.x -= nx*ov; a.y -= ny*ov;
+                                    b.x += nx*ov; b.y += ny*ov;
+                                    const dot = (a.vx - b.vx)*nx + (a.vy - b.vy)*ny;
+                                    if (dot > 0) {
+                                        const imp = dot * 0.95;
+                                        a.vx -= imp*nx; a.vy -= imp*ny;
+                                        b.vx += imp*nx; b.vy += imp*ny;
+                                    }
+                                }
+                            }
+                            const sp = Math.sqrt(a.vx*a.vx + a.vy*a.vy);
+                            if (sp > 1.1) { a.vx = a.vx/sp*1.1; a.vy = a.vy/sp*1.1; }
+                            if (sp > 0 && sp < 0.2) { a.vx = a.vx/sp*0.2; a.vy = a.vy/sp*0.2; }
+                            a.el.style.left = (a.x - a.r) + 'px';
+                            a.el.style.top  = (a.y - a.r) + 'px';
+                        }
+                    }
+                    requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+
+                window.openBubblePanel = function(d) {
+                    paused = true;
+                    document.getElementById('bpTitle').textContent = getLabel(d).replace(/\n/g, ' ');
+                    document.getElementById('bpIcon').innerHTML = `<i class="ti ${d.icon}"></i>`;
+                    const tags = d.tags.map(t => `<span class="bp-tag">${t}</span>`).join('');
+
+                    let mediaHtml = '';
+                    if (d.carousel && d.carousel.length > 0) {
+                        const id = 'carousel_' + Date.now();
+                        const slides = d.carousel.map((src, i) =>
+                            `<div class="bp-carousel-slide${i === 0 ? ' active' : ''}">
+                                <img src="${src}" alt="${getLabel(d)} ${i+1}" class="bp-image">
+                            </div>`
+                        ).join('');
+                        const dots = d.carousel.map((_, i) =>
+                            `<span class="bp-dot${i === 0 ? ' active' : ''}" onclick="carouselGo('${id}',${i})"></span>`
+                        ).join('');
+                        mediaHtml = `
+                            <div class="bp-carousel" id="${id}">
+                                ${slides}
+                                <button class="bp-carousel-btn bp-carousel-prev" onclick="carouselStep('${id}',-1)">&#8249;</button>
+                                <button class="bp-carousel-btn bp-carousel-next" onclick="carouselStep('${id}',1)">&#8250;</button>
+                                <div class="bp-dots">${dots}</div>
+                            </div>`;
+                    } else if (d.img) {
+                        mediaHtml = `<img src="${d.img}" alt="${getLabel(d)}" class="bp-image">`;
+                    }
+
+                    document.getElementById('bpBody').innerHTML =
+                        `${mediaHtml}<p>${getDesc(d)}</p><div class="bp-tags">${tags}</div>`;
+                    document.getElementById('bubblePanel').classList.add('open');
+                    document.getElementById('bubbleOverlay').classList.add('open');
+                };
+
+                window.carouselStep = function(id, dir) {
+                    const c = document.getElementById(id);
+                    if (!c) return;
+                    const slides = c.querySelectorAll('.bp-carousel-slide');
+                    const dots = c.querySelectorAll('.bp-dot');
+                    let cur = [...slides].findIndex(s => s.classList.contains('active'));
+                    slides[cur].classList.remove('active');
+                    dots[cur].classList.remove('active');
+                    cur = (cur + dir + slides.length) % slides.length;
+                    slides[cur].classList.add('active');
+                    dots[cur].classList.add('active');
+                };
+
+                window.carouselGo = function(id, idx) {
+                    const c = document.getElementById(id);
+                    if (!c) return;
+                    const slides = c.querySelectorAll('.bp-carousel-slide');
+                    const dots = c.querySelectorAll('.bp-dot');
+                    slides.forEach(s => s.classList.remove('active'));
+                    dots.forEach(d => d.classList.remove('active'));
+                    slides[idx].classList.add('active');
+                    dots[idx].classList.add('active');
+                };
+
+                window.closeBubblePanel = function() {
+                    paused = false;
+                    document.getElementById('bubblePanel').classList.remove('open');
+                    document.getElementById('bubbleOverlay').classList.remove('open');
+                };
+
+                // Fonction pour mettre à jour les bulles à la volée (sans redémarrer la physique)
+                window.updateBubblesTranslation = function() {
+                    const lang = getLang();
+                    document.querySelectorAll('.interest-bubble').forEach(bubble => {
+                        const idx = bubble.dataset.index;
+                        const data = INTERESTS_DATA[idx];
+                        if (data) {
+                            const key = 'label_' + lang;
+                            const newLabel = (lang === 'fr' ? data.label : (data[key] || data.label)).replace(/\n/g, '<br>');
+                            const textSpan = bubble.querySelector('.bubble-text');
+                            if (textSpan) textSpan.innerHTML = newLabel;
+                        }
+                    });
+                };
+            }
+
+            setTimeout(startPhysics, 150);
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initBubbles);
+        } else {
+            initBubbles();
+        }
+
+        // Écouteurs d'événements pour le changement de langue
+        document.addEventListener('change', function(e) {
+            if (e.target && e.target.tagName && e.target.tagName.toLowerCase() === 'select') {
+                setTimeout(() => {
+                    if (window.updateBubblesTranslation) window.updateBubblesTranslation();
+                }, 100);
+            }
+        });
+
+        document.addEventListener('click', function(e) {
+            if (e.target.closest('#language_selector_container') || e.target.closest('.language-selector')) {
+                setTimeout(() => {
+                    if (window.updateBubblesTranslation) window.updateBubblesTranslation();
+                }, 100);
+            }
+        });
+
+    })();
+    </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+</html>

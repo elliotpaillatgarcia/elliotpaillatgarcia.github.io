@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: white;
+    background: linear-gradient(to bottom, #9B111E, #8A2BE2);
+    overflow-x: hidden;
+    min-height: 100vh;
+    transition: background 0.5s ease, color 0.5s ease;
+    text-align: center;
+}
+
+/* Éléments géométriques subtils en arrière-plan */
+.background-shapes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.03;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape-1 { width: 200px; height: 200px; top: 10%; left: 10%; animation-delay: 0s; }
+.shape-2 { width: 150px; height: 150px; top: 60%; right: 15%; animation-delay: 7s; }
+.shape-3 { width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: 14s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-30px) rotate(120deg); }
+    66% { transform: translateY(30px) rotate(240deg); }
+}
+
+/* ========================================= */
+/* NOUVELLES ANIMATIONS NAVBAR AJOUTÉES */
+/* ========================================= */
+
+/* Animation d'apparition depuis le haut pour la navbar */
+@keyframes navbarSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation de glissement depuis la gauche */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation de glissement depuis la droite */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Style de la navbar avec effets modernes et animations */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(15px);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    
+    /* ANIMATION AJOUTÉE : Apparition depuis le haut */
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: navbarSlideIn 1s ease 0.1s forwards;
+}
+
+.navbar .name {
+    color: #9B111E;
+    font-size: 24px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease;
+    
+    /* ANIMATION AJOUTÉE : Glissement depuis la gauche */
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 1s ease 0.3s forwards;
+}
+
+.navbar .name a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ANIMATION AJOUTÉE : Effet d'agrandissement au survol du logo */
+.navbar .name:hover {
+    transform: scale(1.05);
+}
+
+.navbar a {
+    color: #2d3748;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 12px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(155, 17, 30, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.navbar a:hover::before {
+    left: 100%;
+}
+
+.navbar a:hover {
+    background: linear-gradient(to right, #9B111E, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-2px);
+}
+
+.navbar > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    
+    /* ANIMATION AJOUTÉE : Glissement depuis la droite */
+    opacity: 0;
+    transform: translateX(20px);
+    animation: fadeInRight 1s ease 0.4s forwards;
+}
+
+/* Theme Toggle Button avec animation vague */
+.theme-toggle-button {
+    background: black; /* Modifié pour être noir en mode jour */
+    border: 2px solid white; /* Ajout d'une bordure blanche pour le rendre plus visible */
+    font-size: 1em;
+    cursor: pointer;
+    color: white; /* La couleur du texte reste blanche, ce qui contraste avec le fond noir */
+    padding: 8px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Ajustement de l'ombre pour un fond noir */
+    position: relative;
+    overflow: hidden;
+}
+
+/* ANIMATION AJOUTÉE : Effet vague au survol */
+.theme-toggle-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.theme-toggle-button:hover::before {
+    width: 100px;
+    height: 100px;
+}
+
+.theme-toggle-button:hover {
+    transform: scale(1.1) rotate(180deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Ajustement de l'ombre au survol */
+}
+
+/* Sélecteur de langue optimisé */
+.language-selector {
+    background: #2d3748 !important; /* Couleur de fond foncée pour la visibilité en mode jour */
+    border: 2px solid #9B111E !important; /* Bordure rouge pour un bon contraste */
+    color: white !important; /* Texte blanc pour le contraste */
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(10px) !important;
+    font-size: 14px !important;
+    min-height: 35px !important;
+    outline: none !important;
+}
+
+.language-selector:hover {
+    background-color: rgba(45, 55, 72, 0.8) !important; /* Légèrement plus transparent au survol */
+    transform: translateY(-2px) !important;
+}
+
+.language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(155, 17, 30, 0.5) !important; /* Ombre de focus adaptée */
+}
+
+.language-selector option {
+    background: #000 !important;
+    color: white !important;
+    padding: 8px !important;
+}
+
+/* Zone principale avec effets modernes */
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 20px 50px 20px;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Zone blanche avec effet glassmorphism */
+.content-box {
+    display: flex;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    padding: 60px;
+    border-radius: 24px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease 0.3s forwards;
+}
+
+.content-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.6s ease;
+}
+
+.content-box:hover::before {
+    transform: scaleX(1);
+}
+
+.content-box:hover {
+    transform: translateY(-8px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Zone photo avec effets */
+.photo-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 40px;
+    position: relative;
+}
+
+/* Zone texte avec animations */
+.text-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1 {
+    color: #2d3748;
+    font-size: 3.5rem !important;
+    font-weight: 800;
+    margin: 0 0 20px 0;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease 0.5s forwards;
+}
+
+p {
+    color: #4a5568;
+    line-height: 1.8;
+    font-size: 18px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease 0.7s forwards;
+}
+
+/* Photo de profil avec effets modernes */
+.profile-pic {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: profileAppear 1s ease 0.4s forwards;
+}
+
+.photo-section::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.photo-section:hover::before {
+    opacity: 0.2;
+}
+
+.photo-section:hover .profile-pic {
+    transform: scale(1.05);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes profileAppear {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Bouton CTA moderne */
+.cta-button {
+    margin-top: 30px;
+    background: linear-gradient(135deg, #9B111E, #8A2BE2);
+    color: white;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(155, 17, 30, 0.3);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease 0.9s forwards;
+}
+
+.cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.6s ease;
+}
+
+.cta-button:hover::before {
+    left: 100%;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(155, 17, 30, 0.4);
+}
+
+/* ========================================================= */
+/* --- Styles pour le Thème Sombre --- */
+/* ========================================================= */
+
+body.dark-theme {
+    background: linear-gradient(to bottom, #0D1B2A, #001F3F);
+    color: #f0f0f0;
+}
+
+body.dark-theme .background-shapes .shape {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+}
+
+body.dark-theme .navbar {
+    background: rgba(13, 27, 42, 0.95);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .navbar .name {
+    color: #8A2BE2;
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+body.dark-theme .navbar a {
+    color: #ccc;
+}
+
+body.dark-theme .navbar a:hover {
+    background: linear-gradient(to right, #007BFF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body.dark-theme .theme-toggle-button {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+body.dark-theme .theme-toggle-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+}
+
+body.dark-theme .language-selector { /* Styles pour le sélecteur de langue en mode sombre */
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Fond semi-transparent foncé */
+    border-color: #8A2BE2 !important;
+    color: #8A2BE2 !important;
+}
+
+body.dark-theme .language-selector:hover {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Plus opaque au survol */
+}
+
+body.dark-theme .language-selector:focus {
+    box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.3) !important;
+}
+
+
+body.dark-theme .content-box {
+    background: rgba(26, 41, 58, 0.95);
+    backdrop-filter: blur(20px);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        0 0 0 1px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark-theme .content-box::before {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+}
+
+body.dark-theme .content-box:hover {
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme h1 {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+body.dark-theme p {
+    color: #c0c0c0;
+}
+
+body.dark-theme .profile-pic {
+    border: 4px solid #8A2BE2;
+}
+
+body.dark-theme .photo-section::before {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+}
+
+body.dark-theme .cta-button {
+    background: linear-gradient(135deg, #007BFF, #8A2BE2);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+body.dark-theme .cta-button:hover {
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
+}
+/* Liens dans le contenu principal (thème sombre) */
+body.dark-theme .text-section a {
+    color: #64B5F6; /* Bleu clair qui s'accorde avec votre palette */
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+body.dark-theme .text-section a:hover {
+    color: #8A2BE2; /* Violet de votre palette */
+    text-shadow: 0 0 8px rgba(138, 43, 226, 0.3);
+}
+
+/* Liens avec la classe text-red-600 en thème sombre */
+body.dark-theme .text-red-600 a {
+    background: linear-gradient(135deg, #64B5F6, #8A2BE2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-weight: 600;
+}
+
+body.dark-theme .text-red-600 a:hover {
+    background: linear-gradient(135deg, #8A2BE2, #64B5F6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: translateY(-1px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 20px;
+    }
+    
+    .navbar .name {
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+    
+    .main-content {
+        padding-top: 180px;
+    }
+    
+    .content-box {
+        flex-direction: column;
+        padding: 40px 30px;
+        gap: 30px;
+    }
+    
+    .photo-section {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+    }
+    
+    h1 {
+        font-size: 2.5rem !important;
+    }
+    
+    p {
+        font-size: 16px;
+    }
+    
+    .cta-button {
+        font-size: 16px;
+        padding: 14px 28px;
+    }
+    .language-selector {
+        padding: 6px 10px !important;
+        font-size: 12px !important;
+        min-height: 32px !important;
+    }
+}
+@media (max-width: 480px) {
+    .navbar > div:last-child {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    .language-selector {
+        padding: 5px 8px !important;
+        font-size: 11px !important;
+        min-height: 30px !important;
+    }
+}
