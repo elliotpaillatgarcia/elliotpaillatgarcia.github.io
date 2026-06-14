@@ -3,258 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-translate="Accueil - Elliot Paillat--Garcia">Accueil - Elliot Paillat--Garcia</title>
+    <title data-translate="Title_Index">Accueil - Elliot Paillat--Garcia</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="portfolio2/styleI.css">
 </head>
 <body>
 
-    <!-- Barre de navigation -->
     <div class="navbar">
         <div class="name"><a href="index.html">Elliot Paillat--Garcia</a></div>
         <div>
             <a href="portfolio2/a propos.html" data-translate="À propos">À propos</a>
             <a href="portfolio2/bilanPerso.html" data-translate="Bilan Personnel">Bilan Personnel</a>
-            <a href="portfolio2/projets.html" data-translate="Projets">Projets</a> 
+            <a href="portfolio2/projets.html" data-translate="Projets">Projets</a>
             <a href="portfolio2/contact.html" data-translate="Contacts">Contacts</a>
             <button id="theme-toggle" class="theme-toggle-button">🌙</button>
             <div id="language_selector_container"></div>
         </div>
     </div>
 
-    <!-- Zone principale avec la séparation en deux -->
     <div class="main-content">
         <div class="content-box">
-            <!-- Photo section -->
             <div class="photo-section">
-                <img src="portfolio2/photo cv 1.jpg" alt="Photo de Elliot Paillat--Garcia" class="profile-pic">
+                <img src="portfolio2/images/photo cv 1.jpg" alt="Photo de Elliot Paillat--Garcia" class="profile-pic">
             </div>
-
-            <!-- Texte section -->
             <div class="text-section">
-                <h1 data-translate="Bienvenue !">Bienvenue !</h1>
-                <p><span data-translate="Je suis">Je suis</span> <span class="text-red-600 font-semibold"><a href="portfolio2/a propos.html" data-translate="Elliot Paillat--Garcia">Elliot Paillat--Garcia</a></span>, <span data-translate="un élève de première année de BUT en sciences des données à">un élève de première année de BUT en sciences des données à</span> <span class=" italic text-red-600 font-semibold"><a href="https://iutp.univ-poitiers.fr/sd/" data-translate="l'IUT de Niort">l'IUT de Niort</span></a>.</p>
-                <a href="portfolio2/projets.html" class="cta-button" data-translate="Voir mon travail">Voir mon travail</a>
+                <h1 data-translate="Bienvenue">Bienvenue !</h1>
+                <p>
+                    <span data-translate="Je_suis">Je suis</span>
+                    <span class="text-red-600 font-semibold"><a href="portfolio2/a propos.html" data-translate="Nom">Elliot Paillat--Garcia</a></span>,
+                    <span data-translate="Description">un élève de deuxième année de BUT en sciences des données à</span>
+                    <span class="italic text-red-600 font-semibold"><a href="https://iutp.univ-poitiers.fr/sd/" data-translate="IUT">l'IUT de Niort</a></span>.
+                </p>
+                <a href="portfolio2/projets.html" class="cta-button" data-translate="CTA">Voir mon travail</a>
             </div>
         </div>
     </div>
-<script>
-// --- Système de traductions automatique ---
-const translations = {
-    'fr': {
-        'Accueil - Elliot Paillat--Garcia': 'Accueil - Elliot Paillat--Garcia',
-        'À propos': 'À propos',
-        'Bilan Personnel': 'Bilan Personnel',
-        'Projets': 'Projets',
-        'Contacts': 'Contacts',
-        'Bienvenue !': 'Bienvenue !',
-        'Je suis': 'Je suis',
-        'Elliot Paillat--Garcia': 'Elliot Paillat--Garcia',
-        "un élève de première année de BUT en sciences des données à": "un élève de première année de BUT en sciences des données à",
-        "l'IUT de Niort": "l'IUT de Niort",
-        "Voir mon travail": "Voir mon travail"
-    },
-    'en': {
-        'Accueil - Elliot Paillat--Garcia': 'Home - Elliot Paillat--Garcia',
-        'À propos': 'About',
-        'Bilan Personnel': 'Personal Review',
-        'Projets': 'Projects',
-        'Contacts': 'Contacts',
-        'Bienvenue !': 'Welcome!',
-        'Je suis': 'I am',
-        'Elliot Paillat--Garcia': 'Elliot Paillat--Garcia',
-        "un élève de première année de BUT en sciences des données à": "a first-year student in Data Science BUT at",
-        "l'IUT de Niort": "IUT of Niort",
-        "Voir mon travail": "View my work"
-    },
-    'es': {
-        'Accueil - Elliot Paillat--Garcia': 'Inicio - Elliot Paillat--Garcia',
-        'À propos': 'Acerca de',
-        'Bilan Personnel': 'Evaluación Personal',
-        'Projets': 'Proyectos',
-        'Contacts': 'Contactos',
-        'Bienvenue !': '¡Bienvenido!',
-        'Je suis': 'Soy',
-        'Elliot Paillat--Garcia': 'Elliot Paillat--Garcia',
-        "un élève de première année de BUT en sciences des données à": "un estudiante de primer año de BUT en ciencias de datos en",
-        "l'IUT de Niort": "IUT de Niort",
-        "Voir mon travail": "Ver mi trabajo"
-    },
-    'de': {
-        'Accueil - Elliot Paillat--Garcia': 'Startseite - Elliot Paillat--Garcia',
-        'À propos': 'Über mich',
-        'Bilan Personnel': 'Persönliche Bilanz',
-        'Projets': 'Projekte',
-        'Contacts': 'Kontakte',
-        'Bienvenue !': 'Willkommen!',
-        'Je suis': 'Ich bin',
-        'Elliot Paillat--Garcia': 'Elliot Paillat--Garcia',
-        "un élève de première année de BUT en sciences des données à": "ein Erstsemester-Student im Bereich Datenwissenschaft an der",
-        "l'IUT de Niort": "IUT Niort",
-        "Voir mon travail": "Meine Arbeit ansehen"
-    },
-    'it': {
-        'Accueil - Elliot Paillat--Garcia': 'Home - Elliot Paillat--Garcia',
-        'À propos': 'Chi sono',
-        'Bilan Personnel': 'Bilancio Personale',
-        'Projets': 'Progetti',
-        'Contacts': 'Contatti',
-        'Bienvenue !': 'Benvenuto!',
-        'Je suis': 'Sono',
-        'Elliot Paillat--Garcia': 'Elliot Paillat--Garcia',
-        "un élève de première année de BUT en sciences des données à": "uno studente del primo anno di BUT in scienze dei dati presso",
-        "l'IUT de Niort": "IUT di Niort",
-        "Voir mon travail": "Vedi il mio lavoro"
-    },
-    'pt': {
-        'Accueil - Elliot Paillat--Garcia': 'Início - Elliot Paillat--Garcia',
-        'À propos': 'Sobre',
-        'Bilan Personnel': 'Avaliação Pessoal',
-        'Projets': 'Projetos',
-        'Contacts': 'Contatos',
-        'Bienvenue !': 'Bem-vindo!',
-        'Je suis': 'Eu sou',
-        'Elliot Paillat--Garcia': 'Elliot Paillat--Garcia',
-        "un élève de première année de BUT en sciences des données à": "um estudante do primeiro ano de BUT em ciência de dados na",
-        "l'IUT de Niort": "IUT de Niort",
-        "Voir mon travail": "Ver meu trabalho"
-    }
-};
 
-let currentLanguage = 'fr';
-
-// Créer le sélecteur de langue
-function createLanguageSelector() {
-    const container = document.getElementById('language_selector_container');
-    if (!container) return;
-
-    const select = document.createElement('select');
-    select.className = 'language-selector';
-    select.id = 'language-selector';
-
-    const languages = [
-        { code: 'fr', name: '🇫🇷 Français', flag: '🇫🇷' },
-        { code: 'en', name: '🇬🇧 English', flag: '🇬🇧' },
-        { code: 'es', name: '🇪🇸 Español', flag: '🇪🇸' },
-        { code: 'de', name: '🇩🇪 Deutsch', flag: '🇩🇪' },
-        { code: 'it', name: '🇮🇹 Italiano', flag: '🇮🇹' },
-        { code: 'pt', name: '🇵🇹 Português', flag: '🇵🇹' }
-    ];
-
-    languages.forEach(lang => {
-        const option = document.createElement('option');
-        option.value = lang.code;
-        option.textContent = lang.name;
-        select.appendChild(option);
-    });
-
-    select.addEventListener('change', (e) => {
-        translatePage(e.target.value);
-    });
-
-    container.appendChild(select);
-}
-
-// Fonction de traduction améliorée
-function translatePage(targetLang) {
-    if (!translations[targetLang]) return;
-
-    currentLanguage = targetLang;
-
-    // Sauvegarder le choix de langue
-    localStorage.setItem('preferredLanguage', targetLang);
-
-    // Traduire tous les éléments avec l'attribut data-translate
-    const elementsToTranslate = document.querySelectorAll('[data-translate]');
-    elementsToTranslate.forEach(element => {
-        const key = element.getAttribute('data-translate');
-        if (translations[targetLang][key]) {
-            element.textContent = translations[targetLang][key];
-        }
-    });
-
-    // Mettre à jour la langue du document
-    document.documentElement.lang = targetLang;
-
-    // Mettre à jour la sélection
-    const selector = document.getElementById('language-selector');
-    if (selector) {
-        selector.value = targetLang;
-    }
-}
-
-// Détection automatique de la langue
-function detectAndApplyLanguage() {
-    // Vérifier si l'utilisateur a déjà une préférence sauvegardée
-    const savedLang = localStorage.getItem('preferredLanguage');
-    if (savedLang && translations[savedLang]) {
-        translatePage(savedLang);
-        return;
-    }
-
-    // Récupérer la langue du navigateur
-    const browserLang = navigator.language || navigator.userLanguage;
-    const langCode = browserLang.split('-')[0].toLowerCase();
-
-    console.log('Langue du navigateur détectée:', langCode);
-
-    // Si ce n'est pas français et que la langue est supportée, traduire
-    if (langCode !== 'fr' && translations[langCode]) {
-        translatePage(langCode);
-    } else if (langCode !== 'fr') {
-        // Si la langue n'est pas supportée, utiliser l'anglais par défaut
-        translatePage('en');
-    }
-}
-
-// --- Logique du bouton de changement de thème ---
-const themeToggleButton = document.getElementById('theme-toggle');
-
-if (themeToggleButton) {
-    // Fonction pour appliquer le thème
-    const applyTheme = (theme) => {
-        if (theme === 'dark') {
-            document.body.classList.add('dark-theme');
-            themeToggleButton.textContent = '☀️'; // Icône soleil pour le mode sombre
-        } else {
-            document.body.classList.remove('dark-theme');
-            themeToggleButton.textContent = '🌙'; // Icône lune pour le mode clair
-        }
+    <script>
+    window.PAGE_TRANSLATIONS = {
+        fr: {
+            'Title_Index': 'Accueil - Elliot Paillat--Garcia',
+            'Bienvenue': 'Bienvenue !',
+            'Je_suis': 'Je suis',
+            'Nom': 'Elliot Paillat--Garcia',
+            'Description': 'un élève de deuxième année de BUT en sciences des données à',
+            'IUT': "l'IUT de Niort",
+            'CTA': 'Voir mon travail',
+        },
+        en: {
+            'Title_Index': 'Home - Elliot Paillat--Garcia',
+            'Bienvenue': 'Welcome!',
+            'Je_suis': 'I am',
+            'Nom': 'Elliot Paillat--Garcia',
+            'Description': 'a second-year student in Data Science BUT at',
+            'IUT': 'IUT of Niort',
+            'CTA': 'View my work',
+        },
+        es: {
+            'Title_Index': 'Inicio - Elliot Paillat--Garcia',
+            'Bienvenue': '¡Bienvenido!',
+            'Je_suis': 'Soy',
+            'Nom': 'Elliot Paillat--Garcia',
+            'Description': 'un estudiante de segundo año de BUT en ciencias de datos en',
+            'IUT': 'IUT de Niort',
+            'CTA': 'Ver mi trabajo',
+        },
+        de: {
+            'Title_Index': 'Startseite - Elliot Paillat--Garcia',
+            'Bienvenue': 'Willkommen!',
+            'Je_suis': 'Ich bin',
+            'Nom': 'Elliot Paillat--Garcia',
+            'Description': 'ein Student im zweiten Jahr des BUT Datenwissenschaften an der',
+            'IUT': 'IUT Niort',
+            'CTA': 'Meine Arbeit ansehen',
+        },
+        it: {
+            'Title_Index': 'Home - Elliot Paillat--Garcia',
+            'Bienvenue': 'Benvenuto!',
+            'Je_suis': 'Sono',
+            'Nom': 'Elliot Paillat--Garcia',
+            'Description': 'uno studente del secondo anno di BUT in scienze dei dati presso',
+            'IUT': 'IUT di Niort',
+            'CTA': 'Vedi il mio lavoro',
+        },
+        pt: {
+            'Title_Index': 'Início - Elliot Paillat--Garcia',
+            'Bienvenue': 'Bem-vindo!',
+            'Je_suis': 'Eu sou',
+            'Nom': 'Elliot Paillat--Garcia',
+            'Description': 'um estudante do segundo ano de BUT em ciência de dados na',
+            'IUT': 'IUT de Niort',
+            'CTA': 'Ver meu trabalho',
+        },
     };
+    </script>
+    <script src="portfolio2/portfolio.js"></script>
 
-    // Appliquer le thème sauvegardé au chargement de la page
-    const savedTheme = localStorage.getItem('theme');
-    applyTheme(savedTheme || 'light'); // Par défaut, thème clair si rien n'est sauvegardé
-
-    // Gérer le clic sur le bouton
-    themeToggleButton.addEventListener('click', () => {
-        const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        applyTheme(newTheme);
-        localStorage.setItem('theme', newTheme); // Sauvegarder la préférence
-    });
-}
-// --- Fin de la logique du bouton de changement de thème ---
-
-// Initialisation au chargement de la page
-window.addEventListener('DOMContentLoaded', () => {
-    console.log('Page chargée - Initialisation...');
-    
-    // Créer le sélecteur de langue
-    createLanguageSelector();
-    
-    // Appliquer la détection automatique après un court délai
-    setTimeout(() => {
-        detectAndApplyLanguage();
-    }, 100);
-});
-
-// Écouter les changements de langue du navigateur
-window.addEventListener('languagechange', () => {
-    console.log('Changement de langue détecté');
-    detectAndApplyLanguage();
-});
-
-</script>
 </body>
 </html>
